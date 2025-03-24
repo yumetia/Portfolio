@@ -223,7 +223,7 @@ const languages = {
       toggleBtn: "Français",
     },
     home: {
-      title: "Salut, je suis Rémi Bouyeda",
+      title: "Salut, je suis Remi Bouyeda",
       paragraph1: "Je suis un développeur passionné de 20 ans !",
       paragraph2:
         "Je donne vie à des idées grâce à des expériences web interactives et immersives.",
