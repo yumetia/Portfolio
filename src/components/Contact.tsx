@@ -6,7 +6,7 @@ import languages from "../locales/languages";
 
 function Contact() {
   const { language } = useLanguage();
-  const { title, placeholders, button, success, error } = languages[language].contact;
+  const { title, placeholders, button, success } = languages[language].contact;
   const [formData, setFormData] = useState({
     title: "",
     user_name: "",
