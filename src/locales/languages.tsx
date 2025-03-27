@@ -396,7 +396,7 @@ const languages = {
       title: "Remi",
       subtitle: "BOUYEDA",
       copyright: "Copyright © {year} - Tous droits réservés",
-      cvLink:"/CV/BouyedaRemiEnCv.pdf",
+      cvLink:"/CV/BouyedaRemiFrCv.pdf",
     },
   },
 };
