@@ -1,10 +1,10 @@
-import { Container, Github, Linkedin } from "lucide-react";
+import { Container, Github, Linkedin,ArrowDownFromLine } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
 
 function Footer() {
   const { language } = useLanguage();
-  const { title, subtitle, copyright } = languages[language].footer;
+  const { title, subtitle, copyright,cvLink } = languages[language].footer;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -29,6 +29,10 @@ function Footer() {
           >
             <Linkedin className="w-6 h-6 text-current" />
           </a>
+
+          <a href={cvLink} download>
+            <ArrowDownFromLine />
+            </a>
         </div>
       </nav>
     </footer>

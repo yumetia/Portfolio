@@ -210,6 +210,7 @@ const languages = {
       title: "Remi",
       subtitle: "BOUYEDA",
       copyright: "Copyright © {year} - All rights reserved",
+      cvLink: "/CV/BouyedaRemiEnCv.pdf",
     },
   },
 
@@ -395,6 +396,7 @@ const languages = {
       title: "Remi",
       subtitle: "BOUYEDA",
       copyright: "Copyright © {year} - Tous droits réservés",
+      cvLink:"/CV/BouyedaRemiEnCv.pdf",
     },
   },
 };
