@@ -16,7 +16,7 @@ function Projects() {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full rounded-xl object-contain"
+              className="w-full h-96 rounded-xl object-contain"
             />
             <div>
               <h1 className="my-2 font-bold">{project.title}</h1>

@@ -48,7 +48,7 @@ function Experiences() {
                   <h1 className="text-xl text-accent font-bold">
                     {experience.role}
                   </h1>
-                  <h3 className="text-xl font-italic text-gray-300 text-xs">
+                  <h3 className="text-xl font-italic text-gray-500 text-xs">
                     {experience.at}
                   </h3>
                 </div>
