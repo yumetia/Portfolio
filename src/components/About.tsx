@@ -1,6 +1,6 @@
 // components/About.tsx
 import Title from "./Title";
-import img from "../assets/photocv.jpg";
+import img from "../assets/aboutpp.jpeg";
 import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
 
@@ -16,7 +16,7 @@ function About() {
           <img
             src={img}
             alt="profile"
-            className="w-96 object-cover border-8 border-accent rounded-xl"
+            className="w-96 h-112 object-cover border-8 border-accent rounded-xl"
           />
         </div>
         <div className="md:ml-4 space-y-4">
