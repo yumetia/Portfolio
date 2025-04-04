@@ -169,7 +169,7 @@ const languages = {
             "A Twitter-like social media platform built using PHP, JavaScript, and Skeleton CSS, featuring user authentication, tweet creation, and basic interactions.",
           technologies: ["PHP", "JS", "Skeleton CSS"],
           demoLink: "#",
-          repoLink: "#",
+          repoLink: "https://github.com/yumetia/my_twitter",
           image: myTwitter,
         },
         {
@@ -355,7 +355,7 @@ const languages = {
             "Une plateforme sociale ressemblant à Twitter, construite avec PHP, JavaScript et Skeleton CSS, offrant une authentification, la création de tweets et des interactions basiques.",
           technologies: ["PHP", "JS", "Skeleton CSS"],
           demoLink: "#",
-          repoLink: "#",
+          repoLink: "https://github.com/yumetia/my_twitter",
           image: myTwitter,
         },
         {
