@@ -32,7 +32,7 @@ function Footer() {
 
           <a href={cvLink} download>
             <ArrowDownFromLine />
-            </a>
+          </a>
         </div>
       </nav>
     </footer>
