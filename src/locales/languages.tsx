@@ -18,6 +18,10 @@ import imgTAILWIND from "../assets/technos/tailwind.png";
 import imgPRISMA from "../assets/technos/prisma.webp";
 import imgPHP from "../assets/technos/php.png";
 import imgPYTHON from "../assets/technos/python.png";
+import imgSYMFONY from "../assets/technos/symfony.png";
+import imgLARAVEL from "../assets/technos/laravel.png";
+import imgMYSQL from "../assets/technos/mysql.png";
+import imgMONGODB from "../assets/technos/mongodb.png";
 
 // Projets
 import myMeetic from "../assets/projects/my_meetic.png";
@@ -39,7 +43,7 @@ const languages = {
     },
     home: {
       title: "Hey, I'm Remi Bouyeda",
-      paragraph1: "I'm a passionate 20-year-old developer !",
+      paragraph1: "I'm a passionate 21-year-old developer !",
       paragraph2:
         "I bring ideas to life through interactive and engaging web experiences.",
       paragraph3:
@@ -78,14 +82,16 @@ const languages = {
         { id: 1, name: "HTML", image: imgHTML },
         { id: 2, name: "CSS", image: imgCSS },
         { id: 3, name: "JavaScript", image: imgJS },
-        { id: 10, name: "PHP", image: imgPHP },
-        { id: 4, name: "React", image: imgREACT },
-        { id: 5, name: "Node.js", image: imgNODE },
-        { id: 6, name: "Tailwind CSS", image: imgTAILWIND },
-        { id: 7, name: "TypeScript", image: imgTYPE },
-        { id: 8, name: "Next.js", image: imgNEXT },
-        { id: 9, name: "Prisma", image: imgPRISMA },
+        { id: 4, name: "PHP", image: imgPHP },
+        { id: 5, name: "React", image: imgREACT },
+        { id: 6, name: "Node.js", image: imgNODE },
+        { id: 7, name: "Tailwind CSS", image: imgTAILWIND },
+        { id: 8, name: "TypeScript", image: imgTYPE },
+        { id: 9, name: "Next.js", image: imgNEXT },
+        { id: 10, name: "Prisma", image: imgPRISMA },
         { id: 11, name: "Python", image: imgPYTHON },
+        { id: 12, name: "Symfony", image: imgSYMFONY },
+        { id: 13, name: "Laravel", image: imgLARAVEL },
       ],
       data: [
         {
@@ -225,7 +231,7 @@ const languages = {
     },
     home: {
       title: "Salut, je suis Remi Bouyeda",
-      paragraph1: "Je suis un développeur passionné de 20 ans !",
+      paragraph1: "Je suis un développeur passionné de 21 ans !",
       paragraph2:
         "Je donne vie à des idées grâce à des expériences web interactives et immersives.",
       paragraph3:
@@ -264,14 +270,18 @@ const languages = {
         { id: 1, name: "HTML", image: imgHTML },
         { id: 2, name: "CSS", image: imgCSS },
         { id: 3, name: "JavaScript", image: imgJS },
-        { id: 10, name: "PHP", image: imgPHP },
-        { id: 4, name: "React", image: imgREACT },
-        { id: 5, name: "Node.js", image: imgNODE },
-        { id: 6, name: "Tailwind CSS", image: imgTAILWIND },
-        { id: 7, name: "TypeScript", image: imgTYPE },
-        { id: 8, name: "Next.js", image: imgNEXT },
-        { id: 9, name: "Prisma", image: imgPRISMA },
-        { id: 11, name: "Python", image: imgPYTHON },
+        { id: 4, name: "PHP", image: imgPHP },
+        { id: 5, name: "React", image: imgREACT },
+        { id: 6, name: "Node.js", image: imgNODE },
+        { id: 7, name: "Tailwind CSS", image: imgTAILWIND },
+        { id: 8, name: "TypeScript", image: imgTYPE },
+        { id: 9, name: "Next.js", image: imgNEXT },
+        { id: 10, name: "Prisma", image: imgPRISMA },
+        { id: 11, name: "MySQL", image: imgMYSQL },
+        { id: 12, name: "MongoDB", image: imgMONGODB },
+        { id: 13, name: "Python", image: imgPYTHON },
+        { id: 14, name: "Symfony", image: imgSYMFONY },
+        { id: 15, name: "Laravel", image: imgLARAVEL },
       ],
       data: [
         {

@@ -16,7 +16,7 @@ const Navbar = () => {
         className="flex items-center font-bold text-3xl md:text-xl">
         <Container />
         <span>Remi</span>
-        <span className="text-accent">BOUYEDA</span>
+        <span className="text-accent"> BOUYEDA</span>
       </a>
 
       <ul className="hidden md:flex space-x-4">
