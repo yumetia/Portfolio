@@ -89,9 +89,11 @@ const languages = {
         { id: 8, name: "TypeScript", image: imgTYPE },
         { id: 9, name: "Next.js", image: imgNEXT },
         { id: 10, name: "Prisma", image: imgPRISMA },
-        { id: 11, name: "Python", image: imgPYTHON },
-        { id: 12, name: "Symfony", image: imgSYMFONY },
-        { id: 13, name: "Laravel", image: imgLARAVEL },
+        { id: 11, name: "MySQL", image: imgMYSQL },
+        { id: 12, name: "MongoDB", image: imgMONGODB },
+        { id: 13, name: "Python", image: imgPYTHON },
+        { id: 14, name: "Symfony", image: imgSYMFONY },
+        { id: 15, name: "Laravel", image: imgLARAVEL },
       ],
       data: [
         {

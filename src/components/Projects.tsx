@@ -12,7 +12,7 @@ function Projects() {
       <Title title={title} />
       <div className="grid md:grid-cols-3 gap-4">
         {data.map((project) => (
-          <div key={project.id} className="bg-base-300 p-5 h-fit rounded-xl shadow-lg">
+          <div key={project.id} className="bg-base-300 p-5 h-fit rounded-xl shadow-lg max-w-sm mx-auto">
             <img
               src={project.image}
               alt={project.title}
