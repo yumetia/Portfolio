@@ -156,7 +156,7 @@ const languages = {
           description:
             "A retro-style arcade game developed with Pyxel and Python, where players must dodge falling stones while trying to survive as long as possible.",
           technologies: ["Python", "Pyxel"],
-          demoLink: "https://yumetia.github.io/IshiNoAme/",
+          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
           repoLink: "https://github.com/yumetia/IshiNoAme",
           image: stoneRain,
         },
