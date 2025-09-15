@@ -6,6 +6,10 @@ import { Github, Video } from "lucide-react";
 function Projects() {
   const { language } = useLanguage();
   const { title, data } = languages[language].projects;
+  let play ='Play';
+  if (language=='fr'){
+    play = "Jouer"
+  }
 
   return (
     <div className="mt-10" id="Projects">
@@ -32,7 +36,7 @@ function Projects() {
             <div className="flex">
               {project.demoLink && project.demoLink !== "#" && (
                 <a className="btn btn-accent w-2/3" href={project.demoLink} target="_blank">
-                  Demo
+                  {play}
                   <Video className="w-4" />
                 </a>
               )}

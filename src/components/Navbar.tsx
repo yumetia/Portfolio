@@ -15,7 +15,7 @@ const Navbar = () => {
       <a href="/"
         className="flex items-center font-bold text-3xl md:text-xl">
         <Container />
-        <span>Remi</span>
+        <span className="p-1">Remi</span>
         <span className="text-accent"> BOUYEDA</span>
       </a>
 
