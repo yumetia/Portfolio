@@ -16,7 +16,6 @@ const Navbar = () => {
     toggleBtn,
   } = languages[language].navbar;
 
-  // CV link est dans les traductions du footer (tu peux le déplacer si tu préfères)
   const { cvLink } = languages[language].footer;
 
   return (
