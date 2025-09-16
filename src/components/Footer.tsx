@@ -12,7 +12,7 @@ function Footer() {
       <aside>
         <Container className="w-10 h-10" />
         <p className="font-bold">
-          {title}
+          <span className="p-1">{title}</span>
           <span className="text-accent">{subtitle}</span>
         </p>
         <p>{copyright.replace("{year}", currentYear.toString())}</p>

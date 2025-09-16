@@ -52,13 +52,14 @@ const Navbar = () => {
         <li>
           <button
             id="toggle-lang"
-            className="btn btn-ghost cursor-pointer"
             onClick={toggleLanguage}
+            className="btn btn-outline rounded-full px-4"
           >
             {toggleBtn}
           </button>
         </li>
       </ul>
+
     </div>
   );
 };
