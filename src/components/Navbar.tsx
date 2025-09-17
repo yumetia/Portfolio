@@ -19,7 +19,7 @@ const Navbar = () => {
   const { cvLink } = languages[language].footer;
 
   return (
-    <div className="flex justify-center md:justify-between items-center p-4">
+    <div className="flex justify-center md:justify-between items-center p-4 flex-wrap">
       <a href="/" className="flex items-center font-bold text-3xl md:text-xl">
         <Container />
         <span className="p-1">Remi</span>
