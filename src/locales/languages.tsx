@@ -218,7 +218,7 @@ const languages = {
       title: "Remi",
       subtitle: "BOUYEDA",
       copyright: "Copyright © {year} - All rights reserved",
-      cvLink: "/CV/BouyedaRemiEnCv.pdf",
+      cvLink: "/CV/RemiBOUYEDA_CV_Web_Developer_ApprenticeShip.pdf",
     },
   },
 
@@ -408,7 +408,7 @@ const languages = {
       title: "Remi",
       subtitle: "BOUYEDA",
       copyright: "Copyright © {year} - Tous droits réservés",
-      cvLink:"/CV/BouyedaRemiFrCv.pdf",
+      cvLink:"/CV/RemiBOUYEDA_CV_Developpeur_web_Alternance.pdf",
     },
   },
 };
