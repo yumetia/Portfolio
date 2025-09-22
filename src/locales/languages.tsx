@@ -11,6 +11,7 @@ import imgCSS from "../assets/technos/css.png";
 import imgJS from "../assets/technos/js.png";
 import imgREACT from "../assets/technos/react.png";
 import imgHTML from "../assets/technos/html.png";
+import imgFIGMA from "../assets/technos/figma.svg";
 import imgNEXT from "../assets/technos/next-js.webp";
 import imgNODE from "../assets/technos/node-js.png";
 import imgTYPE from "../assets/technos/typescript.svg";
@@ -23,6 +24,7 @@ import imgLARAVEL from "../assets/technos/laravel.png";
 import imgMYSQL from "../assets/technos/mysql.png";
 import imgMONGODB from "../assets/technos/mongodb.png";
 import imgWORDPRESS from "../assets/technos/wordpress.png";
+
 // Projets
 import myMeetic from "../assets/projects/my_meetic.png";
 import stoneRain from "../assets/projects/stoneRain.png";
@@ -95,6 +97,7 @@ const languages = {
         { id: 14, name: "Symfony", image: imgSYMFONY },
         { id: 15, name: "Laravel", image: imgLARAVEL },
         { id: 16, name: "Wordpress", image: imgWORDPRESS },
+        { id: 17, name: "Figma", image: imgFIGMA },
       ],
       data: [
         {
@@ -286,6 +289,7 @@ const languages = {
         { id: 14, name: "Symfony", image: imgSYMFONY },
         { id: 15, name: "Laravel", image: imgLARAVEL },
         { id: 16, name: "Wordpress", image: imgWORDPRESS },
+        { id: 17, name: "Figma", image: imgFIGMA },
       ],
       data: [
         {
