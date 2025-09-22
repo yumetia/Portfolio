@@ -156,14 +156,15 @@ const languages = {
         },
         {
           id: 2,
-          title: "Stone Rain",
+          title: "My Twitter",
           description:
-            "A retro-style arcade game developed with Pyxel and Python, where players must dodge falling stones while trying to survive as long as possible.",
-          technologies: ["Python", "Pyxel"],
-          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
-          repoLink: "https://github.com/yumetia/IshiNoAme",
-          image: stoneRain,
+            "A Twitter-like social media platform built using PHP, JavaScript, and Skeleton CSS, featuring user authentication, tweet creation, and basic interactions.",
+          technologies: ["PHP", "JS", "Skeleton CSS"],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/my_twitter",
+          image: myTwitter,
         },
+        
         {
           id: 3,
           title: "Generate MVC",
@@ -174,15 +175,25 @@ const languages = {
           repoLink: "https://github.com/yumetia/GenerateMVC",
           image: generateMVC,
         },
+         {
+          id: 6,
+          title: "AniLink",
+          description:
+            "A platform for anime fans to track and share their favorite shows, built with React, Node.js, and Tailwind CSS. Currently in development.",
+          technologies: ["React", "Node.js", "Tailwind CSS", "(In development..)"],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/AniLink",
+          image: anilink,
+        },
         {
           id: 4,
-          title: "My Twitter",
+          title: "Stone Rain",
           description:
-            "A Twitter-like social media platform built using PHP, JavaScript, and Skeleton CSS, featuring user authentication, tweet creation, and basic interactions.",
-          technologies: ["PHP", "JS", "Skeleton CSS"],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/my_twitter",
-          image: myTwitter,
+            "A retro-style arcade game developed with Pyxel and Python, where players must dodge falling stones while trying to survive as long as possible.",
+          technologies: ["Python", "Pyxel"],
+          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
+          repoLink: "https://github.com/yumetia/IshiNoAme",
+          image: stoneRain,
         },
         {
           id: 5,
@@ -194,16 +205,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/connect4-js",
           image: connect4,
         },
-        {
-          id: 6,
-          title: "AniLink",
-          description:
-            "A platform for anime fans to track and share their favorite shows, built with React, Node.js, and Tailwind CSS. Currently in development.",
-          technologies: ["React", "Node.js", "Tailwind CSS", "(In development..)"],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/AniLink",
-          image: anilink,
-        },
+       
       ],
     },
     contact: {
@@ -348,13 +350,13 @@ const languages = {
         },
         {
           id: 2,
-          title: "Stone Rain",
+          title: "My Twitter",
           description:
-            "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
-          technologies: ["Python", "Pyxel"],
-          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
-          repoLink: "https://github.com/yumetia/IshiNoAme",
-          image: stoneRain,
+            "Une plateforme sociale ressemblant à Twitter, construite avec PHP, JavaScript et Skeleton CSS, offrant une authentification, la création de tweets et des interactions basiques.",
+          technologies: ["PHP", "JS", "Skeleton CSS"],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/my_twitter",
+          image: myTwitter,
         },
         {
           id: 3,
@@ -367,14 +369,24 @@ const languages = {
           image: generateMVC,
         },
         {
-          id: 4,
-          title: "My Twitter",
+          id: 6,
+          title: "AniLink",
           description:
-            "Une plateforme sociale ressemblant à Twitter, construite avec PHP, JavaScript et Skeleton CSS, offrant une authentification, la création de tweets et des interactions basiques.",
-          technologies: ["PHP", "JS", "Skeleton CSS"],
+            "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées, développée avec React, Node.js et Tailwind CSS. En développement.",
+          technologies: ["React", "Node.js", "Tailwind CSS", "(En développement..)"],
           demoLink: "#",
-          repoLink: "https://github.com/yumetia/my_twitter",
-          image: myTwitter,
+          repoLink: "https://github.com/yumetia/AniLink",
+          image: anilink,
+        },
+        {
+          id: 4,
+          title: "Stone Rain",
+          description:
+            "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
+          technologies: ["Python", "Pyxel"],
+          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
+          repoLink: "https://github.com/yumetia/IshiNoAme",
+          image: stoneRain,
         },
         {
           id: 5,
@@ -386,16 +398,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/connect4-js",
           image: connect4,
         },
-        {
-          id: 6,
-          title: "AniLink",
-          description:
-            "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées, développée avec React, Node.js et Tailwind CSS. En développement.",
-          technologies: ["React", "Node.js", "Tailwind CSS", "(En développement..)"],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/AniLink",
-          image: anilink,
-        },
+        
       ],
     },
     contact: {
