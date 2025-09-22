@@ -352,7 +352,7 @@ const languages = {
           description:
             "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
           technologies: ["Python", "Pyxel"],
-          demoLink: "https://yumetia.github.io/IshiNoAme/",
+          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
           repoLink: "https://github.com/yumetia/IshiNoAme",
           image: stoneRain,
         },
