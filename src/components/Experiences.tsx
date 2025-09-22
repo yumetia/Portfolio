@@ -32,7 +32,7 @@ function Experiences() {
         </div>
 
         {/* Affichage des expériences */}
-        <div className="w-full md:max-w-[50%]">
+        <div className="md:max-w-[50%]">
           {data.map((experience) => (
             <div
               key={experience.id}
