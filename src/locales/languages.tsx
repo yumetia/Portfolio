@@ -22,7 +22,7 @@ import imgSYMFONY from "../assets/technos/symfony.png";
 import imgLARAVEL from "../assets/technos/laravel.png";
 import imgMYSQL from "../assets/technos/mysql.png";
 import imgMONGODB from "../assets/technos/mongodb.png";
-
+import imgWORDPRESS from "../assets/technos/wordpress.png";
 // Projets
 import myMeetic from "../assets/projects/my_meetic.png";
 import stoneRain from "../assets/projects/stoneRain.png";
@@ -94,6 +94,7 @@ const languages = {
         { id: 13, name: "Python", image: imgPYTHON },
         { id: 14, name: "Symfony", image: imgSYMFONY },
         { id: 15, name: "Laravel", image: imgLARAVEL },
+        { id: 16, name: "Wordpress", image: imgWORDPRESS },
       ],
       data: [
         {
@@ -284,6 +285,7 @@ const languages = {
         { id: 13, name: "Python", image: imgPYTHON },
         { id: 14, name: "Symfony", image: imgSYMFONY },
         { id: 15, name: "Laravel", image: imgLARAVEL },
+        { id: 16, name: "Wordpress", image: imgWORDPRESS },
       ],
       data: [
         {
