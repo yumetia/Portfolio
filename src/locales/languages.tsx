@@ -30,9 +30,14 @@ import myMeetic from "../assets/projects/my_meetic.png";
 import myMeetic2 from "../assets/projects/my_meetic2.png";
 import myMeetic3 from "../assets/projects/my_meetic3.png";
 
+import Partely from "../assets/projects/Partely.png";
+import Partely2 from "../assets/projects/Partely2.png";
+import Partely3 from "../assets/projects/Partely3.png";
+
+import myTwitter from "../assets/projects/my_twitter.png";
+
 import stoneRain from "../assets/projects/stoneRain.png";
 import generateMVC from "../assets/projects/generateMVC.png";
-import myTwitter from "../assets/projects/my_twitter.png";
 import connect4 from "../assets/projects/connect4.png";
 import anilink from "../assets/projects/aniLink.png";
 
@@ -149,6 +154,16 @@ const languages = {
       data: [
         {
           id: 1,
+          title: "Partely",
+          description:
+            "Partely is an e-commerce platform designed to provide users with a smooth, intuitive, and user-friendly shopping experience. It allows visitors to browse a product catalog, add items to their cart, choose shipping methods, and complete their orders with ease",
+          technologies: ["React.js", "Symfony"],
+          images: [Partely,Partely2,Partely3],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/my_meetic",
+        },
+        {
+          id: 2,
           title: "My Meetic",
           description:
             "A dating platform clone built with PHP and JavaScript, allowing users to create profiles, browse potential matches, and interact in real-time.",
@@ -158,7 +173,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/my_meetic",
         },
         {
-          id: 2,
+          id: 3,
           title: "My Twitter",
           description:
             "A Twitter-like social media platform built using PHP, JavaScript, and Skeleton CSS, featuring user authentication, tweet creation, and basic interactions.",
@@ -168,7 +183,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/my_twitter",
         },
         {
-          id: 3,
+          id: 4,
           title: "Generate MVC",
           description:
             "A lightweight PHP MVC framework generator that simplifies project structure and speeds up backend development with automatic routing and controllers.",
@@ -178,17 +193,17 @@ const languages = {
           repoLink: "https://github.com/yumetia/GenerateMVC",
         },
         {
-          id: 6,
+          id: 5,
           title: "AniLink",
           description:
             "A platform for anime fans to track and share their favorite shows, built with React, Node.js, and Tailwind CSS. Currently in development.",
-          technologies: ["React", "Node.js", "Tailwind CSS", "(In development..)"],
+          technologies: ["React.js", "Node.js", "Tailwind CSS", "(In development..)"],
           images: [anilink],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/AniLink",
         },
         {
-          id: 4,
+          id: 6,
           title: "Stone Rain",
           description:
             "A retro-style arcade game developed with Pyxel and Python, where players must dodge falling stones while trying to survive as long as possible.",
@@ -198,7 +213,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/IshiNoAme",
         },
         {
-          id: 5,
+          id: 7,
           title: "Connect 4",
           description:
             "A classic Connect 4 game built in JavaScript, where two players compete to align four pieces in a row, column, or diagonal.",
@@ -339,18 +354,29 @@ const languages = {
     projects: {
       title: "Projets",
       data: [
+        
         {
           id: 1,
-          title: "My Meetic",
+          title: "Partely",
           description:
-            "Un clone de plateforme de rencontres développé avec PHP et JavaScript, permettant aux utilisateurs de créer des profils, parcourir des correspondances potentielles et interagir en temps réel.",
-          technologies: ["PHP", "JS"],
-          images: [myMeetic],
+            "Partely est une plateforme de e-commerce pensée pour offrir une expérience d’achat fluide, intuitive et agréable aux utilisateurs. Le projet permet aux visiteurs de parcourir un catalogue de produits, d’ajouter des articles à leur panier, de choisir un mode de livraison et de finaliser leur commande sans effort.",
+          technologies: ["React.js", "Symfony"],
+          images: [Partely,Partely2,Partely3],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/my_meetic",
         },
         {
           id: 2,
+          title: "My Meetic",
+          description:
+            "Un clone de plateforme de rencontres développé avec PHP et JavaScript, permettant aux utilisateurs de créer des profils, parcourir des correspondances potentielles et interagir en temps réel.",
+          technologies: ["PHP", "JS"],
+          images: [myMeetic,myMeetic2,myMeetic3],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/my_meetic",
+        },
+        {
+          id: 3,
           title: "My Twitter",
           description:
             "Une plateforme sociale ressemblant à Twitter, construite avec PHP, JavaScript et Skeleton CSS, offrant une authentification, la création de tweets et des interactions basiques.",
@@ -360,7 +386,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/my_twitter",
         },
         {
-          id: 3,
+          id: 4,
           title: "Generate MVC",
           description:
             "Un générateur de framework PHP MVC léger qui simplifie la structure du projet et accélère le développement backend grâce à un routage et des contrôleurs automatiques.",
@@ -370,17 +396,17 @@ const languages = {
           repoLink: "https://github.com/yumetia/GenerateMVC",
         },
         {
-          id: 6,
+          id: 5,
           title: "AniLink",
           description:
             "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées, développée avec React, Node.js et Tailwind CSS. En développement.",
-          technologies: ["React", "Node.js", "Tailwind CSS", "(En développement..)"],
+          technologies: ["React.js", "Node.js", "Tailwind CSS", "(En développement..)"],
           images: [anilink],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/AniLink",
         },
         {
-          id: 4,
+          id: 6,
           title: "Stone Rain",
           description:
             "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
@@ -390,7 +416,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/IshiNoAme",
         },
         {
-          id: 5,
+          id: 7,
           title: "Connect 4",
           description:
             "Un jeu classique de Connect 4 développé en JavaScript, où deux joueurs s'affrontent pour aligner quatre pièces en ligne, colonne ou diagonale.",

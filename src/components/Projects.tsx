@@ -21,7 +21,7 @@ function Projects() {
               className="bg-base-300 p-5 h-fit rounded-xl shadow-lg max-w-sm mx-auto"
             >
               {images.length > 0 ? (
-                <ImageCarousel images={images} alt={project.title} className="mb-3" />
+                <ImageCarousel images={images} alt={project.title} className="mb-3" autoPlay interval={4000} loop />
               ) : (
                 <div className="mb-3 w-full h-96 rounded-xl bg-base-200 grid place-items-center text-base-content/60">
                   No image
