@@ -39,11 +39,14 @@ export default function ImageCarousel({
   const autoplayTimer = useRef<number | null>(null);
 
   const prefersReduced = useMemo(
-    () => typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches,
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches,
     []
   );
 
-  const clamp = (i: number) => (loop ? (i + count) % count : Math.max(0, Math.min(count - 1, i)));
+  const clamp = (i: number) =>
+    loop ? (i + count) % count : Math.max(0, Math.min(count - 1, i));
 
   const prev = () => {
     if (isAnimating || count <= 1) return;
@@ -57,13 +60,14 @@ export default function ImageCarousel({
     setIndex((i) => clamp(i + 1));
   };
 
-
+  // anti-spam court
   useEffect(() => {
     if (!isAnimating) return;
     const t = window.setTimeout(() => setAnimating(false), 140);
     return () => window.clearTimeout(t);
   }, [isAnimating]);
 
+  // autoplay
   useEffect(() => {
     if (!autoPlay || prefersReduced || isPaused || count <= 1) return;
     autoplayTimer.current = window.setInterval(() => {
@@ -77,13 +81,14 @@ export default function ImageCarousel({
     };
   }, [autoPlay, prefersReduced, isPaused, interval, count]);
 
+  // pause quand onglet caché
   useEffect(() => {
     const onVis = () => setPaused(document.visibilityState !== "visible");
     document.addEventListener("visibilitychange", onVis);
     return () => document.removeEventListener("visibilitychange", onVis);
   }, []);
 
-
+  // swipe
   const SWIPE_THRESHOLD = 40;
 
   const onPointerDown = (e: React.PointerEvent) => {
@@ -115,6 +120,7 @@ export default function ImageCarousel({
     }
   };
 
+  // clavier
   const onKeyDown = (e: React.KeyboardEvent) => {
     switch (e.key) {
       case "ArrowLeft":
@@ -157,12 +163,11 @@ export default function ImageCarousel({
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
     >
-
       {count > 0 ? (
         <img
           src={images[index]}
           alt={`${alt} — ${a11yLabel}`}
-          className="w-full h-full object-contain bg-base-2 00 transition-transform duration-150"
+          className="w-full h-full object-contain bg-base-200 transition-transform duration-150"
           loading="lazy"
           decoding="async"
           draggable={false}
@@ -179,14 +184,13 @@ export default function ImageCarousel({
         {a11yLabel}
       </div>
 
-
       {count > 1 && (
         <div className="absolute inset-0 grid grid-cols-2 z-10">
           <button
             type="button"
             aria-label="Previous slide area"
             className="h-full w-full focus:outline-none"
-            onClick={(e) => {
+            onClick={() => {
               if (Math.abs(dxRef.current) < 5) prev();
               dxRef.current = 0;
             }}
@@ -195,7 +199,7 @@ export default function ImageCarousel({
             type="button"
             aria-label="Next slide area"
             className="h-full w-full focus:outline-none"
-            onClick={(e) => {
+            onClick={() => {
               if (Math.abs(dxRef.current) < 5) next();
               dxRef.current = 0;
             }}
@@ -203,7 +207,6 @@ export default function ImageCarousel({
         </div>
       )}
 
-      {/* flèches visibles (au-dessus des zones) */}
       {showArrows && count > 1 && (
         <>
           <button
@@ -227,7 +230,6 @@ export default function ImageCarousel({
         </>
       )}
 
-      {/* puces (au-dessus des zones) */}
       {showIndicators && count > 1 && (
         <div
           className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-base-100/70 backdrop-blur px-2 py-1 rounded-full z-30"
@@ -245,7 +247,9 @@ export default function ImageCarousel({
                 tabIndex={selected ? 0 : -1}
                 onClick={() => setIndex(i)}
                 className={`w-2.5 h-2.5 rounded-full transition-transform ${
-                  selected ? "bg-primary scale-110" : "bg-base-content/40 hover:bg-base-content/60"
+                  selected
+                    ? "bg-primary scale-110"
+                    : "bg-base-content/40 hover:bg-base-content/60"
                 }`}
               />
             );
