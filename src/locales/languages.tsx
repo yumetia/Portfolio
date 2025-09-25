@@ -30,6 +30,13 @@ import myMeetic from "../assets/projects/my_meetic.png";
 import myMeetic2 from "../assets/projects/my_meetic2.png";
 import myMeetic3 from "../assets/projects/my_meetic3.png";
 
+import myTweeter from "../assets/projects/my_twitter.png";
+import myTweeter2 from "../assets/projects/my_twitter2.png";
+import myTweeter3 from "../assets/projects/my_twitter3.png";
+import myTweeter4 from "../assets/projects/my_twitter4.png";
+import myTweeter5 from "../assets/projects/my_twitter5.png";
+import myTweeter6 from "../assets/projects/my_twitter6.png";
+
 import Partely from "../assets/projects/Partely.png";
 import Partely2 from "../assets/projects/Partely2.png";
 import Partely3 from "../assets/projects/Partely3.png";
@@ -92,18 +99,18 @@ const languages = {
         { id: 1, name: "HTML", image: imgHTML },
         { id: 2, name: "CSS", image: imgCSS },
         { id: 3, name: "JavaScript", image: imgJS },
-        { id: 4, name: "PHP", image: imgPHP },
+        { id: 4, name: "TypeScript", image: imgTYPE },
         { id: 5, name: "React", image: imgREACT },
         { id: 6, name: "Node.js", image: imgNODE },
-        { id: 7, name: "Tailwind CSS", image: imgTAILWIND },
-        { id: 8, name: "TypeScript", image: imgTYPE },
-        { id: 9, name: "Next.js", image: imgNEXT },
-        { id: 10, name: "Prisma", image: imgPRISMA },
-        { id: 11, name: "MySQL", image: imgMYSQL },
-        { id: 12, name: "MongoDB", image: imgMONGODB },
-        { id: 13, name: "Python", image: imgPYTHON },
-        { id: 14, name: "Symfony", image: imgSYMFONY },
-        { id: 15, name: "Laravel", image: imgLARAVEL },
+        { id: 7, name: "PHP", image: imgPHP },
+        { id: 8, name: "Symfony", image: imgSYMFONY },
+        { id: 9, name: "Laravel", image: imgLARAVEL },
+        { id: 10, name: "Tailwind CSS", image: imgTAILWIND },
+        { id: 11, name: "Next.js", image: imgNEXT },
+        { id: 12, name: "Prisma", image: imgPRISMA },
+        { id: 13, name: "MySQL", image: imgMYSQL },
+        { id: 14, name: "MongoDB", image: imgMONGODB },
+        { id: 15, name: "Python", image: imgPYTHON },
         { id: 16, name: "Wordpress", image: imgWORDPRESS },
         { id: 17, name: "Figma", image: imgFIGMA },
       ],
@@ -178,22 +185,12 @@ const languages = {
           description:
             "A Twitter-like social media platform built using PHP, JavaScript, and Skeleton CSS, featuring user authentication, tweet creation, and basic interactions.",
           technologies: ["PHP", "JS", "Skeleton CSS"],
-          images: [myTwitter],
+          images: [myTwitter,myTweeter2,myTweeter3,myTweeter4,myTweeter5,myTweeter6],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/my_twitter",
         },
-        {
+         {
           id: 4,
-          title: "Generate MVC",
-          description:
-            "A lightweight PHP MVC framework generator that simplifies project structure and speeds up backend development with automatic routing and controllers.",
-          technologies: ["PHP"],
-          images: [generateMVC],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/GenerateMVC",
-        },
-        {
-          id: 5,
           title: "AniLink",
           description:
             "A platform for anime fans to track and share their favorite shows, built with React, Node.js, and Tailwind CSS. Currently in development.",
@@ -201,6 +198,16 @@ const languages = {
           images: [anilink],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/AniLink",
+        },
+        {
+          id: 5,
+          title: "Generate MVC",
+          description:
+            "A lightweight PHP MVC framework generator that simplifies project structure and speeds up backend development with automatic routing and controllers.",
+          technologies: ["PHP"],
+          images: [generateMVC],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
         },
         {
           id: 6,
@@ -294,18 +301,18 @@ const languages = {
         { id: 1, name: "HTML", image: imgHTML },
         { id: 2, name: "CSS", image: imgCSS },
         { id: 3, name: "JavaScript", image: imgJS },
-        { id: 4, name: "PHP", image: imgPHP },
+        { id: 4, name: "TypeScript", image: imgTYPE },
         { id: 5, name: "React", image: imgREACT },
         { id: 6, name: "Node.js", image: imgNODE },
-        { id: 7, name: "Tailwind CSS", image: imgTAILWIND },
-        { id: 8, name: "TypeScript", image: imgTYPE },
-        { id: 9, name: "Next.js", image: imgNEXT },
-        { id: 10, name: "Prisma", image: imgPRISMA },
-        { id: 11, name: "MySQL", image: imgMYSQL },
-        { id: 12, name: "MongoDB", image: imgMONGODB },
-        { id: 13, name: "Python", image: imgPYTHON },
-        { id: 14, name: "Symfony", image: imgSYMFONY },
-        { id: 15, name: "Laravel", image: imgLARAVEL },
+        { id: 7, name: "PHP", image: imgPHP },
+        { id: 8, name: "Symfony", image: imgSYMFONY },
+        { id: 9, name: "Laravel", image: imgLARAVEL },
+        { id: 10, name: "Tailwind CSS", image: imgTAILWIND },
+        { id: 11, name: "Next.js", image: imgNEXT },
+        { id: 12, name: "Prisma", image: imgPRISMA },
+        { id: 13, name: "MySQL", image: imgMYSQL },
+        { id: 14, name: "MongoDB", image: imgMONGODB },
+        { id: 15, name: "Python", image: imgPYTHON },
         { id: 16, name: "Wordpress", image: imgWORDPRESS },
         { id: 17, name: "Figma", image: imgFIGMA },
       ],
@@ -385,18 +392,8 @@ const languages = {
           demoLink: "#",
           repoLink: "https://github.com/yumetia/my_twitter",
         },
-        {
+         {
           id: 4,
-          title: "Generate MVC",
-          description:
-            "Un générateur de framework PHP MVC léger qui simplifie la structure du projet et accélère le développement backend grâce à un routage et des contrôleurs automatiques.",
-          technologies: ["PHP"],
-          images: [generateMVC],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/GenerateMVC",
-        },
-        {
-          id: 5,
           title: "AniLink",
           description:
             "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées, développée avec React, Node.js et Tailwind CSS. En développement.",
@@ -404,6 +401,16 @@ const languages = {
           images: [anilink],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/AniLink",
+        },
+        {
+          id: 5,
+          title: "Generate MVC",
+          description:
+            "Un générateur de framework PHP MVC léger qui simplifie la structure du projet et accélère le développement backend grâce à un routage et des contrôleurs automatiques.",
+          technologies: ["PHP"],
+          images: [generateMVC],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
         },
         {
           id: 6,
