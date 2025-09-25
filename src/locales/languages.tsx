@@ -387,7 +387,7 @@ const languages = {
           description:
             "Une plateforme sociale ressemblant à Twitter, construite avec PHP, JavaScript et Skeleton CSS, offrant une authentification, la création de tweets et des interactions basiques.",
           technologies: ["PHP", "JS", "Skeleton CSS"],
-          images: [myTwitter],
+          images: [myTweeter,myTweeter2,myTweeter3,myTweeter4,myTweeter5,myTweeter6],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/my_twitter",
         },
