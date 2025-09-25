@@ -41,7 +41,6 @@ import Partely from "../assets/projects/Partely.png";
 import Partely2 from "../assets/projects/Partely2.png";
 import Partely3 from "../assets/projects/Partely3.png";
 
-import myTwitter from "../assets/projects/my_twitter.png";
 
 import stoneRain from "../assets/projects/stoneRain.png";
 import generateMVC from "../assets/projects/generateMVC.png";
@@ -185,7 +184,7 @@ const languages = {
           description:
             "A Twitter-like social media platform built using PHP, JavaScript, and Skeleton CSS, featuring user authentication, tweet creation, and basic interactions.",
           technologies: ["PHP", "JS", "Skeleton CSS"],
-          images: [myTwitter,myTweeter2,myTweeter3,myTweeter4,myTweeter5,myTweeter6],
+          images: [myTweeter,myTweeter2,myTweeter3,myTweeter4,myTweeter5,myTweeter6],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/my_twitter",
         },
