@@ -26,6 +26,11 @@ import imgMONGODB from "../assets/technos/mongodb.png";
 import imgWORDPRESS from "../assets/technos/wordpress.png";
 
 // Projets
+import Partely from "../assets/projects/Partely.png";
+import Partely2 from "../assets/projects/Partely2.png";
+import Partely3 from "../assets/projects/Partely3.png";
+
+
 import myMeetic from "../assets/projects/my_meetic.png";
 import myMeetic2 from "../assets/projects/my_meetic2.png";
 import myMeetic3 from "../assets/projects/my_meetic3.png";
@@ -37,9 +42,10 @@ import myTweeter4 from "../assets/projects/my_twitter4.png";
 import myTweeter5 from "../assets/projects/my_twitter5.png";
 import myTweeter6 from "../assets/projects/my_twitter6.png";
 
-import Partely from "../assets/projects/Partely.png";
-import Partely2 from "../assets/projects/Partely2.png";
-import Partely3 from "../assets/projects/Partely3.png";
+
+import cssGenerator from "../assets/projects/cssGenerator.png";
+import cssGenerator2 from "../assets/projects/cssGenerator2.png";
+import cssGenerator3 from "../assets/projects/cssGenerator3.png";
 
 
 import stoneRain from "../assets/projects/stoneRain.png";
@@ -197,6 +203,16 @@ const languages = {
           images: [anilink],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/AniLink",
+        },
+        {
+          id: 5,
+          title: "CSS Generator",
+          description:
+            "A tool that creates a sprite from a folder of images and automatically generates the corresponding CSS stylesheet. It supports standard command-line options (sprite name, CSS name, recursion…) as well as bonus options (padding, resizing, columns)",
+          technologies: ["PHP","GD library"],
+          images: [cssGenerator,cssGenerator2,cssGenerator3],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
         },
         {
           id: 5,
@@ -403,6 +419,16 @@ const languages = {
         },
         {
           id: 5,
+          title: "CSS Generator",
+          description:
+            "Un outil permettant de créer un sprite à partir d’un dossier d’images, et de générer automatiquement la feuille de style CSS correspondante. Cela gère les options classiques en ligne de commande (nom du sprite, nom du CSS, récursivité…) ainsi que des options bonus (padding, redimensionnement, colonnes).",
+          technologies: ["PHP","Librairie GD"],
+          images: [cssGenerator,cssGenerator2,cssGenerator3],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
+        },
+        {
+          id: 6,
           title: "Generate MVC",
           description:
             "Un générateur de framework PHP MVC léger qui simplifie la structure du projet et accélère le développement backend grâce à un routage et des contrôleurs automatiques.",
@@ -412,7 +438,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/GenerateMVC",
         },
         {
-          id: 6,
+          id: 7,
           title: "Stone Rain",
           description:
             "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
@@ -422,7 +448,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/IshiNoAme",
         },
         {
-          id: 7,
+          id: 8,
           title: "Connect 4",
           description:
             "Un jeu classique de Connect 4 développé en JavaScript, où deux joueurs s'affrontent pour aligner quatre pièces en ligne, colonne ou diagonale.",
