@@ -14,7 +14,7 @@ function Experiences() {
     <div className="mt-10" id="Experiences">
       <Title title={title} />
 
-      <div className="flex flex-col justify-center md:gap-10 md:flex-row mt-18">
+      <div className="flex flex-col justify-center md:flex-row mt-20">
         {/* Affichage des compétences */}
         <div className="grid grid-cols-2 content-center sm:grid-cols-3 gap-5">
           {skills.map((skill) => (
@@ -32,7 +32,7 @@ function Experiences() {
         </div>
 
         {/* Affichage des expériences */}
-        <div className="md:max-w-[50%]">
+        <div className="w-fit md:ml-30">
           {data.map((experience) => (
             <div
               key={experience.id}
