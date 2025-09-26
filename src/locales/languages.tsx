@@ -47,6 +47,11 @@ import cssGenerator from "../assets/projects/cssGenerator.png";
 import cssGenerator2 from "../assets/projects/cssGenerator2.png";
 import cssGenerator3 from "../assets/projects/cssGenerator3.png";
 
+import applyBot from "../assets/projects/applybot.png";
+import applyBot2 from "../assets/projects/applybot2.png";
+import applyBot3 from "../assets/projects/applybot3.png";
+import applyBot4 from "../assets/projects/applybot4.png";
+
 
 import stoneRain from "../assets/projects/stoneRain.png";
 import generateMVC from "../assets/projects/generateMVC.png";
@@ -208,14 +213,24 @@ const languages = {
           id: 5,
           title: "CSS Generator",
           description:
-            "A tool that creates a sprite from a folder of images and automatically generates the corresponding CSS stylesheet. It supports standard command-line options (sprite name, CSS name, recursion…) as well as bonus options (padding, resizing, columns)",
+            "A tool that creates a sprite from a folder of images and automatically generates the corresponding CSS stylesheet. It supports standard command-line options (sprite name, CSS name, recursion…) as well as bonus options (padding, resizing, columns).",
           technologies: ["PHP","GD library"],
           images: [cssGenerator,cssGenerator2,cssGenerator3],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/GenerateMVC",
         },
         {
-          id: 5,
+          id: 6,
+          title: "Apply Bot",
+          description:
+            "A tool that automates company search, extracts contact details (email, phone, city), and sends personalized internship applications with a CV attachment. It prevents duplicates, logs applications in a CSV file, and uses Gmail to send emails.",
+          technologies: ["Python","BeautifulSoup", "SMTPlib"],
+          images: [applyBot,applyBot2,applyBot3,applyBot4],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
+        },
+        {
+          id: 7,
           title: "Generate MVC",
           description:
             "A lightweight PHP MVC framework generator that simplifies project structure and speeds up backend development with automatic routing and controllers.",
@@ -225,7 +240,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/GenerateMVC",
         },
         {
-          id: 6,
+          id: 8,
           title: "Stone Rain",
           description:
             "A retro-style arcade game developed with Pyxel and Python, where players must dodge falling stones while trying to survive as long as possible.",
@@ -235,7 +250,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/IshiNoAme",
         },
         {
-          id: 7,
+          id: 9,
           title: "Connect 4",
           description:
             "A classic Connect 4 game built in JavaScript, where two players compete to align four pieces in a row, column, or diagonal.",
@@ -429,6 +444,16 @@ const languages = {
         },
         {
           id: 6,
+          title: "Apply Bot",
+          description:
+            "Un outil qui automatise la recherche d’entreprises, l’extraction de leurs contacts (email, téléphone, ville), et l’envoi d’emails de candidature avec un CV en pièce jointe. Il évite les doublons, tient un historique dans un fichier CSV, et gère l’envoi automatique par Gmail",
+          technologies: ["Python","BeautifulSoup", "SMTPlib"],
+          images: [applyBot,applyBot2,applyBot3,applyBot4],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
+        },
+        {
+          id: 7,
           title: "Generate MVC",
           description:
             "Un générateur de framework PHP MVC léger qui simplifie la structure du projet et accélère le développement backend grâce à un routage et des contrôleurs automatiques.",
@@ -438,7 +463,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/GenerateMVC",
         },
         {
-          id: 7,
+          id: 8,
           title: "Stone Rain",
           description:
             "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
@@ -448,7 +473,7 @@ const languages = {
           repoLink: "https://github.com/yumetia/IshiNoAme",
         },
         {
-          id: 8,
+          id: 9,
           title: "Connect 4",
           description:
             "Un jeu classique de Connect 4 développé en JavaScript, où deux joueurs s'affrontent pour aligner quatre pièces en ligne, colonne ou diagonale.",
