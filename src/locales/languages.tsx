@@ -11,6 +11,7 @@ import imgCSS from "../assets/technos/css.png";
 import imgJS from "../assets/technos/js.png";
 import imgREACT from "../assets/technos/react.png";
 import imgHTML from "../assets/technos/html.png";
+import imgFIGMA from "../assets/technos/figma.svg";
 import imgNEXT from "../assets/technos/next-js.webp";
 import imgNODE from "../assets/technos/node-js.png";
 import imgTYPE from "../assets/technos/typescript.svg";
@@ -22,12 +23,38 @@ import imgSYMFONY from "../assets/technos/symfony.png";
 import imgLARAVEL from "../assets/technos/laravel.png";
 import imgMYSQL from "../assets/technos/mysql.png";
 import imgMONGODB from "../assets/technos/mongodb.png";
+import imgWORDPRESS from "../assets/technos/wordpress.png";
 
 // Projets
+import Partely from "../assets/projects/Partely.png";
+import Partely2 from "../assets/projects/Partely2.png";
+import Partely3 from "../assets/projects/Partely3.png";
+
+
 import myMeetic from "../assets/projects/my_meetic.png";
+import myMeetic2 from "../assets/projects/my_meetic2.png";
+import myMeetic3 from "../assets/projects/my_meetic3.png";
+
+import myTweeter from "../assets/projects/my_twitter.png";
+import myTweeter2 from "../assets/projects/my_twitter2.png";
+import myTweeter3 from "../assets/projects/my_twitter3.png";
+import myTweeter4 from "../assets/projects/my_twitter4.png";
+import myTweeter5 from "../assets/projects/my_twitter5.png";
+import myTweeter6 from "../assets/projects/my_twitter6.png";
+
+
+import cssGenerator from "../assets/projects/cssGenerator.png";
+import cssGenerator2 from "../assets/projects/cssGenerator2.png";
+import cssGenerator3 from "../assets/projects/cssGenerator3.png";
+
+import applyBot from "../assets/projects/applybot.png";
+import applyBot2 from "../assets/projects/applybot2.png";
+import applyBot3 from "../assets/projects/applybot3.png";
+import applyBot4 from "../assets/projects/applybot4.png";
+
+
 import stoneRain from "../assets/projects/stoneRain.png";
 import generateMVC from "../assets/projects/generateMVC.png";
-import myTwitter from "../assets/projects/my_twitter.png";
 import connect4 from "../assets/projects/connect4.png";
 import anilink from "../assets/projects/aniLink.png";
 
@@ -82,18 +109,20 @@ const languages = {
         { id: 1, name: "HTML", image: imgHTML },
         { id: 2, name: "CSS", image: imgCSS },
         { id: 3, name: "JavaScript", image: imgJS },
-        { id: 4, name: "PHP", image: imgPHP },
+        { id: 4, name: "TypeScript", image: imgTYPE },
         { id: 5, name: "React", image: imgREACT },
         { id: 6, name: "Node.js", image: imgNODE },
-        { id: 7, name: "Tailwind CSS", image: imgTAILWIND },
-        { id: 8, name: "TypeScript", image: imgTYPE },
-        { id: 9, name: "Next.js", image: imgNEXT },
-        { id: 10, name: "Prisma", image: imgPRISMA },
-        { id: 11, name: "MySQL", image: imgMYSQL },
-        { id: 12, name: "MongoDB", image: imgMONGODB },
-        { id: 13, name: "Python", image: imgPYTHON },
-        { id: 14, name: "Symfony", image: imgSYMFONY },
-        { id: 15, name: "Laravel", image: imgLARAVEL },
+        { id: 7, name: "PHP", image: imgPHP },
+        { id: 8, name: "Symfony", image: imgSYMFONY },
+        { id: 9, name: "Laravel", image: imgLARAVEL },
+        { id: 10, name: "Tailwind CSS", image: imgTAILWIND },
+        { id: 11, name: "Next.js", image: imgNEXT },
+        { id: 12, name: "Prisma", image: imgPRISMA },
+        { id: 13, name: "MySQL", image: imgMYSQL },
+        { id: 14, name: "MongoDB", image: imgMONGODB },
+        { id: 15, name: "Python", image: imgPYTHON },
+        { id: 16, name: "Wordpress", image: imgWORDPRESS },
+        { id: 17, name: "Figma", image: imgFIGMA },
       ],
       data: [
         {
@@ -142,63 +171,93 @@ const languages = {
       data: [
         {
           id: 1,
+          title: "Partely",
+          description:
+            "Partely is an e-commerce platform designed to provide users with a smooth, intuitive, and user-friendly shopping experience. It allows visitors to browse a product catalog, add items to their cart, choose shipping methods, and complete their orders with ease",
+          technologies: ["React.js", "Symfony"],
+          images: [Partely,Partely2,Partely3],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/my_meetic",
+        },
+        {
+          id: 2,
           title: "My Meetic",
           description:
             "A dating platform clone built with PHP and JavaScript, allowing users to create profiles, browse potential matches, and interact in real-time.",
           technologies: ["PHP", "JS"],
+          images: [myMeetic,myMeetic2,myMeetic3],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/my_meetic",
-          image: myMeetic,
-        },
-        {
-          id: 2,
-          title: "Stone Rain",
-          description:
-            "A retro-style arcade game developed with Pyxel and Python, where players must dodge falling stones while trying to survive as long as possible.",
-          technologies: ["Python", "Pyxel"],
-          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
-          repoLink: "https://github.com/yumetia/IshiNoAme",
-          image: stoneRain,
         },
         {
           id: 3,
-          title: "Generate MVC",
-          description:
-            "A lightweight PHP MVC framework generator that simplifies project structure and speeds up backend development with automatic routing and controllers.",
-          technologies: ["PHP"],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/GenerateMVC",
-          image: generateMVC,
-        },
-        {
-          id: 4,
           title: "My Twitter",
           description:
             "A Twitter-like social media platform built using PHP, JavaScript, and Skeleton CSS, featuring user authentication, tweet creation, and basic interactions.",
           technologies: ["PHP", "JS", "Skeleton CSS"],
+          images: [myTweeter,myTweeter2,myTweeter3,myTweeter4,myTweeter5,myTweeter6],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/my_twitter",
-          image: myTwitter,
+        },
+         {
+          id: 4,
+          title: "AniLink",
+          description:
+            "A platform for anime fans to track and share their favorite shows, built with React, Node.js, and Tailwind CSS. Currently in development.",
+          technologies: ["React.js", "Node.js", "Tailwind CSS", "(In development..)"],
+          images: [anilink],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/AniLink",
         },
         {
           id: 5,
+          title: "CSS Generator",
+          description:
+            "A tool that creates a sprite from a folder of images and automatically generates the corresponding CSS stylesheet. It supports standard command-line options (sprite name, CSS name, recursion…) as well as bonus options (padding, resizing, columns).",
+          technologies: ["PHP","GD library"],
+          images: [cssGenerator,cssGenerator2,cssGenerator3],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
+        },
+        {
+          id: 6,
+          title: "Apply Bot",
+          description:
+            "A tool that automates company search, extracts contact details (email, phone, city), and sends personalized internship applications with a CV attachment. It prevents duplicates, logs applications in a CSV file, and uses Gmail to send emails.",
+          technologies: ["Python","BeautifulSoup", "SMTPlib"],
+          images: [applyBot,applyBot2,applyBot3,applyBot4],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
+        },
+        {
+          id: 7,
+          title: "Generate MVC",
+          description:
+            "A lightweight PHP MVC framework generator that simplifies project structure and speeds up backend development with automatic routing and controllers.",
+          technologies: ["PHP"],
+          images: [generateMVC],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
+        },
+        {
+          id: 8,
+          title: "Stone Rain",
+          description:
+            "A retro-style arcade game developed with Pyxel and Python, where players must dodge falling stones while trying to survive as long as possible.",
+          technologies: ["Python", "Pyxel"],
+          images: [stoneRain],
+          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
+          repoLink: "https://github.com/yumetia/IshiNoAme",
+        },
+        {
+          id: 9,
           title: "Connect 4",
           description:
             "A classic Connect 4 game built in JavaScript, where two players compete to align four pieces in a row, column, or diagonal.",
           technologies: ["JS"],
+          images: [connect4],
           demoLink: "https://yumetia.github.io/connect4-js/",
           repoLink: "https://github.com/yumetia/connect4-js",
-          image: connect4,
-        },
-        {
-          id: 6,
-          title: "AniLink",
-          description:
-            "A platform for anime fans to track and share their favorite shows, built with React, Node.js, and Tailwind CSS. Currently in development.",
-          technologies: ["React", "Node.js", "Tailwind CSS", "(In development..)"],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/AniLink",
-          image: anilink,
         },
       ],
     },
@@ -218,7 +277,7 @@ const languages = {
       title: "Remi",
       subtitle: "BOUYEDA",
       copyright: "Copyright © {year} - All rights reserved",
-      cvLink: "/CV/BouyedaRemiEnCv.pdf",
+      cvLink: "/CV/RemiBOUYEDA_CV_Web_Developer_ApprenticeShip.pdf",
     },
   },
 
@@ -272,18 +331,20 @@ const languages = {
         { id: 1, name: "HTML", image: imgHTML },
         { id: 2, name: "CSS", image: imgCSS },
         { id: 3, name: "JavaScript", image: imgJS },
-        { id: 4, name: "PHP", image: imgPHP },
+        { id: 4, name: "TypeScript", image: imgTYPE },
         { id: 5, name: "React", image: imgREACT },
         { id: 6, name: "Node.js", image: imgNODE },
-        { id: 7, name: "Tailwind CSS", image: imgTAILWIND },
-        { id: 8, name: "TypeScript", image: imgTYPE },
-        { id: 9, name: "Next.js", image: imgNEXT },
-        { id: 10, name: "Prisma", image: imgPRISMA },
-        { id: 11, name: "MySQL", image: imgMYSQL },
-        { id: 12, name: "MongoDB", image: imgMONGODB },
-        { id: 13, name: "Python", image: imgPYTHON },
-        { id: 14, name: "Symfony", image: imgSYMFONY },
-        { id: 15, name: "Laravel", image: imgLARAVEL },
+        { id: 7, name: "PHP", image: imgPHP },
+        { id: 8, name: "Symfony", image: imgSYMFONY },
+        { id: 9, name: "Laravel", image: imgLARAVEL },
+        { id: 10, name: "Tailwind CSS", image: imgTAILWIND },
+        { id: 11, name: "Next.js", image: imgNEXT },
+        { id: 12, name: "Prisma", image: imgPRISMA },
+        { id: 13, name: "MySQL", image: imgMYSQL },
+        { id: 14, name: "MongoDB", image: imgMONGODB },
+        { id: 15, name: "Python", image: imgPYTHON },
+        { id: 16, name: "Wordpress", image: imgWORDPRESS },
+        { id: 17, name: "Figma", image: imgFIGMA },
       ],
       data: [
         {
@@ -330,65 +391,96 @@ const languages = {
     projects: {
       title: "Projets",
       data: [
+        
         {
           id: 1,
+          title: "Partely",
+          description:
+            "Partely est une plateforme de e-commerce pensée pour offrir une expérience d’achat fluide, intuitive et agréable aux utilisateurs. Le projet permet aux visiteurs de parcourir un catalogue de produits, d’ajouter des articles à leur panier, de choisir un mode de livraison et de finaliser leur commande sans effort.",
+          technologies: ["React.js", "Symfony"],
+          images: [Partely,Partely2,Partely3],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/my_meetic",
+        },
+        {
+          id: 2,
           title: "My Meetic",
           description:
             "Un clone de plateforme de rencontres développé avec PHP et JavaScript, permettant aux utilisateurs de créer des profils, parcourir des correspondances potentielles et interagir en temps réel.",
           technologies: ["PHP", "JS"],
+          images: [myMeetic,myMeetic2,myMeetic3],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/my_meetic",
-          image: myMeetic,
-        },
-        {
-          id: 2,
-          title: "Stone Rain",
-          description:
-            "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
-          technologies: ["Python", "Pyxel"],
-          demoLink: "https://yumetia.github.io/IshiNoAme/",
-          repoLink: "https://github.com/yumetia/IshiNoAme",
-          image: stoneRain,
         },
         {
           id: 3,
-          title: "Generate MVC",
-          description:
-            "Un générateur de framework PHP MVC léger qui simplifie la structure du projet et accélère le développement backend grâce à un routage et des contrôleurs automatiques.",
-          technologies: ["PHP"],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/GenerateMVC",
-          image: generateMVC,
-        },
-        {
-          id: 4,
           title: "My Twitter",
           description:
             "Une plateforme sociale ressemblant à Twitter, construite avec PHP, JavaScript et Skeleton CSS, offrant une authentification, la création de tweets et des interactions basiques.",
           technologies: ["PHP", "JS", "Skeleton CSS"],
+          images: [myTweeter,myTweeter2,myTweeter3,myTweeter4,myTweeter5,myTweeter6],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/my_twitter",
-          image: myTwitter,
+        },
+         {
+          id: 4,
+          title: "AniLink",
+          description:
+            "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées, développée avec React, Node.js et Tailwind CSS. En développement.",
+          technologies: ["React.js", "Node.js", "Tailwind CSS", "(En développement..)"],
+          images: [anilink],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/AniLink",
         },
         {
           id: 5,
+          title: "CSS Generator",
+          description:
+            "Un outil permettant de créer un sprite à partir d’un dossier d’images, et de générer automatiquement la feuille de style CSS correspondante. Cela gère les options classiques en ligne de commande (nom du sprite, nom du CSS, récursivité…) ainsi que des options bonus (padding, redimensionnement, colonnes).",
+          technologies: ["PHP","Librairie GD"],
+          images: [cssGenerator,cssGenerator2,cssGenerator3],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
+        },
+        {
+          id: 6,
+          title: "Apply Bot",
+          description:
+            "Un outil qui automatise la recherche d’entreprises, l’extraction de leurs contacts (email, téléphone, ville), et l’envoi d’emails de candidature avec un CV en pièce jointe. Il évite les doublons, tient un historique dans un fichier CSV, et gère l’envoi automatique par Gmail",
+          technologies: ["Python","BeautifulSoup", "SMTPlib"],
+          images: [applyBot,applyBot2,applyBot3,applyBot4],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
+        },
+        {
+          id: 7,
+          title: "Generate MVC",
+          description:
+            "Un générateur de framework PHP MVC léger qui simplifie la structure du projet et accélère le développement backend grâce à un routage et des contrôleurs automatiques.",
+          technologies: ["PHP"],
+          images: [generateMVC],
+          demoLink: "#",
+          repoLink: "https://github.com/yumetia/GenerateMVC",
+        },
+        {
+          id: 8,
+          title: "Stone Rain",
+          description:
+            "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
+          technologies: ["Python", "Pyxel"],
+          images: [stoneRain],
+          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
+          repoLink: "https://github.com/yumetia/IshiNoAme",
+        },
+        {
+          id: 9,
           title: "Connect 4",
           description:
             "Un jeu classique de Connect 4 développé en JavaScript, où deux joueurs s'affrontent pour aligner quatre pièces en ligne, colonne ou diagonale.",
           technologies: ["JS"],
+          images: [connect4],
           demoLink: "https://yumetia.github.io/connect4-js/",
           repoLink: "https://github.com/yumetia/connect4-js",
-          image: connect4,
-        },
-        {
-          id: 6,
-          title: "AniLink",
-          description:
-            "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées, développée avec React, Node.js et Tailwind CSS. En développement.",
-          technologies: ["React", "Node.js", "Tailwind CSS", "(En développement..)"],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/AniLink",
-          image: anilink,
         },
       ],
     },
@@ -408,7 +500,7 @@ const languages = {
       title: "Remi",
       subtitle: "BOUYEDA",
       copyright: "Copyright © {year} - Tous droits réservés",
-      cvLink:"/CV/BouyedaRemiFrCv.pdf",
+      cvLink: "/CV/RemiBOUYEDA_CV_Developpeur_web_Alternance.pdf",
     },
   },
 };

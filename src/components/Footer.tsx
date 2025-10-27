@@ -1,10 +1,12 @@
-import { Container, Github, Linkedin,ArrowDownFromLine } from "lucide-react";
+// components/footer.jsx
+import { Container, Github, Linkedin } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
 
 function Footer() {
   const { language } = useLanguage();
-  const { title, subtitle, copyright,cvLink } = languages[language].footer;
+  const { title, subtitle, copyright } =
+    languages[language].footer;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -12,26 +14,34 @@ function Footer() {
       <aside>
         <Container className="w-10 h-10" />
         <p className="font-bold">
-          {title}
+          <span className="p-1">{title}</span>
           <span className="text-accent">{subtitle}</span>
         </p>
         <p>{copyright.replace("{year}", currentYear.toString())}</p>
       </aside>
+
       <nav>
         <div className="grid grid-flow-col gap-4">
-          <a href="https://github.com/yumetia" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/yumetia"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="btn btn-ghost btn-circle"
+            title="GitHub"
+          >
             <Github className="w-6 h-6 text-current" />
           </a>
+
           <a
             href="https://www.linkedin.com/in/remi-bouyeda-186846290/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="btn btn-ghost btn-circle"
+            title="LinkedIn"
           >
             <Linkedin className="w-6 h-6 text-current" />
-          </a>
-
-          <a href={cvLink} download>
-            <ArrowDownFromLine />
           </a>
         </div>
       </nav>
