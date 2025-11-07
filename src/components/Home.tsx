@@ -3,6 +3,7 @@ import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
 import { Mail } from "lucide-react";
 import img from "../assets/photocv.jpg";
+import SafeImage from "./SafeImage";
 
 function Home() {
   const { language } = useLanguage();
@@ -28,7 +29,7 @@ function Home() {
       </div>
 
       <div className="md:ml-60">
-        <img
+        <SafeImage
           src={img}
           alt="profile"
           className="w-96 h-96 object-cover border-8 border-accent shadow-xl"

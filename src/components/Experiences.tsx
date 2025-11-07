@@ -15,7 +15,7 @@ function Experiences() {
       <Title title={title} />
 
       <div className="flex flex-col justify-center md:flex-row mt-20">
-        {/* Affichage des compétences */}
+        {/* Skills */}
         <div className="grid grid-cols-2 content-center sm:grid-cols-3 gap-5">
           {skills.map((skill) => (
             <div key={skill.id} className="flex justify-center items-center flex-col h-1/8">
@@ -31,7 +31,7 @@ function Experiences() {
           ))}
         </div>
 
-        {/* Affichage des expériences */}
+        {/* Experiences*/}
         <div className="w-fit md:ml-30">
           {data.map((experience) => (
             <div

@@ -1,6 +1,7 @@
 // components/About.tsx
 import Title from "./Title";
 import img from "../assets/aboutpp.jpeg";
+import SafeImage from "./SafeImage";
 import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
 
@@ -13,7 +14,7 @@ function About() {
       <Title title={title} />
       <div className="flex justify-center items-center">
         <div className="hidden md:block">
-          <img
+          <SafeImage
             src={img}
             alt="profile"
             className="w-96 h-112 object-cover border-8 border-accent rounded-xl"

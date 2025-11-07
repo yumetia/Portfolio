@@ -47,10 +47,7 @@ import cssGenerator from "../assets/projects/cssGenerator.png";
 import cssGenerator2 from "../assets/projects/cssGenerator2.png";
 import cssGenerator3 from "../assets/projects/cssGenerator3.png";
 
-import applyBot from "../assets/projects/applybot.png";
-import applyBot2 from "../assets/projects/applybot2.png";
-import applyBot3 from "../assets/projects/applybot3.png";
-import applyBot4 from "../assets/projects/applybot4.png";
+import applybot from "../assets/projects/applybot.png";
 
 
 import stoneRain from "../assets/projects/stoneRain.png";
@@ -225,7 +222,7 @@ const languages = {
           description:
             "A tool that automates company search, extracts contact details (email, phone, city), and sends personalized internship applications with a CV attachment. It prevents duplicates, logs applications in a CSV file, and uses Gmail to send emails.",
           technologies: ["Python","BeautifulSoup", "SMTPlib"],
-          images: [applyBot,applyBot2,applyBot3,applyBot4],
+          images: [applybot],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/GenerateMVC",
         },
@@ -448,7 +445,7 @@ const languages = {
           description:
             "Un outil qui automatise la recherche d’entreprises, l’extraction de leurs contacts (email, téléphone, ville), et l’envoi d’emails de candidature avec un CV en pièce jointe. Il évite les doublons, tient un historique dans un fichier CSV, et gère l’envoi automatique par Gmail",
           technologies: ["Python","BeautifulSoup", "SMTPlib"],
-          images: [applyBot,applyBot2,applyBot3,applyBot4],
+          images: [applybot],
           demoLink: "#",
           repoLink: "https://github.com/yumetia/GenerateMVC",
         },
