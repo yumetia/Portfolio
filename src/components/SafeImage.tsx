@@ -1,4 +1,3 @@
-// src/components/SafeImage.tsx
 import React from "react";
 
 type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
@@ -13,7 +12,6 @@ const SafeImage: React.FC<Props> = ({ className = "", style,...rest }) => {
       onDragStart={(e) => e.preventDefault()}
       onContextMenu={(e) => e.preventDefault()}
       style={{
-        WebkitUserDrag: "none",
         WebkitUserSelect: "none",
         userSelect: "none",
         WebkitTouchCallout: "none",
