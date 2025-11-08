@@ -6,25 +6,6 @@ import amu from "../assets/institutions/amu.jpg";
 import epitech from "../assets/institutions/epitech.png";
 import lyceePerier from "../assets/institutions/lyceePerier.png";
 
-// Technos logos
-import imgCSS from "../assets/technos/css.png";
-import imgJS from "../assets/technos/js.png";
-import imgREACT from "../assets/technos/react.png";
-import imgHTML from "../assets/technos/html.png";
-import imgFIGMA from "../assets/technos/figma.svg";
-import imgNEXT from "../assets/technos/next-js.webp";
-import imgNODE from "../assets/technos/node-js.png";
-import imgTYPE from "../assets/technos/typescript.svg";
-import imgTAILWIND from "../assets/technos/tailwind.png";
-import imgPRISMA from "../assets/technos/prisma.webp";
-import imgPHP from "../assets/technos/php.png";
-import imgPYTHON from "../assets/technos/python.png";
-import imgSYMFONY from "../assets/technos/symfony.png";
-import imgLARAVEL from "../assets/technos/laravel.png";
-import imgMYSQL from "../assets/technos/mysql.png";
-import imgMONGODB from "../assets/technos/mongodb.png";
-import imgWORDPRESS from "../assets/technos/wordpress.png";
-
 // Projets
 import Partely from "../assets/projects/Partely.png";
 import Partely2 from "../assets/projects/Partely2.png";
@@ -60,8 +41,9 @@ const languages = {
     navbar: {
       home: "Home",
       about: "About",
-      experiences: "Experiences",
+      skills:"Skills",
       projects: "Projects",
+      experiences: "Experiences",
       contact: "Contact",
       toggleBtn: "English",
     },
@@ -102,25 +84,6 @@ const languages = {
     },
     experiences: {
       title: "Experiences",
-      skills: [
-        { id: 1, name: "HTML", image: imgHTML },
-        { id: 2, name: "CSS", image: imgCSS },
-        { id: 3, name: "JavaScript", image: imgJS },
-        { id: 4, name: "TypeScript", image: imgTYPE },
-        { id: 5, name: "React", image: imgREACT },
-        { id: 6, name: "Node.js", image: imgNODE },
-        { id: 7, name: "PHP", image: imgPHP },
-        { id: 8, name: "Symfony", image: imgSYMFONY },
-        { id: 9, name: "Laravel", image: imgLARAVEL },
-        { id: 10, name: "Tailwind CSS", image: imgTAILWIND },
-        { id: 11, name: "Next.js", image: imgNEXT },
-        { id: 12, name: "Prisma", image: imgPRISMA },
-        { id: 13, name: "MySQL", image: imgMYSQL },
-        { id: 14, name: "MongoDB", image: imgMONGODB },
-        { id: 15, name: "Python", image: imgPYTHON },
-        { id: 16, name: "Wordpress", image: imgWORDPRESS },
-        { id: 17, name: "Figma", image: imgFIGMA },
-      ],
       data: [
         {
           id: 1,
@@ -282,8 +245,9 @@ const languages = {
     navbar: {
       home: "Accueil",
       about: "À propos",
-      experiences: "Expériences",
+      skills: "Compétences",
       projects: "Projets",
+      experiences: "Expériences",
       contact: "Contact",
       toggleBtn: "Français",
     },
@@ -324,25 +288,7 @@ const languages = {
     },
     experiences: {
       title: "Expériences",
-      skills: [
-        { id: 1, name: "HTML", image: imgHTML },
-        { id: 2, name: "CSS", image: imgCSS },
-        { id: 3, name: "JavaScript", image: imgJS },
-        { id: 4, name: "TypeScript", image: imgTYPE },
-        { id: 5, name: "React", image: imgREACT },
-        { id: 6, name: "Node.js", image: imgNODE },
-        { id: 7, name: "PHP", image: imgPHP },
-        { id: 8, name: "Symfony", image: imgSYMFONY },
-        { id: 9, name: "Laravel", image: imgLARAVEL },
-        { id: 10, name: "Tailwind CSS", image: imgTAILWIND },
-        { id: 11, name: "Next.js", image: imgNEXT },
-        { id: 12, name: "Prisma", image: imgPRISMA },
-        { id: 13, name: "MySQL", image: imgMYSQL },
-        { id: 14, name: "MongoDB", image: imgMONGODB },
-        { id: 15, name: "Python", image: imgPYTHON },
-        { id: 16, name: "Wordpress", image: imgWORDPRESS },
-        { id: 17, name: "Figma", image: imgFIGMA },
-      ],
+
       data: [
         {
           id: 1,

@@ -5,7 +5,7 @@ import languages from "../locales/languages";
 
 const Navbar = () => {
   const { language, toggleLanguage } = useLanguage();
-  const { home, about, experiences, projects, contact, toggleBtn } =
+  const { home, about, skills,experiences, projects, contact, toggleBtn } =
     languages[language].navbar;
   const { cvLink } = languages[language].footer;
 
@@ -34,7 +34,7 @@ const Navbar = () => {
         ${show ? "translate-y-0" : "-translate-y-full"}
         bg-base-300/80 backdrop-blur-md border-b border-base-200`}
     >
-      <div className="flex justify-center md:justify-between items-center p-4 flex-wrap">
+      <div className="flex flex-col items-center p-4 md:justify-between md:flex-row">
         <a href="/" className="flex items-center font-bold text-3xl md:text-xl">
           <Container />
           <span className="p-1">Remi</span>
@@ -43,13 +43,14 @@ const Navbar = () => {
 
         <ul className="hidden md:flex space-x-4">
           <li><a href="#Home" className="btn btn-sm btn-ghost">{home}</a></li>
-          <li><a href="#About" className="btn btn-sm btn-ghost">{about}</a></li>
-          <li><a href="#Experiences" className="btn btn-sm btn-ghost">{experiences}</a></li>
-          <li><a href="#Projects" className="btn btn-sm btn-ghost">{projects}</a></li>
-          <li><a href="#Contact" className="btn btn-sm btn-ghost">{contact}</a></li>
+          <li><a href="#About" className="btn btn-sm btn-ghost text-sm">{about}</a></li>
+          <li><a href="#Skills" className="btn btn-sm btn-ghost text-sm">{skills}</a></li>
+          <li><a href="#Projects" className="btn btn-sm btn-ghost text-sm">{projects}</a></li>
+          <li><a href="#Experiences" className="btn btn-sm btn-ghost text-sm">{experiences}</a></li>
+          <li><a href="#Contact" className="btn btn-sm btn-ghost text-sm">{contact}</a></li>
         </ul>
 
-        <div className="ml-4 flex items-center gap-2">
+        <div className="flex gap-2">
           <button
             id="toggle-lang"
             onClick={toggleLanguage}

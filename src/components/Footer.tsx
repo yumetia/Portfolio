@@ -1,5 +1,5 @@
 // components/footer.jsx
-import { Container, Github, Linkedin } from "lucide-react";
+import { Container, Github } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
 
@@ -33,16 +33,6 @@ function Footer() {
             <Github className="w-6 h-6 text-current" />
           </a>
 
-          <a
-            href="https://www.linkedin.com/in/remi-bouyeda-186846290/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="btn btn-ghost btn-circle"
-            title="LinkedIn"
-          >
-            <Linkedin className="w-6 h-6 text-current" />
-          </a>
         </div>
       </nav>
     </footer>
