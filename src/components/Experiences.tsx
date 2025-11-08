@@ -1,72 +1,62 @@
-// components/Experiences.tsx
 import Title from "./Title";
 import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-function Experiences() {
-  // current lang
+export default function Experiences() {
   const { language } = useLanguage();
-
-  // Experience content
-  const { title, skills, data } = languages[language].experiences;
+  const { title, data: experiences } = languages[language].experiences;
 
   return (
     <div className="mt-10" id="Experiences">
       <Title title={title} />
 
-      <div className="flex flex-col justify-center md:flex-row mt-20">
-        {/* Skills */}
-        <div className="grid grid-cols-2 content-center sm:grid-cols-3 gap-5">
-          {skills.map((skill) => (
-            <div key={skill.id} className="flex justify-center items-center flex-col h-1/8">
-              <div className="w-24 h-24 p-2 rounded-full border-2 border-accent">
-                <img
-                  src={skill.image}
-                  alt={skill.name}
-                  className="object-cover rounded-full h-full w-full"
-                />
-              </div>
-              <span className="mt-2 text-sm">{skill.name}</span>
-            </div>
-          ))}
-        </div>
-
-        {/* Experiences*/}
-        <div className="w-fit md:ml-30">
-          {data.map((experience) => (
-            <div
-              key={experience.id}
-              className="flex flex-col h-fit justify-center bg-base-200 p-5 rounded-xl mb-5"
-            >
-              <div className="flex items-center w-fit gap-6">
-                <img
-                  src={experience.image}
-                  alt={experience.name}
-                  className="object-cover h-10 w-10"
-                />
-                <div>
-                  <h1 className="text-xl text-accent font-bold">
-                    {experience.role}
-                  </h1>
-                  <h3 className="text-xl font-italic text-gray-500 text-xs">
-                    {experience.at}
-                  </h3>
+      <div className="mt-10 mx-auto md:w-full">
+        <Swiper
+          effect="cards"
+          grabCursor
+          autoHeight
+          modules={[EffectCards, Pagination, Navigation]}
+          pagination={{ clickable: true }}
+          watchOverflow={true}
+          centeredSlides={true}
+          className="w-1/2 flex justify-center"
+        >
+          {experiences.map((exp) => (
+            <SwiperSlide key={exp.id} className=" flex justify-center ">
+              <div className="bg-base-200 p-10 rounded-xl shadow-lg">
+                <div className="flex items-center gap-4 w-full">
+                  <img
+                    src={exp.image}
+                    alt={exp.name ?? exp.at}
+                    className="h-10 w-10 object-cover rounded"
+                  />
+                  <div>
+                    <h2 className="text-lg font-bold text-accent">{exp.role}</h2>
+                    <p className="text-xs text-base-content/60">{exp.at}</p>
+                  </div>
                 </div>
+
+                <p className="ml-14 mt-1 text-sm">{exp.period}</p>
+
+                <ul className="ml-14 mt-4 space-y-2 max-h-56 overflow-y-auto pr-2">
+                  {exp.description.map((d, i) => (
+                    <li key={i} className="list-disc">
+                      {d}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="ml-16">
-                <span className="text-sm">{experience.period}</span>
-              </div>
-              <ul className="list-disc ml-16 mt-4 mb-10">
-                {experience.description.map((desc: string, idx: number) => (
-                  <li key={idx}>{desc}</li>
-                ))}
-              </ul>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </div>
   );
 }
 
-export default Experiences;

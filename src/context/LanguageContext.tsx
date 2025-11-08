@@ -27,7 +27,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Hook personnalisé pour éviter de faire useContext(LanguageContext) à chaque fois
 export function useLanguage() {
   return useContext(LanguageContext);
 }

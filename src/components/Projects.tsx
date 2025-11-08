@@ -26,7 +26,8 @@ function Projects() {
         grabCursor={true}
         modules={[EffectCards, EffectCoverflow, Pagination]}
         pagination={{ clickable: true }}
-        className="w-full md:w-1/2 mx-auto my-10"
+        className="w-1/4 mx-auto my-10
+        md:w-1/2"
       >
         {data.map((project: any) => {
           const images: string[] = project.images ?? [];
