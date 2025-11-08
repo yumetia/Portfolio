@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCards, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-cards";
@@ -20,15 +20,12 @@ function Projects() {
   return (
     <div className="mt-10" id="Projects">
       <Title title={title} />
-
-      {/* Swiper container */}
       <Swiper
         effect="cards" 
         grabCursor={true}
-        modules={[EffectCards, EffectCoverflow, Pagination]}
+        modules={[EffectCards, Pagination]}
         pagination={{ clickable: true }}
-        className="w-1/4 mx-auto my-10
-        md:w-1/2"
+        className="w-full md:w-1/2 mx-auto my-10"
       >
         {data.map((project: any) => {
           const images: string[] = project.images ?? [];
@@ -39,7 +36,7 @@ function Projects() {
                   <ImageCarousel
                     images={images}
                     alt={project.title}
-                    className="h-fullmb-3"
+                    className="h-fullbmb-3"
                     autoPlay
                     interval={4000}
                     loop

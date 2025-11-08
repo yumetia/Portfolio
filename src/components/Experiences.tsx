@@ -21,11 +21,11 @@ export default function Experiences() {
           effect="cards"
           grabCursor
           autoHeight
-          modules={[EffectCards, Pagination, Navigation]}
+          modules={[EffectCards,Pagination, Navigation]}
           pagination={{ clickable: true }}
           watchOverflow={true}
           centeredSlides={true}
-          className="w-1/2 flex justify-center"
+          className="flex justify-center md:w-1/2"
         >
           {experiences.map((exp) => (
             <SwiperSlide key={exp.id} className=" flex justify-center ">
@@ -44,7 +44,7 @@ export default function Experiences() {
 
                 <p className="ml-14 mt-1 text-sm">{exp.period}</p>
 
-                <ul className="ml-14 mt-4 space-y-2 max-h-56 overflow-y-auto pr-2">
+                <ul className="ml-14 mt-4 space-y-2 overflow-y-auto pr-2">
                   {exp.description.map((d, i) => (
                     <li key={i} className="list-disc">
                       {d}
