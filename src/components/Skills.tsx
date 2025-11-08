@@ -1,28 +1,23 @@
-import React from "react";
 import shared from "../locales/shared";
+import Title from "./Title";
+import languages from "../locales/languages";
+import { useLanguage } from "../context/LanguageContext";
 
-export type Skills = {
-  id: string | number;
-  name: string;
-  image: string;
-  level?: number; 
-};
+const Skills = () => {
+  const {language} = useLanguage();
+  const title = languages[language].navbar.skills
+  const skills = shared.skills;
 
-interface Props {
-  skills: Skills[];
-  className?: string;
-}
-
-const Skills: React.FC<Props> = ({ skills, className = "" }) => {
   if (!skills?.length) return null;
 
   return (
-    <div className={className}>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="mt-10" id="Skills">
+      <Title title={title}/>
+      <div className="mt-10 grid grid-cols-2 gap-4">
         {skills.map((s) => (
           <div
             key={s.id}
-            className="group bg-base-200 rounded-xl p-6 shadow hover:shadow-lg transition mx-auto"
+            className="group bg-base-200 rounded-xl p-6 shadow hover:shadow-lg transition"
           >
             <div className="flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-full border-2 border-accent overflow-hidden">
@@ -33,16 +28,6 @@ const Skills: React.FC<Props> = ({ skills, className = "" }) => {
                 />
               </div>
               <div className="mt-2 font-medium">{s.name}</div>
-
-              {typeof s.level === "number" && (
-                <div className="mt-2 w-full">
-                  <progress
-                    className="progress progress-accent h-1.5 w-full"
-                    value={s.level}
-                    max={100}
-                  />
-                </div>
-              )}
             </div>
           </div>
         ))}

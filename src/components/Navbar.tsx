@@ -5,7 +5,7 @@ import languages from "../locales/languages";
 
 const Navbar = () => {
   const { language, toggleLanguage } = useLanguage();
-  const { home, about, experiences, projects, contact, toggleBtn } =
+  const { home, about, skills,experiences, projects, contact, toggleBtn } =
     languages[language].navbar;
   const { cvLink } = languages[language].footer;
 
@@ -42,12 +42,11 @@ const Navbar = () => {
         </a>
 
         <ul className="hidden md:flex space-x-4">
-          <li><a href="#Home" className="btn btn-sm btn-ghost">{
-        
-        }</a></li>
+          <li><a href="#Home" className="btn btn-sm btn-ghost">{home}</a></li>
           <li><a href="#About" className="btn btn-sm btn-ghost text-sm">{about}</a></li>
-          <li><a href="#Experiences" className="btn btn-sm btn-ghost text-sm">{experiences}</a></li>
+          <li><a href="#Skills" className="btn btn-sm btn-ghost text-sm">{skills}</a></li>
           <li><a href="#Projects" className="btn btn-sm btn-ghost text-sm">{projects}</a></li>
+          <li><a href="#Experiences" className="btn btn-sm btn-ghost text-sm">{experiences}</a></li>
           <li><a href="#Contact" className="btn btn-sm btn-ghost text-sm">{contact}</a></li>
         </ul>
 

@@ -8,6 +8,7 @@ import "swiper/css/effect-coverflow";
 import Title from "./Title";
 import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
+
 import { Github, Video } from "lucide-react";
 import ImageCarousel from "./ImageCarousel";
 

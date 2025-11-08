@@ -41,8 +41,9 @@ const languages = {
     navbar: {
       home: "Home",
       about: "About",
-      experiences: "Experiences",
+      skills:"Skills",
       projects: "Projects",
+      experiences: "Experiences",
       contact: "Contact",
       toggleBtn: "English",
     },
@@ -244,8 +245,9 @@ const languages = {
     navbar: {
       home: "Accueil",
       about: "À propos",
-      experiences: "Expériences",
+      skills: "Compétences",
       projects: "Projets",
+      experiences: "Expériences",
       contact: "Contact",
       toggleBtn: "Français",
     },
