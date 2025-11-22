@@ -129,16 +129,16 @@ const languages = {
     projects: {
       title: "Projects",
       data: [
-        {
-          id: 1,
-          title: "Partely",
-          description:
-            "Partely is an e-commerce platform designed to provide users with a smooth, intuitive, and user-friendly shopping experience. It allows visitors to browse a product catalog, add items to their cart, choose shipping methods, and complete their orders with ease",
-          technologies: ["React.js", "Symfony"],
-          images: [Partely,Partely2,Partely3],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/my_meetic",
-        },
+        // {
+        //   id: 1,
+        //   title: "Partely",
+        //   description:
+        //     "Partely is an e-commerce platform designed to provide users with a smooth, intuitive, and user-friendly shopping experience. It allows visitors to browse a product catalog, add items to their cart, choose shipping methods, and complete their orders with ease",
+        //   technologies: ["React.js", "Symfony"],
+        //   images: [Partely,Partely2,Partely3],
+        //   demoLink: "#",
+        //   repoLink: "https://github.com/yumetia/my_meetic",
+        // },
         {
           id: 2,
           title: "My Meetic",
@@ -333,18 +333,17 @@ const languages = {
     },
     projects: {
       title: "Projets",
-      data: [
-        
-        {
-          id: 1,
-          title: "Partely",
-          description:
-            "Partely est une plateforme de e-commerce pensée pour offrir une expérience d’achat fluide, intuitive et agréable aux utilisateurs. Le projet permet aux visiteurs de parcourir un catalogue de produits, d’ajouter des articles à leur panier, de choisir un mode de livraison et de finaliser leur commande sans effort.",
-          technologies: ["React.js", "Symfony"],
-          images: [Partely,Partely2,Partely3],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/my_meetic",
-        },
+      data: [    
+        // {
+        //   id: 1,
+        //   title: "Partely",
+        //   description:
+        //     "Partely est une plateforme de e-commerce pensée pour offrir une expérience d’achat fluide, intuitive et agréable aux utilisateurs. Le projet permet aux visiteurs de parcourir un catalogue de produits, d’ajouter des articles à leur panier, de choisir un mode de livraison et de finaliser leur commande sans effort.",
+        //   technologies: ["React.js", "Symfony"],
+        //   images: [Partely,Partely2,Partely3],
+        //   demoLink: "#",
+        //   repoLink: "https://github.com/yumetia/my_meetic",
+        // },
         {
           id: 2,
           title: "My Meetic",
