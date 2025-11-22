@@ -7,9 +7,9 @@ import epitech from "../assets/institutions/epitech.png";
 import lyceePerier from "../assets/institutions/lyceePerier.png";
 
 // Projets
-import Partely from "../assets/projects/Partely.png";
-import Partely2 from "../assets/projects/Partely2.png";
-import Partely3 from "../assets/projects/Partely3.png";
+// import Partely from "../assets/projects/Partely.png";
+// import Partely2 from "../assets/projects/Partely2.png";
+// import Partely3 from "../assets/projects/Partely3.png";
 
 
 import myMeetic from "../assets/projects/my_meetic.png";
