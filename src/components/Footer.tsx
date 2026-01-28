@@ -1,7 +1,8 @@
 // components/footer.jsx
-import { Container, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
+import SafeImage from "./SafeImage";
 
 function Footer() {
   const { language } = useLanguage();
@@ -12,7 +13,7 @@ function Footer() {
   return (
     <footer className="footer footer-center p-10">
       <aside>
-        <Container className="w-10 h-10" />
+        <SafeImage alt="container" className="w-10 h-10" src="/src/favicon.png" roundedBlob={false} />
         <p className="font-bold">
           <span className="p-1">{title}</span>
           <span className="text-accent">{subtitle}</span>

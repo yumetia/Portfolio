@@ -39,7 +39,6 @@ function Projects() {
                     className="h-fullbmb-3"
                     autoPlay
                     interval={4000}
-                    loop
                   />
                 ) : (
                   <div className="mb-3 w-full h-96 rounded-xl bg-base-200 grid place-items-center text-base-content/60">

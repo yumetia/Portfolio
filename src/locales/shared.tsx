@@ -16,7 +16,7 @@ export interface Skill {
 }
 export const shared = {
     skills: [
-    { id: 5, name: "React", image: imgREACT },
+    { id: 5, name: "React/React Native", image: imgREACT },
     { id: 6, name: "Node.js", image: imgNODE },
     { id: 8, name: "Symfony", image: imgSYMFONY },
     { id: 9, name: "Laravel", image: imgLARAVEL },

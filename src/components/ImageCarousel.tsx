@@ -26,7 +26,6 @@ export interface ImageCarouselProps {
   className?: string;
   autoPlay?: boolean;
   interval?: number;
-  loop?: boolean;
   effect?: EffectName;
 
   showPagination?: boolean;
@@ -45,7 +44,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   className = "",
   autoPlay = true,
   interval = 4000,
-  loop = true,
   effect = "slide",
   showPagination = true,
   showNavigation = true,
@@ -88,8 +86,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
     <div className={className}>
       <Swiper
         modules={modules}
-        loop={loop}
-
         grabCursor
         // Effets
         effect={effect === "slide" ? undefined : effect}

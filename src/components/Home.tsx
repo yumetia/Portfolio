@@ -22,7 +22,7 @@ function Home() {
           <br />
           {paragraph3}
         </p>
-        <a href="#Contact" className="btn btn-accent md:w-fit">
+        <a href="#Contact" className="btn btn-accent md:w-fit hover:bg-base-200">
           <Mail className="w-5 h-5" />
           {contactBtn}
         </a>
@@ -33,9 +33,7 @@ function Home() {
           src={img}
           alt="profile"
           className="w-96 h-96 object-cover border-8 border-accent shadow-xl"
-          style={{
-            borderRadius: "30% 70% 70% 30%/ 67% 62% 38% 33%",
-          }}
+          roundedBlob={true}
         />
       </div>
     </div>

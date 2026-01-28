@@ -34,7 +34,7 @@ import applybot from "../assets/projects/applybot.png";
 import stoneRain from "../assets/projects/stoneRain.png";
 import generateMVC from "../assets/projects/generateMVC.png";
 import connect4 from "../assets/projects/connect4.png";
-import anilink from "../assets/projects/aniLink.png";
+import nakamanet from "../assets/projects/nakamanet.png";
 
 const languages = {
   en: {
@@ -49,11 +49,11 @@ const languages = {
     },
     home: {
       title: "Hey, I'm Remi Bouyeda",
-      paragraph1: "I'm a passionate 21-year-old developer !",
+      paragraph1: "Passionate 21-year-old developer !",
       paragraph2:
-        "I bring ideas to life through interactive and engaging web experiences.",
+        "I build web experiences with performance and security in mind.",
       paragraph3:
-        "Welcome to my world, where every line of code has a story to tell !",
+        "Each line of code is written for impact.",
       contactBtn: "Contact me !",
     },
     about: {
@@ -161,13 +161,13 @@ const languages = {
         },
          {
           id: 4,
-          title: "AniLink",
+          title: "Nakamanet",
           description:
             "A platform for anime fans to track and share their favorite shows, built with React, Node.js, and Tailwind CSS. Currently in development.",
           technologies: ["React.js", "Node.js", "Tailwind CSS", "(In development..)"],
-          images: [anilink],
+          images: [nakamanet],
           demoLink: "#",
-          repoLink: "https://github.com/yumetia/AniLink",
+          repoLink: "https://github.com/yumetia/nakamanet",
         },
         {
           id: 5,
@@ -253,11 +253,11 @@ const languages = {
     },
     home: {
       title: "Salut, je suis Remi Bouyeda",
-      paragraph1: "Je suis un développeur passionné de 21 ans !",
+      paragraph1: "Développeur passionné de 21 ans !",
       paragraph2:
-        "Je donne vie à des idées grâce à des expériences web interactives et immersives.",
+        "Je conçois des expériences web en mettant l’accent sur la performance et la sécurité.",
       paragraph3:
-        "Bienvenue dans mon univers, où chaque ligne de code raconte une histoire !",
+        "Chaque ligne de code est écrite avec un objectif clair.",
       contactBtn: "Me contacter !",
     },
     about: {
@@ -366,13 +366,13 @@ const languages = {
         },
          {
           id: 4,
-          title: "AniLink",
+          title: "Nakamanet",
           description:
             "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées, développée avec React, Node.js et Tailwind CSS. En développement.",
           technologies: ["React.js", "Node.js", "Tailwind CSS", "(En développement..)"],
-          images: [anilink],
+          images: [nakamanet],
           demoLink: "#",
-          repoLink: "https://github.com/yumetia/AniLink",
+          repoLink: "https://github.com/yumetia/nakamanet",
         },
         {
           id: 5,
