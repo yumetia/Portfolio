@@ -6,12 +6,6 @@ import amu from "../assets/institutions/amu.jpg";
 import epitech from "../assets/institutions/epitech.png";
 import lyceePerier from "../assets/institutions/lyceePerier.png";
 
-// Projets
-// import Partely from "../assets/projects/Partely.png";
-// import Partely2 from "../assets/projects/Partely2.png";
-// import Partely3 from "../assets/projects/Partely3.png";
-
-
 import myMeetic from "../assets/projects/my_meetic.png";
 import myMeetic2 from "../assets/projects/my_meetic2.png";
 import myMeetic3 from "../assets/projects/my_meetic3.png";
@@ -23,25 +17,241 @@ import myTweeter4 from "../assets/projects/my_twitter4.png";
 import myTweeter5 from "../assets/projects/my_twitter5.png";
 import myTweeter6 from "../assets/projects/my_twitter6.png";
 
-
 import cssGenerator from "../assets/projects/cssGenerator.png";
 import cssGenerator2 from "../assets/projects/cssGenerator2.png";
 import cssGenerator3 from "../assets/projects/cssGenerator3.png";
 
 import applybot from "../assets/projects/applybot.png";
 
-
 import stoneRain from "../assets/projects/stoneRain.png";
 import generateMVC from "../assets/projects/generateMVC.png";
 import connect4 from "../assets/projects/connect4.png";
 import nakamanet from "../assets/projects/nakamanet.png";
+
+export type Locale = "en" | "fr";
+
+/**
+ * Helper: read `field_en` / `field_fr` from an object.
+ * Fallback order: field_<locale> -> field_en -> field (if you ever keep a non-localized field)
+ */
+export function getLocalized<T = string>(
+  obj: Record<string, any>,
+  field: string,
+  locale: Locale
+): T {
+  const key = `${field}_${locale}`;
+  if (key in obj) return obj[key] as T;
+
+  const fallbackEn = `${field}_en`;
+  if (fallbackEn in obj) return obj[fallbackEn] as T;
+
+  return obj[field] as T;
+}
+
+/* ----------------------------- Shared data ----------------------------- */
+
+const aboutSections = [
+  {
+    id: 1,
+    title_en: "Frontend Developer",
+    title_fr: "Développeur Frontend",
+    description_en:
+      "I am a frontend developer with solid experience in building interactive and responsive web applications.",
+    description_fr:
+      "Je suis développeur frontend avec une solide expérience dans la création d'applications web interactives et réactives.",
+    icon: <LetterText className="text-accent scale-150" />,
+  },
+  {
+    id: 2,
+    title_en: "Backend Developer",
+    title_fr: "Développeur Backend",
+    description_en:
+      "I have a strong foundation in backend development, designing robust APIs and handling database management.",
+    description_fr:
+      "J'ai une base solide en développement backend, en concevant des API robustes et en gérant des bases de données.",
+    icon: <CalendarSync className="text-accent scale-150" />,
+  },
+  {
+    id: 3,
+    title_en: "Passionate about UI/UX",
+    title_fr: "Passionné par l'UI/UX",
+    description_en:
+      "Crafting visually appealing and user-friendly interfaces is one of my top priorities.",
+    description_fr:
+      "Créer des interfaces visuellement attrayantes et faciles à utiliser est l'une de mes priorités.",
+    icon: <Paintbrush className="text-accent scale-150" />,
+  },
+] as const;
+
+const experiencesData = [
+  {
+    id: 1,
+    role_en: "Fullstack Developer",
+    role_fr: "Développeur Fullstack",
+    at_en: "Web@cademie by Epitech",
+    at_fr: "Web@cademie by Epitech",
+    period: "Nov 2024 - Nov 2027",
+    description_en: [
+      "Designed and built an internal collaboration platform to improve team workflows.",
+      "Implemented a scalable and optimized software architecture, ensuring high performance and maintainability.",
+      "Developed backend and frontend features using modern web technologies.",
+    ],
+    description_fr: [
+      "Conception et développement d'une plateforme interne de collaboration pour améliorer les flux de travail d'équipe.",
+      "Mise en place d'une architecture logicielle évolutive et optimisée, garantissant des performances élevées et une maintenance aisée.",
+      "Développement des fonctionnalités backend et frontend avec des technologies web modernes.",
+    ],
+    name_en: "Epitech",
+    name_fr: "Epitech",
+    image: epitech,
+  },
+  {
+    id: 2,
+    role_en: "Software, DevOps",
+    role_fr: "Software, DevOps",
+    at_en: "Aix-Marseille University",
+    at_fr: "Université Aix-Marseille",
+    period: "Sep 2022 - Jan 2024",
+    description_en: [
+      "Porting and customizing Kodi on Linux.",
+      "Optimizing the application's performance.",
+      "Gaining expertise in Bash scripting for automation and system management.",
+    ],
+    description_fr: [
+      "Portage et personnalisation de Kodi sur Linux.",
+      "Optimisation des performances de l'application.",
+      "Acquisition d'une expertise en script Bash pour l'automatisation et la gestion des systèmes.",
+    ],
+    name_en: "Aix-Marseille University",
+    name_fr: "Université Aix-Marseille",
+    image: amu,
+  },
+  {
+    id: 3,
+    role_en: "Computer Science Student",
+    role_fr: "Étudiant en Informatique",
+    at_en: "Lycée Périer",
+    at_fr: "Lycée Périer",
+    period: "Sep 2019 - Jul 2022",
+    description_en: [
+      "Built a strong foundation in algorithm design and problem-solving using Python.",
+      "Explored essential data structures and algorithms through hands-on programming.",
+      "Applied logical reasoning and computational thinking to develop optimized solutions.",
+    ],
+    description_fr: [
+      "Construction d'une base solide en conception d'algorithmes et résolution de problèmes avec Python.",
+      "Exploration des structures de données et des algorithmes essentiels à travers des projets pratiques.",
+      "Application de la pensée logique et computationnelle pour développer des solutions optimisées.",
+    ],
+    name_en: "Lycée Périer",
+    name_fr: "Lycée Périer",
+    image: lyceePerier,
+  },
+] as const;
+
+const projectsData = [
+  {
+    id: 2,
+    title: "My Meetic",
+    description_en:
+      "A dating platform clone built with PHP and JavaScript, allowing users to create profiles, browse potential matches, and interact in real-time.",
+    description_fr:
+      "Un clone de plateforme de rencontres développé avec PHP et JavaScript, permettant aux utilisateurs de créer des profils, parcourir des correspondances potentielles et interagir en temps réel.",
+    technologies: ["PHP", "JS"],
+    images: [myMeetic, myMeetic2, myMeetic3],
+    demoLink: "#",
+    repoLink: "https://github.com/yumetia/my_meetic",
+  },
+  {
+    id: 3,
+    title: "My Twitter",
+    description_en:
+      "A Twitter-like social media platform built using PHP, JavaScript, and Skeleton CSS, featuring user authentication, tweet creation, and basic interactions.",
+    description_fr:
+      "Une plateforme sociale ressemblant à Twitter, construite avec PHP, JavaScript et Skeleton CSS, offrant une authentification, la création de tweets et des interactions basiques.",
+    technologies: ["PHP", "JS", "Skeleton CSS"],
+    images: [myTweeter, myTweeter2, myTweeter3, myTweeter4, myTweeter5, myTweeter6],
+    demoLink: "#",
+    repoLink: "https://github.com/yumetia/my_twitter",
+  },
+  {
+    id: 4,
+    title: "Nakamanet",
+    description_en:
+      "A platform for anime fans to track and share their favorite shows. Currently in development.",
+    description_fr:
+      "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées. En développement.",
+    // If tech labels differ by language, keep both.
+    technologies_en: ["Next.js", "Laravel", "AdonisJS", "DaisyUI", "(In development..)"],
+    technologies_fr: ["React.js", "Node.js", "Tailwind CSS", "(En développement..)"],
+    images: [nakamanet],
+    demoLink: "#",
+    repoLink: "https://github.com/yumetia/nakamanet",
+  },
+  {
+    id: 5,
+    title: "CSS Generator",
+    description_en:
+      "A tool that creates a sprite from a folder of images and automatically generates the corresponding CSS stylesheet. It supports standard command-line options (sprite name, CSS name, recursion…) as well as bonus options (padding, resizing, columns).",
+    description_fr:
+      "Un outil permettant de créer un sprite à partir d’un dossier d’images, et de générer automatiquement la feuille de style CSS correspondante. Cela gère les options classiques en ligne de commande (nom du sprite, nom du CSS, récursivité…) ainsi que des options bonus (padding, redimensionnement, colonnes).",
+    technologies_en: ["PHP", "GD library"],
+    technologies_fr: ["PHP", "Librairie GD"],
+    images: [cssGenerator, cssGenerator2, cssGenerator3],
+    demoLink: "#",
+    repoLink: "https://github.com/yumetia/GenerateMVC",
+  },
+  {
+    id: 6,
+    title: "Apply Bot",
+    description_en:
+      "A tool that automates company search, extracts contact details (email, phone, city), and sends personalized internship applications with a CV attachment. It prevents duplicates, logs applications in a CSV file, and uses Gmail to send emails.",
+    description_fr:
+      "Un outil qui automatise la recherche d’entreprises, l’extraction de leurs contacts (email, téléphone, ville), et l’envoi d’emails de candidature avec un CV en pièce jointe. Il évite les doublons, tient un historique dans un fichier CSV, et gère l’envoi automatique par Gmail.",
+    technologies: ["Python", "BeautifulSoup", "SMTPlib"],
+    images: [applybot],
+    demoLink: "#",
+    repoLink: "https://github.com/yumetia/GenerateMVC",
+  },
+  {
+    id: 7,
+    title: "Generate MVC",
+    description_en:
+      "A lightweight PHP MVC framework generator that simplifies project structure and speeds up backend development with automatic routing and controllers.",
+    description_fr:
+      "Un générateur de framework PHP MVC léger qui simplifie la structure du projet et accélère le développement backend grâce à un routage et des contrôleurs automatiques.",
+    technologies: ["PHP"],
+    images: [generateMVC],
+    demoLink: "#",
+    repoLink: "https://github.com/yumetia/GenerateMVC",
+  },
+  {
+    id: 8,
+    title: "Stone Rain",
+    description_en:
+      "A retro-style arcade game developed with Pyxel and Python, where players must dodge falling stones while trying to survive as long as possible.",
+    description_fr:
+      "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
+    technologies: ["Python", "Pyxel"],
+    images: [stoneRain],
+    demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
+    repoLink: "https://github.com/yumetia/IshiNoAme",
+  },
+] as const;
+
+/* ----------------------------- Language dict ---------------------------- */
+
+const footerBase = {
+  title: "Remi",
+  subtitle: "BOUYEDA",
+};
 
 const languages = {
   en: {
     navbar: {
       home: "Home",
       about: "About",
-      skills:"Skills",
+      skills: "Skills",
       projects: "Projects",
       experiences: "Experiences",
       contact: "Contact",
@@ -50,176 +260,21 @@ const languages = {
     home: {
       title: "Hey, I'm Remi Bouyeda",
       paragraph1: "Passionate 21-year-old developer !",
-      paragraph2:
-        "I build web experiences with performance and security in mind.",
-      paragraph3:
-        "Each line of code is written for impact.",
+      paragraph2: "I build web experiences with performance and security in mind.",
+      paragraph3: "Each line of code is written for impact.",
       contactBtn: "Contact me !",
     },
     about: {
       title: "About",
-      sections: [
-        {
-          id: 1,
-          title: "Frontend Developer",
-          description:
-            "I am a frontend developer with solid experience in building interactive and responsive web applications.",
-          icon: <LetterText className="text-accent scale-150" />,
-        },
-        {
-          id: 2,
-          title: "Backend Developer",
-          description:
-            "I have a strong foundation in backend development, designing robust APIs and handling database management.",
-          icon: <CalendarSync className="text-accent scale-150" />,
-        },
-        {
-          id: 3,
-          title: "Passionate about UI/UX",
-          description:
-            "Crafting visually appealing and user-friendly interfaces is one of my top priorities.",
-          icon: <Paintbrush className="text-accent scale-150" />,
-        },
-      ],
+      sections: aboutSections, // shared
     },
     experiences: {
       title: "Experiences",
-      data: [
-        {
-          id: 1,
-          role: "Fullstack Developer",
-          at: "Web@cademie by Epitech",
-          period: "Nov 2024 - Nov 2027",
-          description: [
-            "Designed and built an internal collaboration platform to improve team workflows.",
-            "Implemented a scalable and optimized software architecture, ensuring high performance and maintainability.",
-            "Developed backend and frontend features using modern web technologies.",
-          ],
-          name: "Epitech",
-          image: epitech,
-        },
-        {
-          id: 2,
-          role: "Software, DevOps",
-          at: "Aix-Marseille University",
-          period: "Sep 2022 - Jan 2024",
-          description: [
-            "Porting and customizing Kodi on Linux.",
-            "Optimizing the application's performance.",
-            "Gaining expertise in Bash scripting for automation and system management.",
-          ],
-          name: "Aix-Marseille University",
-          image: amu,
-        },
-        {
-          id: 3,
-          role: "Computer Science Student",
-          at: "Lycée Périer",
-          period: "Sep 2019 - Jul 2022",
-          description: [
-            "Built a strong foundation in algorithm design and problem-solving using Python.",
-            "Explored essential data structures and algorithms through hands-on programming.",
-            "Applied logical reasoning and computational thinking to develop optimized solutions.",
-          ],
-          name: "Lycée Périer",
-          image: lyceePerier,
-        },
-      ],
+      data: experiencesData, // shared
     },
     projects: {
       title: "Projects",
-      data: [
-        // {
-        //   id: 1,
-        //   title: "Partely",
-        //   description:
-        //     "Partely is an e-commerce platform designed to provide users with a smooth, intuitive, and user-friendly shopping experience. It allows visitors to browse a product catalog, add items to their cart, choose shipping methods, and complete their orders with ease",
-        //   technologies: ["React.js", "Symfony"],
-        //   images: [Partely,Partely2,Partely3],
-        //   demoLink: "#",
-        //   repoLink: "https://github.com/yumetia/my_meetic",
-        // },
-        {
-          id: 2,
-          title: "My Meetic",
-          description:
-            "A dating platform clone built with PHP and JavaScript, allowing users to create profiles, browse potential matches, and interact in real-time.",
-          technologies: ["PHP", "JS"],
-          images: [myMeetic,myMeetic2,myMeetic3],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/my_meetic",
-        },
-        {
-          id: 3,
-          title: "My Twitter",
-          description:
-            "A Twitter-like social media platform built using PHP, JavaScript, and Skeleton CSS, featuring user authentication, tweet creation, and basic interactions.",
-          technologies: ["PHP", "JS", "Skeleton CSS"],
-          images: [myTweeter,myTweeter2,myTweeter3,myTweeter4,myTweeter5,myTweeter6],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/my_twitter",
-        },
-         {
-          id: 4,
-          title: "Nakamanet",
-          description:
-            "A platform for anime fans to track and share their favorite shows, built with React, Node.js, and Tailwind CSS. Currently in development.",
-          technologies: ["React.js", "Node.js", "Tailwind CSS", "(In development..)"],
-          images: [nakamanet],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/nakamanet",
-        },
-        {
-          id: 5,
-          title: "CSS Generator",
-          description:
-            "A tool that creates a sprite from a folder of images and automatically generates the corresponding CSS stylesheet. It supports standard command-line options (sprite name, CSS name, recursion…) as well as bonus options (padding, resizing, columns).",
-          technologies: ["PHP","GD library"],
-          images: [cssGenerator,cssGenerator2,cssGenerator3],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/GenerateMVC",
-        },
-        {
-          id: 6,
-          title: "Apply Bot",
-          description:
-            "A tool that automates company search, extracts contact details (email, phone, city), and sends personalized internship applications with a CV attachment. It prevents duplicates, logs applications in a CSV file, and uses Gmail to send emails.",
-          technologies: ["Python","BeautifulSoup", "SMTPlib"],
-          images: [applybot],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/GenerateMVC",
-        },
-        {
-          id: 7,
-          title: "Generate MVC",
-          description:
-            "A lightweight PHP MVC framework generator that simplifies project structure and speeds up backend development with automatic routing and controllers.",
-          technologies: ["PHP"],
-          images: [generateMVC],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/GenerateMVC",
-        },
-        {
-          id: 8,
-          title: "Stone Rain",
-          description:
-            "A retro-style arcade game developed with Pyxel and Python, where players must dodge falling stones while trying to survive as long as possible.",
-          technologies: ["Python", "Pyxel"],
-          images: [stoneRain],
-          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
-          repoLink: "https://github.com/yumetia/IshiNoAme",
-        },
-        {
-          id: 9,
-          title: "Connect 4",
-          description:
-            "A classic Connect 4 game built in JavaScript, where two players compete to align four pieces in a row, column, or diagonal.",
-          technologies: ["JS"],
-          images: [connect4],
-          demoLink: "https://yumetia.github.io/connect4-js/",
-          repoLink: "https://github.com/yumetia/connect4-js",
-        },
-      ],
+      data: projectsData, // shared
     },
     contact: {
       title: "Contact",
@@ -234,8 +289,7 @@ const languages = {
       error: "❌ Failed to send message. Please try again.",
     },
     footer: {
-      title: "Remi",
-      subtitle: "BOUYEDA",
+      ...footerBase,
       copyright: "Copyright © {year} - All rights reserved",
       cvLink: "/CV/RemiBOUYEDA_CV_Web_Developer_ApprenticeShip.pdf",
     },
@@ -256,175 +310,20 @@ const languages = {
       paragraph1: "Développeur passionné de 21 ans !",
       paragraph2:
         "Je conçois des expériences web en mettant l’accent sur la performance et la sécurité.",
-      paragraph3:
-        "Chaque ligne de code est écrite avec un objectif clair.",
+      paragraph3: "Chaque ligne de code est écrite avec un objectif clair.",
       contactBtn: "Me contacter !",
     },
     about: {
       title: "À propos",
-      sections: [
-        {
-          id: 1,
-          title: "Développeur Frontend",
-          description:
-            "Je suis développeur frontend avec une solide expérience dans la création d'applications web interactives et réactives.",
-          icon: <LetterText className="text-accent scale-150" />,
-        },
-        {
-          id: 2,
-          title: "Développeur Backend",
-          description:
-            "J'ai une base solide en développement backend, en concevant des API robustes et en gérant des bases de données.",
-          icon: <CalendarSync className="text-accent scale-150" />,
-        },
-        {
-          id: 3,
-          title: "Passionné par l'UI/UX",
-          description:
-            "Créer des interfaces visuellement attrayantes et faciles à utiliser est l'une de mes priorités.",
-          icon: <Paintbrush className="text-accent scale-150" />,
-        },
-      ],
+      sections: aboutSections, // shared
     },
     experiences: {
       title: "Expériences",
-
-      data: [
-        {
-          id: 1,
-          role: "Développeur Fullstack",
-          at: "Web@cademie by Epitech",
-          period: "Nov 2024 - Nov 2027",
-          description: [
-            "Conception et développement d'une plateforme interne de collaboration pour améliorer les flux de travail d'équipe.",
-            "Mise en place d'une architecture logicielle évolutive et optimisée, garantissant des performances élevées et une maintenance aisée.",
-            "Développement des fonctionnalités backend et frontend avec des technologies web modernes.",
-          ],
-          name: "Epitech",
-          image: epitech,
-        },
-        {
-          id: 2,
-          role: "Software, DevOps",
-          at: "Université Aix-Marseille",
-          period: "Sep 2022 - Jan 2024",
-          description: [
-            "Portage et personnalisation de Kodi sur Linux.",
-            "Optimisation des performances de l'application.",
-            "Acquisition d'une expertise en script Bash pour l'automatisation et la gestion des systèmes.",
-          ],
-          name: "Université Aix-Marseille",
-          image: amu,
-        },
-        {
-          id: 3,
-          role: "Étudiant en Informatique",
-          at: "Lycée Périer",
-          period: "Sep 2019 - Jul 2022",
-          description: [
-            "Construction d'une base solide en conception d'algorithmes et résolution de problèmes avec Python.",
-            "Exploration des structures de données et des algorithmes essentiels à travers des projets pratiques.",
-            "Application de la pensée logique et computationnelle pour développer des solutions optimisées.",
-          ],
-          name: "Lycée Périer",
-          image: lyceePerier,
-        },
-      ],
+      data: experiencesData, // shared
     },
     projects: {
       title: "Projets",
-      data: [    
-        // {
-        //   id: 1,
-        //   title: "Partely",
-        //   description:
-        //     "Partely est une plateforme de e-commerce pensée pour offrir une expérience d’achat fluide, intuitive et agréable aux utilisateurs. Le projet permet aux visiteurs de parcourir un catalogue de produits, d’ajouter des articles à leur panier, de choisir un mode de livraison et de finaliser leur commande sans effort.",
-        //   technologies: ["React.js", "Symfony"],
-        //   images: [Partely,Partely2,Partely3],
-        //   demoLink: "#",
-        //   repoLink: "https://github.com/yumetia/my_meetic",
-        // },
-        {
-          id: 2,
-          title: "My Meetic",
-          description:
-            "Un clone de plateforme de rencontres développé avec PHP et JavaScript, permettant aux utilisateurs de créer des profils, parcourir des correspondances potentielles et interagir en temps réel.",
-          technologies: ["PHP", "JS"],
-          images: [myMeetic,myMeetic2,myMeetic3],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/my_meetic",
-        },
-        {
-          id: 3,
-          title: "My Twitter",
-          description:
-            "Une plateforme sociale ressemblant à Twitter, construite avec PHP, JavaScript et Skeleton CSS, offrant une authentification, la création de tweets et des interactions basiques.",
-          technologies: ["PHP", "JS", "Skeleton CSS"],
-          images: [myTweeter,myTweeter2,myTweeter3,myTweeter4,myTweeter5,myTweeter6],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/my_twitter",
-        },
-         {
-          id: 4,
-          title: "Nakamanet",
-          description:
-            "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées, développée avec React, Node.js et Tailwind CSS. En développement.",
-          technologies: ["React.js", "Node.js", "Tailwind CSS", "(En développement..)"],
-          images: [nakamanet],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/nakamanet",
-        },
-        {
-          id: 5,
-          title: "CSS Generator",
-          description:
-            "Un outil permettant de créer un sprite à partir d’un dossier d’images, et de générer automatiquement la feuille de style CSS correspondante. Cela gère les options classiques en ligne de commande (nom du sprite, nom du CSS, récursivité…) ainsi que des options bonus (padding, redimensionnement, colonnes).",
-          technologies: ["PHP","Librairie GD"],
-          images: [cssGenerator,cssGenerator2,cssGenerator3],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/GenerateMVC",
-        },
-        {
-          id: 6,
-          title: "Apply Bot",
-          description:
-            "Un outil qui automatise la recherche d’entreprises, l’extraction de leurs contacts (email, téléphone, ville), et l’envoi d’emails de candidature avec un CV en pièce jointe. Il évite les doublons, tient un historique dans un fichier CSV, et gère l’envoi automatique par Gmail",
-          technologies: ["Python","BeautifulSoup", "SMTPlib"],
-          images: [applybot],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/GenerateMVC",
-        },
-        {
-          id: 7,
-          title: "Generate MVC",
-          description:
-            "Un générateur de framework PHP MVC léger qui simplifie la structure du projet et accélère le développement backend grâce à un routage et des contrôleurs automatiques.",
-          technologies: ["PHP"],
-          images: [generateMVC],
-          demoLink: "#",
-          repoLink: "https://github.com/yumetia/GenerateMVC",
-        },
-        {
-          id: 8,
-          title: "Stone Rain",
-          description:
-            "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
-          technologies: ["Python", "Pyxel"],
-          images: [stoneRain],
-          demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
-          repoLink: "https://github.com/yumetia/IshiNoAme",
-        },
-        {
-          id: 9,
-          title: "Connect 4",
-          description:
-            "Un jeu classique de Connect 4 développé en JavaScript, où deux joueurs s'affrontent pour aligner quatre pièces en ligne, colonne ou diagonale.",
-          technologies: ["JS"],
-          images: [connect4],
-          demoLink: "https://yumetia.github.io/connect4-js/",
-          repoLink: "https://github.com/yumetia/connect4-js",
-        },
-      ],
+      data: projectsData, // shared
     },
     contact: {
       title: "Contact",
@@ -439,12 +338,11 @@ const languages = {
       error: "❌ Échec de l'envoi du message. Veuillez réessayer.",
     },
     footer: {
-      title: "Remi",
-      subtitle: "BOUYEDA",
+      ...footerBase,
       copyright: "Copyright © {year} - Tous droits réservés",
       cvLink: "/CV/RemiBOUYEDA_CV_Developpeur_web_Alternance.pdf",
     },
   },
-};
+} as const;
 
 export default languages;
