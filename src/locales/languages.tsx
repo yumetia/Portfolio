@@ -25,7 +25,6 @@ import applybot from "../assets/projects/applybot.png";
 
 import stoneRain from "../assets/projects/stoneRain.png";
 import generateMVC from "../assets/projects/generateMVC.png";
-import connect4 from "../assets/projects/connect4.png";
 import nakamanet from "../assets/projects/nakamanet.png";
 
 export type Locale = "en" | "fr";
@@ -114,12 +113,10 @@ const experiencesData = [
     period: "Sep 2022 - Jan 2024",
     description_en: [
       "Porting and customizing Kodi on Linux.",
-      "Optimizing the application's performance.",
       "Gaining expertise in Bash scripting for automation and system management.",
     ],
     description_fr: [
       "Portage et personnalisation de Kodi sur Linux.",
-      "Optimisation des performances de l'application.",
       "Acquisition d'une expertise en script Bash pour l'automatisation et la gestion des systèmes.",
     ],
     name_en: "Aix-Marseille University",
