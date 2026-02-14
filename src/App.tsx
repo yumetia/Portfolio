@@ -8,8 +8,18 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 
 import { LanguageProvider } from "./context/LanguageContext";
+import { useEffect } from "react";
+
 
 export default function App() {
+  useEffect(()=>{
+      // if theres no saved theme, set the default
+      // else : set the saved one
+      const savedTheme = localStorage.getItem("theme")
+      if (!savedTheme) document.documentElement.dataset.theme = "dracula";
+      else {document.documentElement.dataset.theme = savedTheme}
+  },[])
+  
   return (
     <LanguageProvider>
       <div className="mb-20">

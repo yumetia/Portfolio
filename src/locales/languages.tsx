@@ -89,7 +89,7 @@ const experiencesData = [
     role_fr: "Développeur Fullstack",
     at_en: "Web@cademie by Epitech",
     at_fr: "Web@cademie by Epitech",
-    period: "Nov 2024 - Nov 2027",
+    period: "Nov 2024 - Nov 2026",
     description_en: [
       "Designed and built an internal collaboration platform to improve team workflows.",
       "Implemented a scalable and optimized software architecture, ensuring high performance and maintainability.",
@@ -238,10 +238,6 @@ const projectsData = [
 
 /* ----------------------------- Language dict ---------------------------- */
 
-const footerBase = {
-  title: "Remi",
-  subtitle: "BOUYEDA",
-};
 
 const languages = {
   en: {
@@ -252,6 +248,7 @@ const languages = {
       projects: "Projects",
       experiences: "Experiences",
       contact: "Contact",
+      themeBtn: "Theme",
       toggleBtn: "English",
     },
     home: {
@@ -292,7 +289,6 @@ const languages = {
       error: "❌ Failed to send message. Please try again.",
     },
     footer: {
-      ...footerBase,
       copyright: "Copyright © {year} - All rights reserved",
     },
   },
@@ -305,6 +301,7 @@ const languages = {
       projects: "Projets",
       experiences: "Expériences",
       contact: "Contact",
+      themeBtn: "Thème",
       toggleBtn: "Français",
     },
     home: {
@@ -346,7 +343,6 @@ const languages = {
       error: "❌ Échec de l'envoi du message. Veuillez réessayer.",
     },
     footer: {
-      ...footerBase,
       copyright: "Copyright © {year} - Tous droits réservés",
     },
   },

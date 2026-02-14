@@ -9,9 +9,11 @@ import Title from "./Title";
 import { useLanguage } from "../context/LanguageContext";
 import languages, { getLocalized, type Locale } from "../locales/languages";
 
-import { Github, Info, Video } from "lucide-react";
+import {Info, Video } from "lucide-react";
 import ImageCarousel from "./ImageCarousel";
 import { useState } from "react";
+
+import github from "../assets/institutions/github.png"
 
 // rncp
 import mappingRncp from "../utils/mappingRncp";
@@ -193,7 +195,7 @@ function Projects() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Github className="w-4" />
+                    <img src={github} alt="github" className="w-5 h-5" />
                   </a>
                 </div>
               </div>

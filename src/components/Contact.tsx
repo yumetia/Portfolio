@@ -78,7 +78,11 @@ function Contact() {
           ></textarea>
           <button
             type="submit"
-            className="bg-accent text-white p-3 rounded font-bold cursor-pointer hover:bg-base-200"
+            className="
+              btn btn-outline
+              bg-accent
+              text-base
+            "
           >
             {button}
           </button>
