@@ -255,7 +255,7 @@ const languages = {
       toggleBtn: "English",
     },
     home: {
-      title: "Hey, I'm Remi Bouyeda",
+      title: "Hey, I'm Yumetia",
       paragraph1: "Passionate 21-year-old developer !",
       paragraph2: "I build web experiences with performance and security in mind.",
       paragraph3: "Each line of code is written for impact.",
@@ -268,6 +268,12 @@ const languages = {
     experiences: {
       title: "Experiences",
       data: experiencesData, // shared
+    },
+    skillsSection: {
+      software: "Software Development",
+      web: "Web Development",
+      database: "Databases & Auth",
+      game: "Game Development",
     },
     projects: {
       title: "Projects",
@@ -288,7 +294,6 @@ const languages = {
     footer: {
       ...footerBase,
       copyright: "Copyright © {year} - All rights reserved",
-      cvLink: "/CV/RemiBOUYEDA_CV_Web_Developer_ApprenticeShip.pdf",
     },
   },
 
@@ -303,7 +308,7 @@ const languages = {
       toggleBtn: "Français",
     },
     home: {
-      title: "Salut, je suis Remi Bouyeda",
+      title: "Salut, je suis Yumetia",
       paragraph1: "Développeur passionné de 21 ans !",
       paragraph2:
         "Je conçois des expériences web en mettant l’accent sur la performance et la sécurité.",
@@ -313,6 +318,12 @@ const languages = {
     about: {
       title: "À propos",
       sections: aboutSections, // shared
+    },
+    skillsSection: {
+      software: "Développement Logiciel",
+      web: "Développement Web",
+      database: "Bases de données & Auth",
+      game: "Développement de Jeux",
     },
     experiences: {
       title: "Expériences",
@@ -337,7 +348,6 @@ const languages = {
     footer: {
       ...footerBase,
       copyright: "Copyright © {year} - Tous droits réservés",
-      cvLink: "/CV/RemiBOUYEDA_CV_Developpeur_web_Alternance.pdf",
     },
   },
 } as const;

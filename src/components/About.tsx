@@ -1,7 +1,5 @@
 // components/About.tsx
 import Title from "./Title";
-import img from "../assets/aboutpp.jpeg";
-import SafeImage from "./SafeImage";
 import { useLanguage } from "../context/LanguageContext";
 import languages, { getLocalized, type Locale } from "../locales/languages";
 
@@ -16,16 +14,7 @@ function About() {
       <Title title={title} />
 
       <div className="flex justify-center items-center">
-        <div className="hidden md:block">
-          <SafeImage
-            src={img}
-            alt="profile"
-            className="w-96 h-112 object-cover border-8 border-accent rounded-xl"
-            roundedBlob={false}
-          />
-        </div>
-
-        <div className="md:ml-4 space-y-4">
+        <div className="md:flex space-y-4 gap-4">
           {sections.map((section: any) => {
             // ✅ NEW: localized fields
             const sectionTitle = getLocalized<string>(

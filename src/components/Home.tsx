@@ -2,7 +2,7 @@
 import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
 import { Mail } from "lucide-react";
-import img from "../assets/photocv.jpg";
+import img from "../assets/profile.jpg";
 import SafeImage from "./SafeImage";
 
 function Home() {

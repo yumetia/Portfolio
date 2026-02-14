@@ -7,7 +7,6 @@ const Navbar = () => {
   const { language, toggleLanguage } = useLanguage();
   const { home, about, skills,experiences, projects, contact, toggleBtn } =
     languages[language].navbar;
-  const { cvLink } = languages[language].footer;
 
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -37,8 +36,7 @@ const Navbar = () => {
       <div className="flex flex-col items-center p-4 md:justify-between md:flex-row">
         <a href="/" className="flex items-center font-bold text-3xl md:text-xl">
           <Container />
-          <span className="p-1">Remi</span>
-          <span className="text-accent"> BOUYEDA</span>
+          <span className="p-1"> Yumetia</span>
         </a>
 
         <ul className="hidden md:flex space-x-4">
@@ -60,14 +58,6 @@ const Navbar = () => {
             <span>{toggleBtn}</span>
           </button>
 
-          <a
-            href={cvLink}
-            download
-            className="btn btn-outline btn-accent btn-sm rounded-full px-4 gap-2"
-          >
-            <Download className="w-4 h-4" />
-            <span>CV</span>
-          </a>
         </div>
       </div>
     </div>
