@@ -47,6 +47,8 @@ export function getLocalized<T = string>(
   return obj[field] as T;
 }
 
+
+
 /* ----------------------------- Shared data ----------------------------- */
 
 const aboutSections = [
@@ -58,7 +60,7 @@ const aboutSections = [
       "I am a frontend developer with solid experience in building interactive and responsive web applications.",
     description_fr:
       "Je suis développeur frontend avec une solide expérience dans la création d'applications web interactives et réactives.",
-    icon: <LetterText className="text-accent scale-150" />,
+    icon: LetterText,
   },
   {
     id: 2,
@@ -68,17 +70,17 @@ const aboutSections = [
       "I have a strong foundation in backend development, designing robust APIs and handling database management.",
     description_fr:
       "J'ai une base solide en développement backend, en concevant des API robustes et en gérant des bases de données.",
-    icon: <CalendarSync className="text-accent scale-150" />,
-  },
+    icon: CalendarSync,
+  },  
   {
     id: 3,
-    title_en: "Passionate about UI/UX",
+    title_en: "UI/UX Enthusiast",
     title_fr: "Passionné par l'UI/UX",
     description_en:
       "Crafting visually appealing and user-friendly interfaces is one of my top priorities.",
     description_fr:
       "Créer des interfaces visuellement attrayantes et faciles à utiliser est l'une de mes priorités.",
-    icon: <Paintbrush className="text-accent scale-150" />,
+    icon: Paintbrush,
   },
 ] as const;
 
@@ -255,7 +257,7 @@ const languages = {
       title: "Hey, I'm Yumetia",
       paragraph1: "Passionate 21-year-old developer !",
       paragraph2: "I build web experiences with performance and security in mind.",
-      paragraph3: "Each line of code is written for impact.",
+      paragraph3: "Each part of code is written for impact.",
       contactBtn: "Contact me !",
     },
     about: {
@@ -287,10 +289,7 @@ const languages = {
       button: "Send Message",
       success: "✅ Message sent successfully!",
       error: "❌ Failed to send message. Please try again.",
-    },
-    footer: {
-      copyright: "Copyright © {year} - All rights reserved",
-    },
+    }
   },
 
   fr: {
@@ -309,7 +308,7 @@ const languages = {
       paragraph1: "Développeur passionné de 21 ans !",
       paragraph2:
         "Je conçois des expériences web en mettant l’accent sur la performance et la sécurité.",
-      paragraph3: "Chaque ligne de code est écrite avec un objectif clair.",
+      paragraph3: "Chaque morceau de code est écrite avec un objectif clair.",
       contactBtn: "Me contacter !",
     },
     about: {
@@ -341,9 +340,6 @@ const languages = {
       button: "Envoyer le message",
       success: "✅ Message envoyé avec succès !",
       error: "❌ Échec de l'envoi du message. Veuillez réessayer.",
-    },
-    footer: {
-      copyright: "Copyright © {year} - Tous droits réservés",
     },
   },
 } as const;

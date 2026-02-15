@@ -48,7 +48,7 @@ function Contact() {
             onChange={handleChange}
             placeholder={placeholders.subject}
             required
-            className="p-3 rounded border border-gray-400"
+            className="p-3 rounded border border-outline-400"
           />
           <input
             type="text"
@@ -57,7 +57,7 @@ function Contact() {
             onChange={handleChange}
             placeholder={placeholders.name}
             required
-            className="p-3 rounded border border-gray-400"
+            className="p-3 rounded border border-outline-400"
           />
           <input
             type="email"
@@ -66,7 +66,7 @@ function Contact() {
             onChange={handleChange}
             placeholder={placeholders.email}
             required
-            className="p-3 rounded border border-gray-400"
+            className="p-3 rounded border border-outline-400"
           />
           <textarea
             name="message"
@@ -74,7 +74,7 @@ function Contact() {
             onChange={handleChange}
             placeholder={placeholders.message}
             required
-            className="p-3 rounded border border-gray-400 h-32"
+            className="p-3 rounded border border-outline-400 h-32"
           ></textarea>
           <button
             type="submit"

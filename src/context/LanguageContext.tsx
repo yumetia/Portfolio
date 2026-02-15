@@ -24,8 +24,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     return "en";
   });
 
-  console.log("savedLang=",savedLang==null)
-
   const toggleLanguage = () => {
     setLanguage((prev) => {
       const newLang = prev==="en"? "fr": "en";

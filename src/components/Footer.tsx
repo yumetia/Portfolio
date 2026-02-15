@@ -8,19 +8,17 @@ import github from "../assets/institutions/github.png"
 import { Container } from "lucide-react";
 
 function Footer() {
-  const { language } = useLanguage();
-  const { copyright } =
-    languages[language].footer;
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer footer-center p-10">
       <aside>
         <Container className="w-10 h-10 text-accent" />
-        <p className="font-bold">
-          <span className="text-primary">Yumetia</span>
-        </p>
-        <p>{copyright.replace("{year}", currentYear.toString())}</p>
+        <div className="flex gap-1">
+          <span>©</span>
+          <span>{(currentYear.toString())}</span>
+          <span className="font-bold">Yumetia</span>
+        </div>
       </aside>
 
         <div className="grid grid-flow-col gap-4">

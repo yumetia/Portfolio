@@ -12,42 +12,62 @@ function About() {
   return (
     <div id="About" className="bg-base-300 p-12">
       <Title title={title} />
+      <div className="sm:grid sm:grid-cols-2 
+      md:flex md:justify-center
+      lg:gap-16
+      gap-4 ">
+        {sections.map((section: any) => {
+          //  NEW: localized fields
+          const sectionTitle = getLocalized<string>(
+            section,
+            "title",
+            lang
+          );
+          const sectionDescription = getLocalized<string>(
+            section,
+            "description",
+            lang
+          );
 
-      <div className="flex justify-center items-center">
-        <div className="md:flex space-y-4 gap-4">
-          {sections.map((section: any) => {
-            // ✅ NEW: localized fields
-            const sectionTitle = getLocalized<string>(
-              section,
-              "title",
-              lang
-            );
-            const sectionDescription = getLocalized<string>(
-              section,
-              "description",
-              lang
-            );
+          const Icon = section.icon;
 
-            return (
-              <div
-                key={section.id}
-                className="flex flex-col md:flex-row items-center bg-base-100 p-5 rounded-xl md:w-96 shadow-xl"
-              >
-                <div className="mb-2 md:mb-0">{section.icon}</div>
+          return (
 
-                <div className="md:ml-4 text-center md:text-left">
-                  {/* ✅ CHANGED */}
-                  <h2 className="text-xl font-bold mb-1">
-                    {sectionTitle}
-                  </h2>
+          // container cards
+          <div
+              key={section.id}
+              className="mt-4 bg-base-100 p-5 rounded-xl 
+              md:size-full
+              lg:w-96
+              shadow-xl"
+            >
 
-                  {/* ✅ CHANGED */}
-                  <p className="text-sm">{sectionDescription}</p>
-                </div>
+          {/* card */}
+              
+            <div className="flex flex-col">
+              <div className="flex justify-between
+              lg:mb-3">
+                <Icon className="text-accent size-6 
+                lg:size-8
+                "/>
+                <h2 className="text-xl font-bold mb-1 text-center w-full
+                lg:text-2xl
+                ">
+                  {sectionTitle}
+                </h2>
               </div>
-            );
-          })}
-        </div>
+
+              <div className="mx-auto size-full">
+                <p className="text-xs text-center
+                md:text-sm
+                lg:text-xl
+                ">{sectionDescription}</p>
+              </div>
+            </div>
+          </div>
+          );
+        })}
+        
       </div>
     </div>
   );

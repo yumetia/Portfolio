@@ -22,17 +22,17 @@ function Home() {
           <br />
           {paragraph3}
         </p>
-        <a href="#Contact" className="btn btn-accent md:w-fit hover:bg-base-200">
+        <a href="#Contact" className="btn btn-accent md:w-fit hover:bg-outline-200">
           <Mail className="w-5 h-5" />
           {contactBtn}
         </a>
       </div>
 
-      <div className="md:ml-60">
+      <div className="lg:ml-60 md:ml-30">
         <SafeImage
           src={img}
           alt="profile"
-          className="w-96 h-96 object-cover border-8 border-accent shadow-xl"
+          className="w-80 h-80 sm:size-96 object-cover border-8 border-accent shadow-xl"
           roundedBlob={true}
         />
       </div>

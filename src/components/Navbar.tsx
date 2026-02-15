@@ -68,10 +68,10 @@ const Navbar = () => {
       <div className="flex flex-col items-center p-4 md:justify-between md:flex-row">
         <a href="/" className="flex items-center font-bold text-3xl md:text-xl">
           <Container className="text-accent" />
-          <span className="text-primary p-1"> Yumetia</span>
+          <span className="p-1"> Yumetia</span>
         </a>
 
-        <ul className="hidden md:flex space-x-4">
+        <ul className="hidden lg:flex space-x-4">
           <li><a href="#Home" className="btn btn-sm btn-ghost text-sm">{home}</a></li>
           <li><a href="#About" className="btn btn-sm btn-ghost text-sm">{about}</a></li>
           <li><a href="#Skills" className="btn btn-sm btn-ghost text-sm">{skills}</a></li>
@@ -80,20 +80,33 @@ const Navbar = () => {
           <li><a href="#Contact" className="btn btn-sm btn-ghost text-sm">{contact}</a></li>
         </ul>
 
-        <div className="flex gap-2">
-          {/* theme selector button*/}
+        <div className="flex gap-10 mt-5 md:mt-0">
+           {/* theme selector button*/}
           <button
-            id="toggle-lang"
             onClick={()=>{renderModalTheme()}}
-            className="btn btn-outline btn-sm rounded-full px-4 gap-2"
+            className="btn btn-outline lg:btn-sm rounded-full px-4 gap-2"
           >
             <Palette className="w-4 h-4" />
             <span>{themeBtn}</span>
           </button>
 
+            {/* toggle lang button */}
+          <button
+            id="toggle-lang"
+            onClick={toggleLanguage}
+            className="btn btn-outline lg:btn-sm rounded-full px-4 gap-2"
+          >
+            <Languages className="w-4 h-4" />
+            <span>{toggleBtn}</span>
+          </button>
+        </div>
 
-          {themeModal===true &&(
-            <div className="absolute bg-primary rounded p-6 top-20">
+        {/* theme modal */}
+         {themeModal===true &&(
+            <div className="absolute top-40 right-40 
+            sm:right-70 md:top-20 md:right-30
+            bg-primary rounded p-6
+            ">
               {/* modal title */}
               <div className="mb-4 flex justify-center">
                 <h2 className="text-center text-neutral font-bold">{themeBtn}</h2>
@@ -118,19 +131,6 @@ const Navbar = () => {
             </div>
           )}
 
-
-
-          {/* toggle lang button */}
-          <button
-            id="toggle-lang"
-            onClick={toggleLanguage}
-            className="btn btn-outline btn-sm rounded-full px-4 gap-2"
-          >
-            <Languages className="w-4 h-4" />
-            <span>{toggleBtn}</span>
-          </button>
-
-        </div>
       </div>
     </div>
   );

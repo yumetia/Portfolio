@@ -17,18 +17,26 @@ const Skills = () => {
 
       <div className="mt-12 space-y-12">
         {categories.map((category) => (
+
           <div key={category.id}>
+
             {/* Category Title */}
             <h3 className="text-2xl font-bold mb-6 text-accent text-center">
               {categoryLabels[category.key]}
             </h3>
 
             {/* Skills Grid */}
-            <div className="grid grid-cols-2 md:w-1/2 md:mx-auto gap-6">
+            <div className="grid grid-cols-2 
+            md:grid-cols-3
+            lg:flex lg:justify-center  
+            gap-6">
               {category.skills.map((skill) => (
+
+                // container card
                 <div
                   key={skill.id}
-                  className="bg-base-200 rounded-xl p-6 shadow hover:shadow-lg transition transform hover:-translate-y-1"
+                  className="lg:w-96 bg-base-200 rounded-xl p-6 shadow 
+                  hover:shadow-lg transition transform hover:-translate-y-1"
                 >
                   <div className="flex flex-col items-center text-center">
                     <div className="w-20 h-20 rounded-full border-2 border-accent overflow-hidden">
