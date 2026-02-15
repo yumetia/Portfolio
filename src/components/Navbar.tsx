@@ -94,8 +94,9 @@ const Navbar = () => {
 
           {themeModal===true &&(
             <div className="absolute bg-primary rounded p-6 top-20">
+              {/* modal title */}
               <div className="mb-4 flex justify-center">
-                <h2 className="text-center font-bold">{themeBtn}</h2>
+                <h2 className="text-center text-neutral font-bold">{themeBtn}</h2>
               </div>
 
               {/* rendering themes button */}
@@ -106,9 +107,10 @@ const Navbar = () => {
                   </button>
                 </div>
               ))}
+
               {/* close modal button */}
               <button 
-                className="btn btn-outline bg-base-700"
+                className="mt-2 btn btn-outline hover:bg-accent text-neutral"
                 onClick={()=>{handleCloseModal()}}
               >
                 <span>{language === "fr" ? "Fermer" : "Close"}</span>
