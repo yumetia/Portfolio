@@ -16,10 +16,10 @@ const Navbar = () => {
   const [themeModal,setThemeModal] = useState(false);
 
   const themes = [
-    "dracula",
-    "halloween",
     "emerald",
+    "dracula",
     "cyberpunk",
+    "halloween",
   ]
   useEffect(() => {
     const handleScroll = () => {
@@ -99,8 +99,8 @@ const Navbar = () => {
               </div>
 
               {/* rendering themes button */}
-              {themes.map((theme)=>(
-                <div className="flex mb-2 ">
+              {themes.map((theme,key)=>(
+                <div key={key} className="flex mb-2 ">
                   <button className="btn" onClick={()=>{handleTheme(theme)}}>
                     {theme}
                   </button>
