@@ -18,7 +18,7 @@ function Footer() {
       <aside>
         <Container className="w-10 h-10 text-accent" />
         <p className="font-bold">
-          <span className="text-accent">Yumetia</span>
+          <span className="text-primary">Yumetia</span>
         </p>
         <p>{copyright.replace("{year}", currentYear.toString())}</p>
       </aside>

@@ -68,7 +68,7 @@ const Navbar = () => {
       <div className="flex flex-col items-center p-4 md:justify-between md:flex-row">
         <a href="/" className="flex items-center font-bold text-3xl md:text-xl">
           <Container className="text-accent" />
-          <span className="p-1"> Yumetia</span>
+          <span className="text-primary p-1"> Yumetia</span>
         </a>
 
         <ul className="hidden md:flex space-x-4">
@@ -91,6 +91,7 @@ const Navbar = () => {
             <span>{themeBtn}</span>
           </button>
 
+
           {themeModal===true &&(
             <div className="absolute bg-primary rounded p-6 top-20">
               <div className="mb-4 flex justify-center">
@@ -107,13 +108,16 @@ const Navbar = () => {
               ))}
               {/* close modal button */}
               <button 
-                className="btn btn-ghost bg-base-700"
+                className="btn btn-outline bg-base-700"
                 onClick={()=>{handleCloseModal()}}
               >
                 <span>{language === "fr" ? "Fermer" : "Close"}</span>
               </button>
             </div>
           )}
+
+
+
           {/* toggle lang button */}
           <button
             id="toggle-lang"
