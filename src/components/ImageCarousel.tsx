@@ -123,13 +123,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         ))}
         {/* buttons */}
           <button className="btn custom-prev absolute 
-          left-5 top-1/2 z-10">
+          left-5 top-1/2 z-10
+          [&.swiper-button-disabled]:hidden">
             <CornerDownLeft />
           </button>
 
           <button className="btn custom-next absolute 
           right-5 top-1/2 z-10
-          swiper-button-disabled:hidden">
+          [&.swiper-button-disabled]:hidden">
             <CornerDownRight />
           </button>
       </Swiper>
