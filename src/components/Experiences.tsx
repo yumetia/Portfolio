@@ -29,7 +29,9 @@ export default function Experiences() {
           modules={[Pagination, Navigation]}
           pagination={{ clickable: true }}
           watchOverflow={true}
-          className="flex justify-center md:w-1/2 lg:w-2/3"
+          className="flex justify-center w-80
+          md:w-2/3
+          lg:w-1/2"
           navigation={{
             prevEl:".custom-prev",
             nextEl:".custom-next",
@@ -46,41 +48,68 @@ export default function Experiences() {
             return (
               <SwiperSlide key={exp.id} className="flex justify-center">
                 <div className="bg-base-200 p-10 rounded-xl shadow-lg">
-                  <div className="flex items-center gap-4 w-full mb-2">
+
+                  {/* header block */}
+                  <div className="flex items-center gap-4 w-full mb-2 
+                  lg:gap-6">
                     <img
                       src={exp.image}
                       alt={name ?? at}
-                      className="h-10 w-10 object-cover rounded"
+                      className="size-10 object-cover rounded
+                      lg:size-12"
                     />
-                    <div>
-                      <h2 className="text-lg font-bold text-accent">{role}</h2>
-                      <p className="text-xs text-base-content/60">{at}</p>
+                    <div className="flex flex-col">
+                      <h2 className="text-2sm font-bold text-accent 
+                      lg:text-xl lg:mb-1">{role}</h2>
+                      <p className="text-xs text-base-content/60
+                      md:text-sm">{at}</p>
                     </div>
-                  </div>
+                </div>
 
-                  <p className="ml-14 mt-1 text-sm">{exp.period}</p>
+                {/* period & description */}
+                    <div className="ml-2 lg:ml-17">
 
-                  <ul className="ml-14 mt-4 space-y-2 overflow-y-auto pr-2">
-                    {description.map((d, i) => (
-                      <li key={i} className="list-disc">
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
+                      <p className="ml-12 mt-1 text-xs
+                      md:text-sm
+                      lg:ml-1
+                      ">{exp.period}
+                      </p>
+
+                      <ul className="list-disc list-inside mt-4 space-y-2 overflow-y-auto
+                      md:ml-5
+                      lg:ml-1
+                      ">
+                        {description.map((d, i) => (
+                          <li key={i} className="text-xs
+                          sm:text-sm
+                          md:text-base
+                          lg:text-lg">
+                            {d}
+                          </li>
+                        ))}
+                      </ul>
+
+                    </div>
+
                 </div>
               </SwiperSlide>
             );
           })}
 
           {/* buttons */}
-          <button className="btn custom-prev absolute 
-          left-5 top-1/2 z-10
+          <button className="btn bg-transparent custom-prev absolute 
+          left-1 top-1/2 z-10
+          lg:left-5
+
+          p-1 md:p-2
           [&.swiper-button-disabled]:hidden">
             <CornerDownLeft />
           </button>
 
-          <button className="btn custom-next absolute 
-          right-5 top-1/2 z-10
+          <button className="btn bg-transparent custom-next absolute 
+          right-1 top-1/2 z-10
+          lg:right-5
+          p-1 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
             <CornerDownRight />
           </button>

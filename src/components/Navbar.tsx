@@ -71,7 +71,7 @@ const Navbar = () => {
       <div className="flex flex-col items-center p-4 md:justify-between md:flex-row">
         <a href="/" className="flex items-center font-bold text-3xl md:text-xl lg:text-2xl">
           <Container className="text-accent lg:size-7" />
-          <p className="p-1"> Yumetia</p>
+          <p className="ml-1 p-1"> Yumetia</p>
         </a>
 
         <ul className="hidden lg:flex space-x-4">

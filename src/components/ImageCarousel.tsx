@@ -64,31 +64,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
     );
   }
 
-  // Config des effets (seulement ce qui est nécessaire)
-  const coverflowEffect =
-    effect === "coverflow"
-      ? {
-          rotate: 40,
-          stretch: 0,
-          depth: 120,
-          modifier: 1,
-          slideShadows: true,
-        }
-      : undefined;
-
-  const modules = [
-    Autoplay,
-    Pagination,
-    Navigation,
-    EffectFade,
-    EffectCoverflow,
-    EffectCards,
-  ];
-
   return (
     <div className={className}>
       <Swiper
-        modules={modules}
+        modules={[Autoplay,Pagination,EffectCards]}
         grabCursor
         // Effets
         effect={effect === "slide" ? undefined : effect}
