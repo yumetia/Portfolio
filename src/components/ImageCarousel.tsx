@@ -18,6 +18,9 @@ import "swiper/css/effect-fade";
 import "swiper/css/effect-coverflow";
 import "swiper/css/effect-cards";
 
+
+import { CornerDownLeft, CornerDownRight } from "lucide-react";
+
 type EffectName = "slide" | "fade" | "coverflow" | "cards";
 
 export interface ImageCarouselProps {
@@ -90,10 +93,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         // Effets
         effect={effect === "slide" ? undefined : effect}
         fadeEffect={effect === "fade" ? { crossFade: true } : undefined}
-        coverflowEffect={coverflowEffect}
-        // Affordances
-        pagination={showPagination ? { clickable: true } : false}
-        navigation={showNavigation}
+        navigation={{
+          prevEl:".custom-prev",
+          nextEl:".custom-next",
+        }}
         // Autoplay
         autoplay={
           autoPlay
@@ -116,7 +119,19 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
               />
             </div>
           </SwiperSlide>
+          
         ))}
+        {/* buttons */}
+          <button className="btn custom-prev absolute 
+          left-5 top-1/2 z-10">
+            <CornerDownLeft />
+          </button>
+
+          <button className="btn custom-next absolute 
+          right-5 top-1/2 z-10
+          swiper-button-disabled:hidden">
+            <CornerDownRight />
+          </button>
       </Swiper>
     </div>
   );

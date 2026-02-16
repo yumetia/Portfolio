@@ -7,7 +7,9 @@ import { EffectCards, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
+import { CornerDownLeft, CornerDownRight } from "lucide-react";
+
+
 
 export default function Experiences() {
   const { language } = useLanguage();
@@ -24,11 +26,15 @@ export default function Experiences() {
           effect="cards"
           grabCursor
           autoHeight
-          modules={[EffectCards, Pagination, Navigation]}
+          modules={[Pagination, Navigation]}
           pagination={{ clickable: true }}
           watchOverflow={true}
-          centeredSlides={true}
           className="flex justify-center md:w-1/2 lg:w-2/3"
+          navigation={{
+            prevEl:".custom-prev",
+            nextEl:".custom-next",
+            disabledClass:"swiper-button-disabled"
+          }}
         >
           {experiences.map((exp: any) => {
             const role = getLocalized<string>(exp, "role", lang);
@@ -40,7 +46,7 @@ export default function Experiences() {
             return (
               <SwiperSlide key={exp.id} className="flex justify-center">
                 <div className="bg-base-200 p-10 rounded-xl shadow-lg">
-                  <div className="flex items-center gap-4 w-full">
+                  <div className="flex items-center gap-4 w-full mb-2">
                     <img
                       src={exp.image}
                       alt={name ?? at}
@@ -65,6 +71,18 @@ export default function Experiences() {
               </SwiperSlide>
             );
           })}
+
+          {/* buttons */}
+          <button className="btn custom-prev absolute 
+          left-5 top-1/2 z-10">
+            <CornerDownLeft />
+          </button>
+
+          <button className="btn custom-next absolute 
+          right-5 top-1/2 z-10
+          swiper-button-disabled:hidden">
+            <CornerDownRight />
+          </button>
         </Swiper>
       </div>
     </div>
