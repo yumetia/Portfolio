@@ -12,18 +12,24 @@ function Home() {
   return (
     <div id="Home" className="flex flex-col-reverse md:flex-row justify-center items-center md:my-32 my-10">
       <div className="flex flex-col">
-        <h1 className="text-5xl md:text-6xl font-bold text-center md:text-left mt-4 md:mt-0">
+        <h1 className="mt-4 text-5xl font-bold text-center 
+        md:text-left md:text-6xl md:mt-0">
           {title}
         </h1>
-        <p className="my-4 text-md text-center md:text-left">
+        <p className="my-4 text-md text-center 
+        md:text-left
+        lg:text-xl">
           {paragraph1}
           <br />
           {paragraph2}
           <br />
           {paragraph3}
         </p>
-        <a href="#Contact" className="btn btn-accent md:w-fit hover:bg-outline-200">
-          <Mail className="w-5 h-5" />
+        <a href="#Contact" className="btn btn-accent hover:bg-outline-200
+        md:w-fit
+        lg:text-lg">
+          <Mail className="size-5
+          lg:size-6" />
           {contactBtn}
         </a>
       </div>
@@ -32,7 +38,7 @@ function Home() {
         <SafeImage
           src={img}
           alt="profile"
-          className="w-80 h-80 sm:size-96 object-cover border-8 border-accent shadow-xl"
+          className="size-80 sm:size-96 object-cover border-8 border-accent shadow-xl"
           roundedBlob={true}
         />
       </div>

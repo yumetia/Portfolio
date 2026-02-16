@@ -60,7 +60,7 @@ function About() {
               <div className="mx-auto size-full">
                 <p className="text-xs text-center
                 md:text-sm
-                lg:text-xl
+                lg:text-lg
                 ">{sectionDescription}</p>
               </div>
             </div>

@@ -28,7 +28,7 @@ export default function Experiences() {
           pagination={{ clickable: true }}
           watchOverflow={true}
           centeredSlides={true}
-          className="flex justify-center md:w-1/2"
+          className="flex justify-center md:w-1/2 lg:w-2/3"
         >
           {experiences.map((exp: any) => {
             const role = getLocalized<string>(exp, "role", lang);

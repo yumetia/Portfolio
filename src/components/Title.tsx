@@ -4,7 +4,8 @@ interface TitleProps{
 
 function Title({title}:TitleProps){
     return(
-        <h1 className="uppercase font-bold mb-5 text-center text-3xl">
+        <h1 className="uppercase font-bold mb-5 text-center text-3xl
+        lg:text-4xl">
             {title}
         </h1>
     )

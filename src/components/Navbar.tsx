@@ -69,9 +69,9 @@ const Navbar = () => {
         bg-base-300/80 backdrop-blur-md border-b border-base-200`}
     >
       <div className="flex flex-col items-center p-4 md:justify-between md:flex-row">
-        <a href="/" className="flex items-center font-bold text-3xl md:text-xl">
-          <Container className="text-accent" />
-          <span className="p-1"> Yumetia</span>
+        <a href="/" className="flex items-center font-bold text-3xl md:text-xl lg:text-2xl">
+          <Container className="text-accent lg:size-7" />
+          <p className="p-1"> Yumetia</p>
         </a>
 
         <ul className="hidden lg:flex space-x-4">
@@ -90,9 +90,10 @@ const Navbar = () => {
            {/* theme selector button*/}
           <button
             onClick={()=>{renderModalTheme()}}
-            className="btn btn-outline lg:btn-sm rounded-full"
+            className="btn btn-outline rounded-full"
           >
-            <Palette className="w-4 h-4" />
+            <Palette className="size-4
+            lg:size-5" />
             <span>{themeBtn}</span>
           </button>
 
@@ -100,9 +101,10 @@ const Navbar = () => {
           <button
             id="toggle-lang"
             onClick={toggleLanguage}
-            className="btn btn-outline lg:btn-sm rounded-full"
+            className="btn btn-outline rounded-full"
           >
-            <Languages className="w-4 h-4" />
+            <Languages className="size-4 
+            lg:size-5" />
             <span>{toggleBtn}</span>
           </button>
         </div>

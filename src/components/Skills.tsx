@@ -21,7 +21,8 @@ const Skills = () => {
           <div key={category.id}>
 
             {/* Category Title */}
-            <h3 className="text-2xl font-bold mb-6 text-accent text-center">
+            <h3 className="text-2xl font-bold mb-6 text-accent text-center
+            lg:text-3xl">
               {categoryLabels[category.key]}
             </h3>
 
@@ -49,7 +50,8 @@ const Skills = () => {
                         draggable={false}
                       />
                     </div>
-                    <div className="mt-3 font-medium text-sm text-center">
+                    <div className="mt-3 font-medium text-sm text-center
+                    lg:text-lg">
                       {skill.name}
                     </div>
                   </div>
