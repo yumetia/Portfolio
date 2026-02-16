@@ -4,15 +4,33 @@ import { useLanguage } from "../context/LanguageContext";
 import languages from "../locales/languages";
 
 const Navbar = () => {
-  const { language, toggleLanguage } = useLanguage();
-  const { home, about, skills,experiences, projects, contact, themeBtn,toggleBtn } =
-    languages[language].navbar;
-
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // modal change theme
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+  
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
+
+  const { language, toggleLanguage } = useLanguage();
+  const { home, about, skills, experiences, projects, contact, themeBtn,toggleBtn } = languages[language].navbar;
+
+  // navLinkClass const
+  const navLinkClass = "btn btn-sm btn-ghost text-lg";
+
+  // modal change theme
   const [themeModal,setThemeModal] = useState(false);
 
   const themes = [
@@ -21,21 +39,6 @@ const Navbar = () => {
     "cyberpunk",
     "halloween",
   ]
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setShow(false);
-      } else {
-        setShow(true);
-      }
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
 
   
   const renderModalTheme = ()=>{
@@ -72,19 +75,22 @@ const Navbar = () => {
         </a>
 
         <ul className="hidden lg:flex space-x-4">
-          <li><a href="#Home" className="btn btn-sm btn-ghost text-sm">{home}</a></li>
-          <li><a href="#About" className="btn btn-sm btn-ghost text-sm">{about}</a></li>
-          <li><a href="#Skills" className="btn btn-sm btn-ghost text-sm">{skills}</a></li>
-          <li><a href="#Projects" className="btn btn-sm btn-ghost text-sm">{projects}</a></li>
-          <li><a href="#Experiences" className="btn btn-sm btn-ghost text-sm">{experiences}</a></li>
-          <li><a href="#Contact" className="btn btn-sm btn-ghost text-sm">{contact}</a></li>
+          <li><a href="#Home" className={navLinkClass}>{home}</a></li>
+          <li><a href="#About" className={navLinkClass}>{about}</a></li>
+          <li><a href="#Skills" className={navLinkClass}>{skills}</a></li>
+          <li><a href="#Projects" className={navLinkClass}>{projects}</a></li>
+          <li><a href="#Experiences" className={navLinkClass}>{experiences}</a></li>
+          <li><a href="#Contact" className={navLinkClass}>{contact}</a></li>
         </ul>
 
-        <div className="flex gap-10 mt-5 md:mt-0">
+        <div className="flex gap-10 mt-5 
+        md:mt-0
+        lg:gap-2
+        ">
            {/* theme selector button*/}
           <button
             onClick={()=>{renderModalTheme()}}
-            className="btn btn-outline lg:btn-sm rounded-full px-4 gap-2"
+            className="btn btn-outline lg:btn-sm rounded-full"
           >
             <Palette className="w-4 h-4" />
             <span>{themeBtn}</span>
@@ -94,7 +100,7 @@ const Navbar = () => {
           <button
             id="toggle-lang"
             onClick={toggleLanguage}
-            className="btn btn-outline lg:btn-sm rounded-full px-4 gap-2"
+            className="btn btn-outline lg:btn-sm rounded-full"
           >
             <Languages className="w-4 h-4" />
             <span>{toggleBtn}</span>

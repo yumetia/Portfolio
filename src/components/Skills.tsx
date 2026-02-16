@@ -43,7 +43,10 @@ const Skills = () => {
                       <img
                         src={skill.image}
                         alt={skill.name}
-                        className="w-full h-full object-contain p-2"
+                        className="w-full h-full object-contain p-2
+                        select-none pointer-events-none
+                        "
+                        draggable={false}
                       />
                     </div>
                     <div className="mt-3 font-medium text-sm text-center">
