@@ -48,8 +48,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   autoPlay = true,
   interval = 4000,
   effect = "slide",
-  showPagination = true,
-  showNavigation = true,
   heightClass = "h-64 md:h-80",
   roundedClass = "rounded-xl",
   alts,
@@ -67,7 +65,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   return (
     <div className={className}>
       <Swiper
-        modules={[Autoplay,Pagination,EffectCards]}
+        modules={[Autoplay,Pagination,Navigation,EffectCards]}
         grabCursor
         // Effets
         effect={effect === "slide" ? undefined : effect}

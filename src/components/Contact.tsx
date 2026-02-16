@@ -39,7 +39,12 @@ function Contact() {
   return (
     <div id="Contact" className="mt-20">
       <Title title={title} />
-      <div className="bg-base-300 p-5 h-fit rounded-xl shadow-lg max-w-lg mx-auto">
+
+      {/* main container */}
+      <div className="bg-base-300 p-5 rounded-xl shadow-lg max-w-xs mx-auto
+      sm:max-w-lg
+      md:max-w-xl
+      lg:max-w-2xl">
         <form onSubmit={sendEmail} className="flex flex-col gap-4">
           <input
             type="text"
@@ -89,6 +94,7 @@ function Contact() {
         </form>
         {messageText && <p className="text-center mt-4 text-sm">{messageText}</p>}
       </div>
+
     </div>
   );
 }

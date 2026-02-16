@@ -68,7 +68,7 @@ function Projects() {
                   <ImageCarousel
                     images={images}
                     alt={project.title}
-                    className="h-fullbmb-3"
+                    className="h-full mb-3"
                     autoPlay
                     interval={4000}
                   />
