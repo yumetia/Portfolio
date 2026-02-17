@@ -2,19 +2,19 @@
 import { LetterText, CalendarSync, Paintbrush } from "lucide-react";
 
 // Institutions
-import amu from "../assets/institutions/amu.jpg";
-import epitech from "../assets/institutions/epitech.png";
-import lyceePerier from "../assets/institutions/lyceePerier.png";
+import amu from "@assets/institutions/amu.jpg";
+import epitech from "@assets/institutions/epitech.png";
+import lyceePerier from "@assets/institutions/lyceePerier.png";
 
 
-import myMeetic from "../assets/projects/my_meetic.png";
+import myMeetic from "@assets/projects/my_meetic.png";
 
-import cssGenerator from "../assets/projects/cssGenerator.png";
-import cssGenerator2 from "../assets/projects/cssGenerator2.png";
+import cssGenerator from "@assets/projects/cssGenerator.png";
+import cssGenerator2 from "@assets/projects/cssGenerator2.png";
 
-import stoneRain from "../assets/projects/stoneRain.png";
-import generateMVC from "../assets/projects/generateMVC.png";
-import nakamanet from "../assets/projects/nakamanet.png";
+import stoneRain from "@assets/projects/stoneRain.png";
+import generateMVC from "@assets/projects/generateMVC.png";
+import nakamanet from "@assets/projects/nakamanet.png";
 
 export type Locale = "en" | "fr";
 

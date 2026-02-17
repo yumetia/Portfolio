@@ -1,14 +1,14 @@
  // Technos logos
 
-import imgREACT from "../assets/technos/react.png";
-import imgNODE from "../assets/technos/node-js.png";
-import imgPYTHON from "../assets/technos/python.png";
+import imgREACT from "@assets/technos/react.png";
+import imgNODE from "@assets/technos/node-js.png";
+import imgPYTHON from "@assets/technos/python.png";
 
-import imgLARAVEL from "../assets/technos/laravel.png";
-import imgMYSQL from "../assets/technos/mysql.png";
-import imgMONGODB from "../assets/technos/mongodb.png";
-import imgDocker from "../assets/technos/docker.png";
-import imgPostgre from "../assets/technos/postgre.png";
+import imgLARAVEL from "@assets/technos/laravel.png";
+import imgMYSQL from "@assets/technos/mysql.png";
+import imgMONGODB from "@assets/technos/mongodb.png";
+import imgDocker from "@assets/technos/docker.png";
+import imgPostgre from "@assets/technos/postgre.png";
 
  
 export interface Skill {

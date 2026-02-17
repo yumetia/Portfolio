@@ -1,10 +1,10 @@
 // components/footer.jsx
 
-import { useLanguage } from "../context/LanguageContext";
-import languages from "../locales/languages";
+import { useLanguage } from "@context/LanguageContext";
+import languages from "@locales/languages";
 
 
-import github from "../assets/institutions/github.png"
+import github from "@assets/institutions/github.png"
 import { Container } from "lucide-react";
 
 function Footer() {

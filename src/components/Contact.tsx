@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Title from "./Title";
 import emailjs from "@emailjs/browser";
-import { useLanguage } from "../context/LanguageContext";
-import languages from "../locales/languages";
+import { useLanguage } from "@context/LanguageContext";
+import languages from "@locales/languages";
 
 function Contact() {
   const { language } = useLanguage();

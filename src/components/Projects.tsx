@@ -6,20 +6,20 @@ import "swiper/css/effect-cards";
 import "swiper/css/effect-coverflow";
 
 import Title from "./Title";
-import { useLanguage } from "../context/LanguageContext";
-import languages, { getLocalized, type Locale } from "../locales/languages";
+import { useLanguage } from "@context/LanguageContext";
+import languages, { getLocalized, type Locale } from "@locales/languages";
 
 import {Info, Video } from "lucide-react";
 import ImageCarousel from "./ImageCarousel";
 import { useState } from "react";
 
-import github from "../assets/institutions/github.png"
+import github from "@assets/institutions/github.png"
 
 // rncp
-import mappingRncp from "../utils/mappingRncp";
-import RNCP_DATA from "../utils/Rncp";
+import mappingRncp from "@utils/mappingRncp";
+import RNCP_DATA from "@utils/Rncp";
 
-function Projects() {
+const Projects = () => {
   const { language } = useLanguage();
   const lang = language as Locale; // ensure "en" | "fr"
 
@@ -49,7 +49,8 @@ function Projects() {
         grabCursor={true}
         modules={[EffectCards, Pagination]}
         pagination={{ clickable: true }}
-        className="w-full md:w-1/2 mx-auto my-10"
+        className="mx-auto my-10 w-80 
+        md:w-2/3 lg:w-1/2 "
       >
         {data.map((project: any) => {
           const images: string[] = project.images ?? [];
@@ -64,7 +65,6 @@ function Projects() {
           return (
             <SwiperSlide key={project.id}>
               <div className="bg-base-300 p-5 rounded-xl shadow-lg">
-                {images.length > 0 ? (
                   <ImageCarousel
                     images={images}
                     alt={project.title}
@@ -72,11 +72,6 @@ function Projects() {
                     autoPlay
                     interval={4000}
                   />
-                ) : (
-                  <div className="mb-3 w-full h-96 rounded-xl bg-base-200 grid place-items-center text-base-content/60">
-                    No image
-                  </div>
-                )}
 
                 <div>
                   <h1 className="my-2 font-bold">{project.title}</h1>
@@ -195,7 +190,7 @@ function Projects() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img src={github} alt="github" className="w-5 h-5" />
+                    <img src={github} alt="github" className="size-5" />
                   </a>
                 </div>
               </div>

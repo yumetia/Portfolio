@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Languages, Palette } from "lucide-react";
-import { useLanguage } from "../context/LanguageContext";
-import languages from "../locales/languages";
+import { useLanguage } from "@context/LanguageContext";
+import languages from "@locales/languages";
 
 const Navbar = () => {
   const [show, setShow] = useState(true);

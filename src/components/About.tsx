@@ -1,7 +1,7 @@
 // components/About.tsx
 import Title from "./Title";
-import { useLanguage } from "../context/LanguageContext";
-import languages, { getLocalized, type Locale } from "../locales/languages";
+import { useLanguage } from "@context/LanguageContext";
+import languages, { getLocalized, type Locale } from "@locales/languages";
 
 function About() {
   const { language } = useLanguage();

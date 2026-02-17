@@ -1,7 +1,7 @@
-import shared from "../locales/shared";
+import shared from "@locales/shared";
 import Title from "./Title";
-import languages from "../locales/languages";
-import { useLanguage } from "../context/LanguageContext";
+import languages from "@locales/languages";
+import { useLanguage } from "@context/LanguageContext";
 
 const Skills = () => {
   const { language } = useLanguage();
