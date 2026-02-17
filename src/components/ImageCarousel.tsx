@@ -5,8 +5,6 @@ import {
   Autoplay,
   Pagination,
   Navigation,
-  EffectFade,
-  EffectCoverflow,
   EffectCards,
 } from "swiper/modules";
 

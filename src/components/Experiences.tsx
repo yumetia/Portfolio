@@ -1,9 +1,9 @@
 import Title from "./Title";
-import { useLanguage } from "../context/LanguageContext";
-import languages, { getLocalized, type Locale } from "../locales/languages";
+import { useLanguage } from "@context/LanguageContext";
+import languages, { getLocalized, type Locale } from "@locales/languages";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
