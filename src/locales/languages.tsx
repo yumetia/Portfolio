@@ -206,9 +206,10 @@ const projectsData = [
     description_fr:
       "Une intégration complète d’une maquette responsive conforme au visuel fourni. Le projet respecte les normes W3C, optimise le référencement et implémente des images adaptatives selon la taille d’écran en utilisant HTML5, CSS3 et JavaScript avec la méthodologie BEM.",
     technologies: ["HTML5", "CSS3", "JavaScript"],
+    rncp:["Maquette","Architecture de la Solution Web","Présentation Technique"],
     images: mockupResponsiveScreenshots(),
     demoLink: "#",
-    repoLink: "https://github.com/yumetia/responsive",
+    repoLink: "https://github.com/yumetia/mockup-css-responsive",
   },
 ] as const;
 

@@ -83,7 +83,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           lg:left-5
           p-0 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
-            <CornerDownLeft className="text-accent" />
+            <CornerDownLeft className="size-5 text-accent
+            md:size-auto" />
           </button>
 
           <button className="btn bg-transparent custom-next absolute 
@@ -91,7 +92,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           lg:right-5
           p-0 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
-            <CornerDownRight className="text-accent"/>
+            <CornerDownRight className="size-5 text-accent
+            md:size-auto"/>
           </button>
       </Swiper>
     </div>

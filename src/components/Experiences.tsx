@@ -102,7 +102,8 @@ export default function Experiences() {
           lg:left-5
           p-1 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
-            <CornerDownLeft />
+            <CornerDownLeft className="size-5 text-accent
+            md:size-auto"/>
           </button>
 
           <button className="btn bg-transparent custom-next absolute 
@@ -110,7 +111,8 @@ export default function Experiences() {
           lg:right-5
           p-1 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
-            <CornerDownRight />
+            <CornerDownRight className="size-5 text-accent
+            md:size-auto"/>
           </button>
         </Swiper>
       </div>

@@ -95,7 +95,7 @@ const Projects = () => {
                   <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
                     {/* Overlay */}
                     <div
-                      className="absolute inset-0 bg-black/50"
+                      className="absolute inset-0 b g-black/50"
                       onClick={handleCloseModal}
                     />
 
@@ -103,6 +103,7 @@ const Projects = () => {
                     <div
                       className="
                         relative
+                        bottom-40 md:bottom-auto
                         w-full md:w-[28rem]
                         max-h-[85vh]
                         bg-base-100 text-base-content
