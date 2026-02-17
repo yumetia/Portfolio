@@ -6,22 +6,11 @@ import amu from "../assets/institutions/amu.jpg";
 import epitech from "../assets/institutions/epitech.png";
 import lyceePerier from "../assets/institutions/lyceePerier.png";
 
-import myMeetic from "../assets/projects/my_meetic.png";
-import myMeetic2 from "../assets/projects/my_meetic2.png";
-import myMeetic3 from "../assets/projects/my_meetic3.png";
 
-import myTweeter from "../assets/projects/my_twitter.png";
-import myTweeter2 from "../assets/projects/my_twitter2.png";
-import myTweeter3 from "../assets/projects/my_twitter3.png";
-import myTweeter4 from "../assets/projects/my_twitter4.png";
-import myTweeter5 from "../assets/projects/my_twitter5.png";
-import myTweeter6 from "../assets/projects/my_twitter6.png";
+import myMeetic from "../assets/projects/my_meetic.png";
 
 import cssGenerator from "../assets/projects/cssGenerator.png";
 import cssGenerator2 from "../assets/projects/cssGenerator2.png";
-import cssGenerator3 from "../assets/projects/cssGenerator3.png";
-
-import applybot from "../assets/projects/applybot.png";
 
 import stoneRain from "../assets/projects/stoneRain.png";
 import generateMVC from "../assets/projects/generateMVC.png";
@@ -150,31 +139,19 @@ const experiencesData = [
 
 const projectsData = [
   {
-    id: 2,
+    id: 1,
     title: "My Meetic",
     description_en:
       "A dating platform clone built with PHP and JavaScript, allowing users to create profiles, browse potential matches, and interact in real-time.",
     description_fr:
       "Un clone de plateforme de rencontres développé avec PHP et JavaScript, permettant aux utilisateurs de créer des profils, parcourir des correspondances potentielles et interagir en temps réel.",
     technologies: ["PHP", "JS"],
-    images: [myMeetic, myMeetic2, myMeetic3],
+    images: [myMeetic],
     demoLink: "#",
     repoLink: "https://github.com/yumetia/my_meetic",
   },
   {
-    id: 3,
-    title: "My Twitter",
-    description_en:
-      "A Twitter-like social media platform built using PHP, JavaScript, and Skeleton CSS, featuring user authentication, tweet creation, and basic interactions.",
-    description_fr:
-      "Une plateforme sociale ressemblant à Twitter, construite avec PHP, JavaScript et Skeleton CSS, offrant une authentification, la création de tweets et des interactions basiques.",
-    technologies: ["PHP", "JS", "Skeleton CSS"],
-    images: [myTweeter, myTweeter2, myTweeter3, myTweeter4, myTweeter5, myTweeter6],
-    demoLink: "#",
-    repoLink: "https://github.com/yumetia/my_twitter",
-  },
-  {
-    id: 4,
+    id: 2,
     title: "Nakamanet",
     description_en:
       "A platform for anime fans to track and share their favorite shows. Currently in development.",
@@ -182,13 +159,13 @@ const projectsData = [
       "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées. En développement.",
     // If tech labels differ by language, keep both.
     technologies_en: ["Next.js", "Laravel", "AdonisJS", "DaisyUI", "(In development..)"],
-    technologies_fr: ["React.js", "Node.js", "Tailwind CSS", "(En développement..)"],
+    technologies_fr: ["Next.js", "Laravel", "AdonisJS", "DaisyUI", "(En développement..)"],
     images: [nakamanet],
     demoLink: "#",
     repoLink: "https://github.com/yumetia/nakamanet",
   },
   {
-    id: 5,
+    id: 3,
     title: "CSS Generator",
     description_en:
       "A tool that creates a sprite from a folder of images and automatically generates the corresponding CSS stylesheet. It supports standard command-line options (sprite name, CSS name, recursion…) as well as bonus options (padding, resizing, columns).",
@@ -196,24 +173,12 @@ const projectsData = [
       "Un outil permettant de créer un sprite à partir d’un dossier d’images, et de générer automatiquement la feuille de style CSS correspondante. Cela gère les options classiques en ligne de commande (nom du sprite, nom du CSS, récursivité…) ainsi que des options bonus (padding, redimensionnement, colonnes).",
     technologies_en: ["PHP", "GD library"],
     technologies_fr: ["PHP", "Librairie GD"],
-    images: [cssGenerator, cssGenerator2, cssGenerator3],
+    images: [cssGenerator, cssGenerator2],
     demoLink: "#",
     repoLink: "https://github.com/yumetia/GenerateMVC",
   },
   {
-    id: 6,
-    title: "Apply Bot",
-    description_en:
-      "A tool that automates company search, extracts contact details (email, phone, city), and sends personalized internship applications with a CV attachment. It prevents duplicates, logs applications in a CSV file, and uses Gmail to send emails.",
-    description_fr:
-      "Un outil qui automatise la recherche d’entreprises, l’extraction de leurs contacts (email, téléphone, ville), et l’envoi d’emails de candidature avec un CV en pièce jointe. Il évite les doublons, tient un historique dans un fichier CSV, et gère l’envoi automatique par Gmail.",
-    technologies: ["Python", "BeautifulSoup", "SMTPlib"],
-    images: [applybot],
-    demoLink: "#",
-    repoLink: "https://github.com/yumetia/GenerateMVC",
-  },
-  {
-    id: 7,
+    id: 4,
     title: "Generate MVC",
     description_en:
       "A lightweight PHP MVC framework generator that simplifies project structure and speeds up backend development with automatic routing and controllers.",
@@ -225,7 +190,7 @@ const projectsData = [
     repoLink: "https://github.com/yumetia/GenerateMVC",
   },
   {
-    id: 8,
+    id: 5,
     title: "Stone Rain",
     description_en:
       "A retro-style arcade game developed with Pyxel and Python, where players must dodge falling stones while trying to survive as long as possible.",
