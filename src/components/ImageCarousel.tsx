@@ -2,15 +2,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
-  Autoplay,
-  Pagination,
   Navigation,
   EffectCards,
 } from "swiper/modules";
 
 // CSS Swiper (voir note en bas si TS râle sur ces imports)
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import "swiper/css/effect-coverflow";
@@ -25,11 +22,8 @@ export interface ImageCarouselProps {
   images: string[];
   alt?: string;
   className?: string;
-  autoPlay?: boolean;
   interval?: number;
   effect?: EffectName;
-
-  showPagination?: boolean;
   showNavigation?: boolean;
 
   heightClass?: string;
@@ -43,9 +37,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   images,
   alt = "slide image",
   className = "",
-  autoPlay = true,
-  interval = 4000,
-  effect = "slide",
   heightClass = "h-64 md:h-80",
   roundedClass = "rounded-xl",
   alts,
@@ -63,21 +54,12 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   return (
     <div className={className}>
       <Swiper
-        modules={[Autoplay,Pagination,Navigation,EffectCards]}
+        modules={[Navigation,EffectCards]}
         grabCursor
-        // Effets
-        effect={effect === "slide" ? undefined : effect}
-        fadeEffect={effect === "fade" ? { crossFade: true } : undefined}
         navigation={{
           prevEl:".custom-prev",
           nextEl:".custom-next",
         }}
-        // Autoplay
-        autoplay={
-          autoPlay
-            ? { delay: interval, disableOnInteraction: false, pauseOnMouseEnter: true }
-            : false
-        }
         className={`${roundedClass} overflow-hidden`}
 
       >
@@ -96,16 +78,20 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           
         ))}
         {/* buttons */}
-          <button className="btn custom-prev absolute 
+          <button className="btn bg-transparent custom-prev absolute 
           left-5 top-1/2 z-10
+          lg:left-5
+          p-0 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
-            <CornerDownLeft />
+            <CornerDownLeft className="text-accent" />
           </button>
 
-          <button className="btn custom-next absolute 
+          <button className="btn bg-transparent custom-next absolute 
           right-5 top-1/2 z-10
+          lg:right-5
+          p-0 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
-            <CornerDownRight />
+            <CornerDownRight className="text-accent"/>
           </button>
       </Swiper>
     </div>

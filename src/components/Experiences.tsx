@@ -100,8 +100,7 @@ export default function Experiences() {
           <button className="btn bg-transparent custom-prev absolute 
           left-1 top-1/2 z-10
           lg:left-5
-
-          p-1 md:p-2
+          p-1 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
             <CornerDownLeft />
           </button>

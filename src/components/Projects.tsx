@@ -69,7 +69,6 @@ const Projects = () => {
                     images={images}
                     alt={project.title}
                     className="h-full mb-3"
-                    autoPlay
                     interval={4000}
                   />
 
