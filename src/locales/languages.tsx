@@ -7,14 +7,12 @@ import epitech from "@assets/institutions/epitech.png";
 import lyceePerier from "@assets/institutions/lyceePerier.png";
 
 
-import myMeetic from "@assets/projects/my_meetic.png";
-
-import cssGenerator from "@assets/projects/cssGenerator.png";
-import cssGenerator2 from "@assets/projects/cssGenerator2.png";
-
-import stoneRain from "@assets/projects/stoneRain.png";
-import generateMVC from "@assets/projects/generateMVC.png";
-import nakamanet from "@assets/projects/nakamanet.png";
+import cssGeneratorScreenshots from "@assets/projects/cssGenerator/cssGeneratorScreenshots";
+import mockupResponsiveScreenshots from "@assets/projects/mockupResponsive/mockupResponsiveScreenshots";
+import generateMVCScreenshots from "@assets/projects/generateMVC/generateMVCScreenshots";
+import myMeeticScreenshots from "@assets/projects/myMeetic/myMeeticScreenshots";
+import nakamanetScreenshots from "@assets/projects/nakamanet/nakamanetScreenshots";
+import stoneRainScreenshots from "@assets/projects/stoneRain/stoneRainScreenshots";
 
 export type Locale = "en" | "fr";
 
@@ -146,7 +144,7 @@ const projectsData = [
     description_fr:
       "Un clone de plateforme de rencontres développé avec PHP et JavaScript, permettant aux utilisateurs de créer des profils, parcourir des correspondances potentielles et interagir en temps réel.",
     technologies: ["PHP", "JS"],
-    images: [myMeetic],
+    images: myMeeticScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/my_meetic",
   },
@@ -157,10 +155,9 @@ const projectsData = [
       "A platform for anime fans to track and share their favorite shows. Currently in development.",
     description_fr:
       "Une plateforme pour les fans d'anime permettant de suivre et partager leurs émissions préférées. En développement.",
-    // If tech labels differ by language, keep both.
     technologies_en: ["Next.js", "Laravel", "AdonisJS", "DaisyUI", "(In development..)"],
     technologies_fr: ["Next.js", "Laravel", "AdonisJS", "DaisyUI", "(En développement..)"],
-    images: [nakamanet],
+    images: nakamanetScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/nakamanet",
   },
@@ -173,7 +170,7 @@ const projectsData = [
       "Un outil permettant de créer un sprite à partir d’un dossier d’images, et de générer automatiquement la feuille de style CSS correspondante. Cela gère les options classiques en ligne de commande (nom du sprite, nom du CSS, récursivité…) ainsi que des options bonus (padding, redimensionnement, colonnes).",
     technologies_en: ["PHP", "GD library"],
     technologies_fr: ["PHP", "Librairie GD"],
-    images: [cssGenerator, cssGenerator2],
+    images: cssGeneratorScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/GenerateMVC",
   },
@@ -185,7 +182,7 @@ const projectsData = [
     description_fr:
       "Un générateur de framework PHP MVC léger qui simplifie la structure du projet et accélère le développement backend grâce à un routage et des contrôleurs automatiques.",
     technologies: ["PHP"],
-    images: [generateMVC],
+    images: generateMVCScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/GenerateMVC",
   },
@@ -197,9 +194,21 @@ const projectsData = [
     description_fr:
       "Un jeu d'arcade rétro développé avec Pyxel et Python, où les joueurs doivent esquiver des pierres tombantes tout en essayant de survivre le plus longtemps possible.",
     technologies: ["Python", "Pyxel"],
-    images: [stoneRain],
+    images: stoneRainScreenshots(),
     demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
     repoLink: "https://github.com/yumetia/IshiNoAme",
+  },
+  {
+    id: 6,
+    title: "Maquette Responsive",
+    description_en:
+      "A fully responsive website integration based on a provided design mockup. The project follows W3C standards, ensures SEO optimization, and implements adaptive images depending on screen size using HTML5, CSS3, and JavaScript with the BEM methodology.",
+    description_fr:
+      "Une intégration complète d’une maquette responsive conforme au visuel fourni. Le projet respecte les normes W3C, optimise le référencement et implémente des images adaptatives selon la taille d’écran en utilisant HTML5, CSS3 et JavaScript avec la méthodologie BEM.",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    images: mockupResponsiveScreenshots(),
+    demoLink: "#",
+    repoLink: "https://github.com/yumetia/responsive",
   },
 ] as const;
 

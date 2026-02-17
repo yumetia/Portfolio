@@ -83,12 +83,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       >
         {images.map((src, i) => (
           <SwiperSlide key={i}>
-            <div className={`h-full`}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+            <div className={`flex justify-center w-full`}>
               <img
                 src={src}
                 alt={alts?.[i] ?? alt}
-                className="mx-auto "
+                className={`h-96 mx-auto object-cover ${roundedClass}`}
                 loading="lazy"
                 draggable={false}
               />
