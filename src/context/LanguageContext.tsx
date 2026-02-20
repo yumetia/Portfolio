@@ -1,41 +1,32 @@
 // context/LanguageContext.tsx
 import React, { createContext, useContext, useState } from "react";
 
-type Language = "en"|"de"|"fr"|"jp";
+export const LOCALES = ["en", "de", "fr", "jp"] as const;
+export type Language = typeof LOCALES[number];
 
 interface LanguageContextProps {
   language: Language;
-  toggleLanguage: () => void;
+  switchLanguage: (lang:Language) => void;toggleLanguage
 }
 
 const LanguageContext = createContext<LanguageContextProps>({
   language: "en",
-  toggleLanguage: () => {}
+  switchLanguage: ()=>{}
 });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-
-  // if lang saved, set it as default
-  // else, set eng
-  const savedLang = localStorage.getItem("lang");
   
   const [language, setLanguage] = useState<Language>(()=>{
     if (savedLang=="en"||savedLang=="fr") return savedLang;
     return "en";
   });
 
-  const toggleLanguage = () => {
-    setLanguage((prev) => {
-      const newLang = prev==="en"? "fr": "en";
-      // save the lang (localStorage)
-      localStorage.setItem("lang",newLang); 
-      return newLang;
-    });
-    
+  const switchLanguage = (lang:string) => {
+    setLanguage(lang);
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, switchLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

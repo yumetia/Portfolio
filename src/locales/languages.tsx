@@ -3,8 +3,8 @@ import en from "@locales/en/en";
 import fr from "@locales/fr/fr";
 
 
-export type Locale = "en" | "de" | "fr" | "jp";
-
+export const LOCALES = ["en", "de", "fr", "jp"] as const;
+export type Locale = typeof LOCALES[number]
 
 /**
  * Helper: read `field_en` / `field_fr` from an object.
@@ -12,10 +12,10 @@ export type Locale = "en" | "de" | "fr" | "jp";
 */
 
 export function getLocalized<T = string>(
-  obj: Record<string, any>,
+  obj: Record<string, unknown>,
   field: string,
   locale: Locale
-): T {
+): T | undefined{
   const key = `${field}_${locale}`;
   if (key in obj) return obj[key] as T;
 

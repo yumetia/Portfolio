@@ -9,7 +9,7 @@ import Title from "./Title";
 import { useLanguage } from "@context/LanguageContext";
 import languages, { getLocalized, type Locale } from "@locales/languages";
 
-import {Info, Video } from "lucide-react";
+import { Info, Video } from "lucide-react";
 import ImageCarousel from "./ImageCarousel";
 import { useState } from "react";
 

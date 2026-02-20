@@ -18,7 +18,6 @@ const ThemeModal = ({ themes,language,isVisible=false,onClose }: ThemeModalProps
         // 1) get the current theme
         // 2) change with the theme pressed
         // 3) storing in local storage
-
         // 1 & 2)
         const html = document.documentElement;
         html.dataset.theme = theme;

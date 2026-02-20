@@ -4,6 +4,9 @@ import { useLanguage } from "@context/LanguageContext";
 import languages from "@locales/languages";
 
 import ThemeModal from "./modals/ThemeModal";
+import LangModal from "./modals/LangModal";
+
+import { LOCALES } from "@locales/languages"
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
@@ -26,14 +29,16 @@ const Navbar = () => {
   }, [lastScrollY]);
 
 
-  const { language, toggleLanguage } = useLanguage();
+  const { language } = useLanguage();
   const { home, about, skills, experiences, projects, contact, themeBtn,toggleBtn } = languages[language].navbar;
 
   // navLinkClass const
   const navLinkClass = "btn btn-sm btn-ghost text-lg";
 
-  // modal change theme
+  // modals visibility states
+
   const [themeModalVisible,setThemeModalVisible] = useState(false);
+  const [langModalVisible,setLangModalVisible] = useState(false);
 
   const themes = [
     "emerald",
@@ -42,9 +47,14 @@ const Navbar = () => {
     "halloween",
   ]
 
+  // renders
   
-  const renderModalTheme = ()=>{
+  const renderThemeModal = () => {
     themeModalVisible===false? setThemeModalVisible(true): setThemeModalVisible(false);
+  }
+
+  const renderLangModal = () => {
+    langModalVisible===false? setLangModalVisible(true): setLangModalVisible(false);
   }
 
   return (
@@ -76,7 +86,7 @@ const Navbar = () => {
 
         {/* theme selector button*/}
           <button
-            onClick={()=>{renderModalTheme()}}
+            onClick={()=>{renderThemeModal()}}
             className="btn btn-outline rounded-full"
           >
             <Palette className="size-4
@@ -87,7 +97,7 @@ const Navbar = () => {
         {/* toggle lang button */}
           <button
             id="toggle-lang"
-            onClick={toggleLanguage}
+            onClick={()=>renderLangModal()}
             className="btn btn-outline rounded-full"
           >
             <Languages className="size-4 
@@ -100,6 +110,13 @@ const Navbar = () => {
         language={language}
         isVisible={themeModalVisible}
         onClose={()=>{setThemeModalVisible(false)}}
+        />
+        
+        <LangModal
+        locales={LOCALES}
+        currentLang={language}
+        isVisible={langModalVisible}
+        onClose={()=>setLangModalVisible(false)}
         />
 
 
