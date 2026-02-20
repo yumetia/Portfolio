@@ -1,7 +1,7 @@
 // context/LanguageContext.tsx
 import React, { createContext, useContext, useState } from "react";
 
-type Language = "en"|"fr";
+type Language = "en"|"de"|"jp"|"fr";
 
 interface LanguageContextProps {
   language: Language;
@@ -15,7 +15,7 @@ const LanguageContext = createContext<LanguageContextProps>({
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
-  // if lang saved set it as default
+  // if lang saved, set it as default
   // else, set eng
   const savedLang = localStorage.getItem("lang");
   

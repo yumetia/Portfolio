@@ -55,12 +55,11 @@ const Projects = () => {
         {data.map((project: any) => {
           const images: string[] = project.images ?? [];
 
-          // ✅ NEW: localize description (description_en / description_fr)
+          // shared or localized
           const description = getLocalized<string>(project, "description", lang);
 
-          // ✅ NEW: technologies can be shared OR localized
-          const technologies: string[] =
-            project[`technologies_${lang}`] ?? project.technologies ?? [];
+          // shared or localized
+          const technologies = getLocalized<string[]>(project,"technologies",lang)
 
           return (
             <SwiperSlide key={project.id}>
@@ -74,12 +73,10 @@ const Projects = () => {
 
                 <div>
                   <h1 className="my-2 font-bold">{project.title}</h1>
-                  {/* ✅ CHANGED */}
                   <p className="text-sm">{description}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2 my-3">
-                  {/* ✅ CHANGED */}
                   {technologies.map((tech: string, idx: number) => (
                     <span key={idx} className="badge badge-accent badge-sm">
                       {tech}
