@@ -13,6 +13,7 @@ const fr =
       experiences: "Expériences",
       contact: "Contact",
       themeBtn: "Thème",
+      langBtn: "Langue",
       toggleBtn: "Français",
     },
     home: {

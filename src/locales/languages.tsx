@@ -1,16 +1,15 @@
 
 import en from "@locales/en/en";
 import fr from "@locales/fr/fr";
+import de from "@locales/de/de";
+import ja from "@locales/ja/ja";
 
-
-export const LOCALES = ["en", "de", "fr", "jp"] as const;
-export type Locale = typeof LOCALES[number]
+import { Locale } from "@context/LanguageContext";
 
 /**
  * Helper: read `field_en` / `field_fr` from an object.
  * Fallback order: field_<locale> -> field_en -> field (if we keep a non-localized field)
 */
-
 export function getLocalized<T = string>(
   obj: Record<string, unknown>,
   field: string,
@@ -29,7 +28,9 @@ export function getLocalized<T = string>(
 
 const languages = {
   en,
-  fr
+  fr,
+  de,
+  ja
 } as const;
 
 export default languages;

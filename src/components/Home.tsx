@@ -18,7 +18,7 @@ function Home() {
         </h1>
         <p className="my-4 text-md text-center 
         md:text-left
-        lg:text-xl">
+        lg:text-lg">
           {paragraph1}
           <br />
           {paragraph2}

@@ -6,7 +6,7 @@ import languages from "@locales/languages";
 import ThemeModal from "./modals/ThemeModal";
 import LangModal from "./modals/LangModal";
 
-import { LOCALES } from "@locales/languages"
+import { Locales } from "@context/LanguageContext";
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
@@ -113,7 +113,7 @@ const Navbar = () => {
         />
         
         <LangModal
-        locales={LOCALES}
+        locales={Locales}
         currentLang={language}
         isVisible={langModalVisible}
         onClose={()=>setLangModalVisible(false)}
