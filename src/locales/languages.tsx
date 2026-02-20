@@ -2,12 +2,15 @@
 import en from "@locales/en/en";
 import fr from "@locales/fr/fr";
 
-export type Locale = "en" | "fr";
+
+export type Locale = "en" | "de" | "fr" | "jp";
+
 
 /**
  * Helper: read `field_en` / `field_fr` from an object.
  * Fallback order: field_<locale> -> field_en -> field (if we keep a non-localized field)
 */
+
 export function getLocalized<T = string>(
   obj: Record<string, any>,
   field: string,

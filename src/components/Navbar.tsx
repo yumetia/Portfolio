@@ -3,6 +3,8 @@ import { Container, Languages, Palette } from "lucide-react";
 import { useLanguage } from "@context/LanguageContext";
 import languages from "@locales/languages";
 
+import ThemeModal from "./modals/ThemeModal";
+
 const Navbar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -31,7 +33,7 @@ const Navbar = () => {
   const navLinkClass = "btn btn-sm btn-ghost text-lg";
 
   // modal change theme
-  const [themeModal,setThemeModal] = useState(false);
+  const [themeModalVisible,setThemeModalVisible] = useState(false);
 
   const themes = [
     "emerald",
@@ -42,26 +44,9 @@ const Navbar = () => {
 
   
   const renderModalTheme = ()=>{
-    themeModal===false? setThemeModal(true): setThemeModal(false);
+    themeModalVisible===false? setThemeModalVisible(true): setThemeModalVisible(false);
   }
 
-  // handles functions
-  const handleCloseModal = () =>{
-    setThemeModal(false);
-  }
-
-  const handleTheme = (theme: string) =>{
-    // 1) get the current theme
-    // 2) change with the theme pressed
-    // 3) storing in local storage
-    
-    // 1 & 2)
-    const html = document.documentElement;
-    html.dataset.theme = theme;
-
-    // 3)
-    localStorage.setItem("theme",theme);
-  }
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300
@@ -83,11 +68,13 @@ const Navbar = () => {
           <li><a href="#Contact" className={navLinkClass}>{contact}</a></li>
         </ul>
 
+      {/* theme & lang buttons  */}
         <div className="flex gap-10 mt-5 
         md:mt-0
         lg:gap-2
         ">
-           {/* theme selector button*/}
+
+        {/* theme selector button*/}
           <button
             onClick={()=>{renderModalTheme()}}
             className="btn btn-outline rounded-full"
@@ -97,7 +84,7 @@ const Navbar = () => {
             <span>{themeBtn}</span>
           </button>
 
-            {/* toggle lang button */}
+        {/* toggle lang button */}
           <button
             id="toggle-lang"
             onClick={toggleLanguage}
@@ -109,35 +96,12 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* theme modal */}
-         {themeModal===true &&(
-            <div className="absolute top-40 right-40 
-            sm:right-70 md:top-20 md:right-30
-            bg-primary rounded p-6
-            ">
-              {/* modal title */}
-              <div className="mb-4 flex justify-center">
-                <h2 className="text-center text-neutral font-bold">{themeBtn}</h2>
-              </div>
+        <ThemeModal themes={themes}
+        language={language}
+        isVisible={themeModalVisible}
+        onClose={()=>{setThemeModalVisible(false)}}
+        />
 
-              {/* rendering themes button */}
-              {themes.map((theme,key)=>(
-                <div key={key} className="flex mb-2 ">
-                  <button className="btn" onClick={()=>{handleTheme(theme)}}>
-                    {theme}
-                  </button>
-                </div>
-              ))}
-
-              {/* close modal button */}
-              <button 
-                className="mt-2 btn btn-outline hover:bg-accent text-neutral"
-                onClick={()=>{handleCloseModal()}}
-              >
-                <span>{language === "fr" ? "Fermer" : "Close"}</span>
-              </button>
-            </div>
-          )}
 
       </div>
     </div>

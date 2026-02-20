@@ -17,7 +17,7 @@ function About() {
       lg:gap-16
       gap-4 ">
         {sections.map((section: any) => {
-          //  NEW: localized fields
+          //  localized fields
           const sectionTitle = getLocalized<string>(
             section,
             "title",
@@ -32,7 +32,6 @@ function About() {
           const Icon = section.icon;
 
           return (
-
           // container cards
           <div
               key={section.id}
