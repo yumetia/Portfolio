@@ -4,14 +4,14 @@ import languages from "@locales/languages";
 
 type ThemeModalProps = {
     themes: string[],
-    language:string,
+    language:keyof typeof languages,
     isVisible?:boolean,
     onClose:()=>void;
 }
 
 const ThemeModal = ({ themes,language,isVisible=false,onClose }: ThemeModalProps) => {
-
-    const { themeBtn } = languages[language].navbar
+    
+    const { themeBtn  } = languages[language].navbar 
 
 
     const handleTheme = (theme:string) =>{

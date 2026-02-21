@@ -1,9 +1,5 @@
 // components/footer.jsx
 
-import { useLanguage } from "@context/LanguageContext";
-import languages from "@locales/languages";
-
-
 import github from "@assets/institutions/github.png"
 import { Container } from "lucide-react";
 
@@ -31,7 +27,7 @@ function Footer() {
               className="btn btn-neutral btn-circle"
               title="GitHub"
             >
-              <img src={github} alt="github" className="w-6 w-6"/>
+              <img src={github} alt="github" className="size-6"/>
             </a>
           </div>
 

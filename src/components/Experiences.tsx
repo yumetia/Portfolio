@@ -1,6 +1,6 @@
 import Title from "./Title";
 import { useLanguage } from "@context/LanguageContext";
-import languages, { getLocalized, type Locale } from "@locales/languages";
+import languages, { getLocalized } from "@locales/languages";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
@@ -13,7 +13,7 @@ import { CornerDownLeft, CornerDownRight } from "lucide-react";
 
 export default function Experiences() {
   const { language } = useLanguage();
-  const lang = language as Locale;
+  const lang = language;
 
   const { title, data: experiences } = languages[lang].experiences;
 

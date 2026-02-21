@@ -17,7 +17,7 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const savedLang: string = localStorage.getItem("lang")
+  const savedLang: string = localStorage.getItem("lang") || ""
   
   const [language, setLanguage] = useState(()=>{
     if (savedLang && Locales.includes(savedLang as any)) return savedLang as Locale;

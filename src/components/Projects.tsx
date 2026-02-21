@@ -7,7 +7,7 @@ import "swiper/css/effect-coverflow";
 
 import Title from "./Title";
 import { useLanguage } from "@context/LanguageContext";
-import languages, { getLocalized, type Locale } from "@locales/languages";
+import languages, { getLocalized } from "@locales/languages";
 
 import { Info, Video } from "lucide-react";
 import ImageCarousel from "./ImageCarousel";
@@ -21,7 +21,7 @@ import RNCP_DATA from "@utils/Rncp";
 
 const Projects = () => {
   const { language } = useLanguage();
-  const lang = language as Locale; // ensure "en" | "fr"
+  const lang = language ; 
 
   const { title, data } = languages[lang].projects;
   const play = lang === "fr" ? "Jouer" : "Play";
@@ -59,7 +59,7 @@ const Projects = () => {
           const description = getLocalized<string>(project, "description", lang);
 
           // shared or localized
-          const technologies = getLocalized<string[]>(project,"technologies",lang)
+          const technologies = getLocalized<string[]>(project,"technologies",lang) ?? []
 
           return (
             <SwiperSlide key={project.id}>
