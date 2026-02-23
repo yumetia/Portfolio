@@ -62,7 +62,7 @@ const projectsData = [
     description:
       "提供されたデザインモックアップを基に実装した完全レスポンシブWebサイト。W3C標準に準拠し、SEO最適化を行い、HTML5・CSS3・JavaScriptおよびBEM手法を用いて画面サイズに応じた適応画像を実装。",
     technologies: ["HTML5", "CSS3", "JavaScript"],
-    rncp: ["モックアップ", "Webソリューション設計", "技術プレゼンテーション"],
+    rncp: [],
     images: mockupResponsiveScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/mockup-css-responsive",

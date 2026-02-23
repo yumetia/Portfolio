@@ -17,6 +17,7 @@ const LangModal = ({locales,currentLang,isVisible=false,onClose}: LangModalProps
     const { language } = useLanguage();
     
     const langBtn = languages[language].navbar.langBtn;
+    
      return (
         <div className="absolute top-40 right-40 
         sm:right-70 md:top-20 md:right-30

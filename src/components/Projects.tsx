@@ -15,16 +15,12 @@ import { useState } from "react";
 
 import github from "@assets/institutions/github.png"
 
-// rncp
-import mappingRncp from "@utils/mappingRncp";
-import RNCP_DATA from "@utils/Rncp";
 
 const Projects = () => {
   const { language } = useLanguage();
   const lang = language ; 
 
-  const { title, data } = languages[lang].projects;
-  const play = lang === "fr" ? "Jouer" : "Play";
+  const { title, data, modalTitle,modalClose,play,} = languages[lang].projects ;
 
   const [projectId, setProjectId] = useState<number | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -38,7 +34,6 @@ const Projects = () => {
     setIsModalVisible(false);
   };
 
-  const rncpMap = mappingRncp(RNCP_DATA);
 
   return (
     <div className="mt-10" id="Projects">
@@ -88,81 +83,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {isModalVisible && projectId === project.id && (
-                  <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
-                    {/* Overlay */}
-                    <div
-                      className="absolute inset-0 b g-black/50"
-                      onClick={handleCloseModal}
-                    />
-
-                    {/* Modal */}
-                    <div
-                      className="
-                        relative
-                        bottom-40 md:bottom-auto
-                        w-full md:w-[28rem]
-                        max-h-[85vh]
-                        bg-base-100 text-base-content
-                        rounded-t-2xl md:rounded-2xl
-                        p-4 md:p-6
-                        overflow-y-auto
-                        animate-slide-up
-                      "
-                    >
-                      {/* Header */}
-                      <div className="flex items-center justify-between mb-3">
-                        <h3 className="font-bold text-lg">
-                          {lang === "fr"
-                            ? "Compétences acquises (RNCP)"
-                            : "Skills acquired (RNCP)"}
-                        </h3>
-                        <button
-                          className="btn btn-sm btn-circle btn-ghost"
-                          onClick={handleCloseModal}
-                        >
-                          ✕
-                        </button>
-                      </div>
-
-                      {/* Content */}
-                      <div className="space-y-3">
-                        {project.rncp?.map((rncpLabel: string) => {
-                          const match = rncpMap.find(
-                            (item) => item.label === rncpLabel
-                          );
-                          if (!match || !match.rncp) return null;
-
-                          return (
-                            <div
-                              key={rncpLabel}
-                              className="rounded-lg bg-base-200 p-3"
-                            >
-                              <h4 className="font-semibold text-sm mb-1">
-                                {match.rncp.code}
-                              </h4>
-                              <p className="text-xs leading-snug opacity-80 line-clamp-3">
-                                {lang === "en"
-                                  ? match.rncp.description_en
-                                  : match.rncp.description_fr}
-                              </p>
-                            </div>
-                          );
-                        })}
-                      </div>
-
-                      {/* Footer */}
-                      <div className="mt-4 flex justify-center">
-                        <button
-                          className="btn btn-primary btn-sm w-full md:w-auto"
-                          onClick={handleCloseModal}
-                        >
-                          {lang === "fr" ? "Fermer" : "Close"}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                )}
+                
 
                 <div className="flex">
                   {project.demoLink && project.demoLink !== "#" && (

@@ -1,154 +1,119 @@
+export type RncpBloc = "RNCP38436BC01" | "RNCP38436BC02" | "RNCP38436BC03";
+export type Lang = "fr" | "en";
+
+/**
+ * 1) Structure/order per bloc 
+ */
+export const RNCP_BLOCKS = {
+  RNCP38436BC01: ["RNCP01-1", "RNCP01-2", "RNCP01-3", "RNCP01-4", "RNCP01-5", "RNCP01-6"],
+  RNCP38436BC02: ["RNCP02-1", "RNCP02-2", "RNCP02-3", "RNCP02-4", "RNCP02-5", "RNCP02-6", "RNCP02-7", "RNCP02-8"],
+  RNCP38436BC03: ["RNCP03-1", "RNCP03-2", "RNCP03-3", "RNCP03-4", "RNCP03-5", "RNCP03-6"],
+} as const satisfies Record<RncpBloc, readonly string[]>;
+
+export type RncpId = (typeof RNCP_BLOCKS)[RncpBloc][number];
 
 
-export interface Rncp {
-    id : string,
-    code: string,
-    description_fr: string,
-    description_en: string,
-    bloc: string
-}
+/**
+ * 2) Descriptions 
+ */
+export const RNCP_DESCRIPTION_FR = {
+  "RNCP01-1": `Rédiger un Cahier Des Charges (CDC) en partant d'une expression de besoins, afin de cadrer fonctionnellement un projet de solution web dans le respect des réglementations en vigueur et notamment le RGPD`,
+  "RNCP01-2": `Rédiger des spécifications techniques en analysant un CDC, afin de cadrer techniquement un projet de développement de solution web`,
+  "RNCP01-3": `Déployer un environnement de travail en mettant en place les outils de versionnage, de partage et de collaboration/communication nécessaires, afin de cadrer opérationnellement un projet de développement de solution web`,
+  "RNCP01-4": `Réaliser une maquette afin de permettre au client de valider la structure de la solution web en respectant les bonnes pratiques en termes d'ergonomie et d'accessibilité`,
+  "RNCP01-5": `Identifier les fonctionnalités à développer, en modélisant les divers éléments et leurs interconnexions, afin de structurer l'architecture de la solution web et de Base De Données (BDD)`,
+  "RNCP01-6": `Rédiger une présentation pour présenter les choix techniques, les maquettes, et le schéma de la solution web en argumentant les choix faits afin de permettre au client ou au décideur de valider la proposition de solution`,
 
-export const RNCP_DATA: Rncp[] = [
-    {
-        id: "RNCP01-1",
-        code: "RNCP38436BC01",
-        description_fr: "Rédiger un Cahier Des Charges (CDC) en partant d'une expression de besoins, afin de cadrer fonctionnellement un projet de solution web dans le respect des réglementations en vigueur et notamment le RGPD",
-        description_en: "Draft a Statement of Requirements (SOR) based on needs expression, in order to functionally define a web solution project while respecting current regulations, particularly GDPR",
-        bloc: "RNCP38436BC01"
-    },
-    {
-        id: "RNCP01-2",
-        code: "RNCP38436BC01",
-        description_fr: "Rédiger des spécifications techniques en analysant un CDC, afin de cadrer techniquement un projet de développement de solution web",
-        description_en: "Write technical specifications by analyzing a SOR, in order to technically define a web solution development project",
-        bloc: "RNCP38436BC01"
-    },
-    {
-        id: "RNCP01-3",
-        code: "RNCP38436BC01",
-        description_fr: "Déployer un environnement de travail en mettant en place les outils de versionnage, de partage et de collaboration/communication nécessaires, afin de cadrer opérationnellement un projet de développement de solution web",
-        description_en: "Deploy a working environment by implementing the necessary versioning, sharing, and collaboration/communication tools to operationally define a web solution development project",
-        bloc: "RNCP38436BC01"
-    },
-    {
-        id: "RNCP01-4",
-        code: "RNCP38436BC01",
-        description_fr: "Réaliser une maquette afin de permettre au client de valider la structure de la solution web en respectant les bonnes pratiques en termes d'ergonomie et d'accessibilité",
-        description_en: "Create a mockup to allow the client to validate the web solution's structure while respecting best practices in terms of ergonomics and accessibility",
-        bloc: "RNCP38436BC01"
-    },
-    {
-        id: "RNCP01-5",
-        code: "RNCP38436BC01",
-        description_fr: "Identifier les fonctionnalités à développer, en modélisant les divers éléments et leurs interconnexions, afin de structurer l'architecture de la solution web et de Base De Données (BDD)",
-        description_en: "Identify features to develop by modeling various elements and their interconnections to structure the architecture of the web solution and Database (DB)",
-        bloc: "RNCP38436BC01"
-    },
-    {
-        id: "RNCP01-6",
-        code: "RNCP38436BC01",
-        description_fr: "Rédiger une présentation pour présenter les choix techniques, les maquettes, et le schéma de la solution web en argumentant les choix faits afin de permettre au client ou au décideur de valider la proposition de solution",
-        description_en: "Write a presentation to showcase technical choices, mockups, and the web solution schema by arguing the choices made to allow the client or decision-maker to validate the proposed solution",
-        bloc: "RNCP38436BC01"
-    },
-    {
-        id: "RNCP02-1",
-        code: "RNCP38436BC02",
-        description_fr: "Développer le prototype de la solution web afin de présenter l'architecture technique au client",
-        description_en: "Develop the web solution prototype to present the technical architecture to the client",
-        bloc: "RNCP38436BC02"
-    },
-    {
-        id: "RNCP02-2",
-        code: "RNCP38436BC02",
-        description_fr: "Rédiger le code de la solution en transcrivant les fonctionnalités du CDC, en respectant les normes d'accessibilité, d'ergonomie, de référencement, et la réglementation en vigueur afin de développer la solution web",
-        description_en: "Write the solution code by transcribing the SOR features while respecting accessibility, ergonomics, SEO standards and current regulations to develop the web solution",
-        bloc: "RNCP38436BC02"
-    },
-    {
-        id: "RNCP02-3",
-        code: "RNCP38436BC02",
-        description_fr: "Intégrer les différents éléments de la solution web en fonction des maquettes, en respectant les dernières normes des langages utilisés (HTML, CSS, JS, …)",
-        description_en: "Integrate the various elements of the web solution according to the mockups while respecting the latest standards of used languages (HTML, CSS, JS, ...)",
-        bloc: "RNCP38436BC02"
-    },
-    {
-        id: "RNCP02-4",
-        code: "RNCP38436BC02",
-        description_fr: "Implémenter la partie \"front-end\" d'une solution web",
-        description_en: "Implement the \"front-end\" part of a web solution",
-        bloc: "RNCP38436BC02"
-    },
-    {
-        id: "RNCP02-5",
-        code: "RNCP38436BC02",
-        description_fr: "Implémenter la logique et la base de données assurant la persistance des données côté serveur (le \"back-end\")",
-        description_en: "Implement the logic and database ensuring data persistence on the server side (the \"back-end\")",
-        bloc: "RNCP38436BC02"
-    },
-    {
-        id: "RNCP02-6",
-        code: "RNCP38436BC02",
-        description_fr: "Implémenter des règles d'authentification, en respectant les bonnes pratiques en matière de sécurité, afin de sécuriser l'accès à une solution web",
-        description_en: "Implement authentication rules while respecting security best practices to secure access to a web solution",
-        bloc: "RNCP38436BC02"
-    },
-    {
-        id: "RNCP02-7",
-        code: "RNCP38436BC02",
-        description_fr: "Implémenter un plan de tests en concevant les différents tests unitaires et d'intégration afin de vérifier que l'ensemble des fonctionnalités développées fonctionne bien séparément et à l'unisson",
-        description_en: "Implement a testing plan by designing various unit and integration tests to verify that all developed features work well separately and together",
-        bloc: "RNCP38436BC02"
-    },
-    {
-        id: "RNCP02-8",
-        code: "RNCP38436BC02",
-        description_fr: "Déployer une application web en utilisant un serveur afin de rendre l'application accessible aux utilisateurs",
-        description_en: "Deploy a web application using a server to make the application accessible to users",
-        bloc: "RNCP38436BC02"
-    },
-    {
-        id: "RNCP03-1",
-        code: "RNCP38436BC03",
-        description_fr: "Rédiger une documentation technique à destination des équipes parties prenantes en réalisant la documentation technique et fonctionnelle de la solution web, afin de garantir sa pérennité et son évolution future",
-        description_en: "Write technical documentation for stakeholder teams by creating the technical and functional documentation of the web solution to ensure its longevity and future evolution",
-        bloc: "RNCP38436BC03"
-    },
-    {
-        id: "RNCP03-2",
-        code: "RNCP38436BC03",
-        description_fr: "Rédiger une documentation utilisateur pour apporter un support aux utilisateurs, afin de garantir l'autonomie et la satisfaction des utilisateurs de la solution web",
-        description_en: "Write user documentation to provide support to users to ensure the autonomy and satisfaction of web solution users",
-        bloc: "RNCP38436BC03"
-    },
-    {
-        id: "RNCP03-3",
-        code: "RNCP38436BC03",
-        description_fr: "Monitorer le lancement d'une solution web, en recueillant les retours utilisateurs, afin d'évaluer la qualité de la solution web déployée",
-        description_en: "Monitor the launch of a web solution by collecting user feedback to assess the quality of the deployed web solution",
-        bloc: "RNCP38436BC03"
-    },
-    {
-        id: "RNCP03-4",
-        code: "RNCP38436BC03",
-        description_fr: "Identifier des améliorations qualitatives et de performance d'une solution web, en analysant les retours utilisateurs et les données d'analyse du trafic, afin d'améliorer la qualité et la disponibilité d'une solution web déployée",
-        description_en: "Identify quality and performance improvements for a web solution by analyzing user feedback and traffic analysis data to improve the quality and availability of a deployed web solution",
-        bloc: "RNCP38436BC03"
-    },
-    {
-        id: "RNCP03-5",
-        code: "RNCP38436BC03",
-        description_fr: "Analyser la qualité de l'ergonomie et la qualité de l'accessibilité de la solution (normes, design, ergonomie, navigation, référencement, bonnes pratiques, etc.) pour identifier les axes d'amélioration",
-        description_en: "Analyze the quality of ergonomics and accessibility of the solution (standards, design, ergonomics, navigation, SEO, best practices, etc.) to identify areas for improvement",
-        bloc: "RNCP38436BC03"
-    },
-    {
-        id: "RNCP03-6",
-        code: "RNCP38436BC03",
-        description_fr: "Rédiger un document argumentatif en listant des propositions d'améliorations afin de faire valider des préconisations de développements correctifs d'une solution web",
-        description_en: "Write an argumentative document listing improvement proposals to validate recommendations for corrective developments of a web solution",
-        bloc: "RNCP38436BC03"
-    }
-];
+  "RNCP02-1": `Développer le prototype de la solution web afin de présenter l'architecture technique au client`,
+  "RNCP02-2": `Rédiger le code de la solution en transcrivant les fonctionnalités du CDC, en respectant les normes d'accessibilité, d'ergonomie, de référencement, et la réglementation en vigueur afin de développer la solution web`,
+  "RNCP02-3": `Intégrer les différents éléments de la solution web en fonction des maquettes, en respectant les dernières normes des langages utilisés (HTML, CSS, JS, …)`,
+  "RNCP02-4": `Implémenter la partie "front-end" d'une solution web`,
+  "RNCP02-5": `Implémenter la logique et la base de données assurant la persistance des données côté serveur (le "back-end")`,
+  "RNCP02-6": `Implémenter des règles d'authentification, en respectant les bonnes pratiques en matière de sécurité, afin de sécuriser l'accès à une solution web`,
+  "RNCP02-7": `Implémenter un plan de tests en concevant les différents tests unitaires et d'intégration afin de vérifier que l'ensemble des fonctionnalités développées fonctionne bien séparément et à l'unisson`,
+  "RNCP02-8": `Déployer une application web en utilisant un serveur afin de rendre l'application accessible aux utilisateurs`,
 
-export default RNCP_DATA;
+  "RNCP03-1": `Rédiger une documentation technique à destination des équipes parties prenantes en réalisant la documentation technique et fonctionnelle de la solution web, afin de garantir sa pérennité et son évolution future`,
+  "RNCP03-2": `Rédiger une documentation utilisateur pour apporter un support aux utilisateurs, afin de garantir l'autonomie et la satisfaction des utilisateurs de la solution web`,
+  "RNCP03-3": `Monitorer le lancement d'une solution web, en recueillant les retours utilisateurs, afin d'évaluer la qualité de la solution web déployée`,
+  "RNCP03-4": `Identifier des améliorations qualitatives et de performance d'une solution web, en analysant les retours utilisateurs et les données d'analyse du trafic, afin d'améliorer la qualité et la disponibilité d'une solution web déployée`,
+  "RNCP03-5": `Analyser la qualité de l'ergonomie et la qualité de l'accessibilité de la solution (normes, design, ergonomie, navigation, référencement, bonnes pratiques, etc.) pour identifier les axes d'amélioration`,
+  "RNCP03-6": `Rédiger un document argumentatif en listant des propositions d'améliorations afin de faire valider des préconisations de développements correctifs d'une solution web`,
+} as const satisfies Record<RncpId, string>;
+
+export const RNCP_DESCRIPTION_EN = {
+  "RNCP01-1": `Draft a Statement of Requirements (SOR) based on needs expression, in order to functionally define a web solution project while respecting current regulations, particularly GDPR`,
+  "RNCP01-2": `Write technical specifications by analyzing a SOR, in order to technically define a web solution development project`,
+  "RNCP01-3": `Deploy a working environment by implementing the necessary versioning, sharing, and collaboration/communication tools to operationally define a web solution development project`,
+  "RNCP01-4": `Create a mockup to allow the client to validate the web solution's structure while respecting best practices in terms of ergonomics and accessibility`,
+  "RNCP01-5": `Identify features to develop by modeling various elements and their interconnections to structure the architecture of the web solution and Database (DB)`,
+  "RNCP01-6": `Write a presentation to showcase technical choices, mockups, and the web solution schema by arguing the choices made to allow the client or decision-maker to validate the proposed solution`,
+
+  "RNCP02-1": `Develop the web solution prototype to present the technical architecture to the client`,
+  "RNCP02-2": `Write the solution code by transcribing the SOR features while respecting accessibility, ergonomics, SEO standards and current regulations to develop the web solution`,
+  "RNCP02-3": `Integrate the various elements of the web solution according to the mockups while respecting the latest standards of used languages (HTML, CSS, JS, ...)`,
+  "RNCP02-4": `Implement the "front-end" part of a web solution`,
+  "RNCP02-5": `Implement the logic and database ensuring data persistence on the server side (the "back-end")`,
+  "RNCP02-6": `Implement authentication rules while respecting security best practices to secure access to a web solution`,
+  "RNCP02-7": `Implement a testing plan by designing various unit and integration tests to verify that all developed features work well separately and together`,
+  "RNCP02-8": `Deploy a web application using a server to make the application accessible to users`,
+
+  "RNCP03-1": `Write technical documentation for stakeholder teams by creating the technical and functional documentation of the web solution to ensure its longevity and future evolution`,
+  "RNCP03-2": `Write user documentation to provide support to users to ensure the autonomy and satisfaction of web solution users`,
+  "RNCP03-3": `Monitor the launch of a web solution by collecting user feedback to assess the quality of the deployed web solution`,
+  "RNCP03-4": `Identify quality and performance improvements for a web solution by analyzing user feedback and traffic analysis data to improve the quality and availability of a deployed web solution`,
+  "RNCP03-5": `Analyze the quality of ergonomics and accessibility of the solution (standards, design, ergonomics, navigation, SEO, best practices, etc.) to identify areas for improvement`,
+  "RNCP03-6": `Write an argumentative document listing improvement proposals to validate recommendations for corrective developments of a web solution`,
+} as const satisfies Record<RncpId, string>;
+
+
+
+export const RNCP_DESCRIPTION_DE = {
+  "RNCP01-1": `Ein Lastenheft (CDC) ausgehend von einer Bedarfserhebung erstellen, um ein Web-Lösungsprojekt funktional zu rahmen und dabei die geltenden Vorschriften, insbesondere die DSGVO, einzuhalten`,
+  "RNCP01-2": `Technische Spezifikationen durch Analyse des Lastenhefts erstellen, um ein Web-Lösungsentwicklungsprojekt technisch zu rahmen`,
+  "RNCP01-3": `Eine Arbeitsumgebung aufsetzen, indem die erforderlichen Tools für Versionierung, Sharing sowie Zusammenarbeit/Kommunikation eingerichtet werden, um ein Web-Lösungsentwicklungsprojekt operativ zu rahmen`,
+  "RNCP01-4": `Ein Mockup erstellen, damit der Kunde die Struktur der Weblösung validieren kann, unter Einhaltung von Best Practices zu Ergonomie und Barrierefreiheit`,
+  "RNCP01-5": `Zu entwickelnde Funktionen identifizieren, indem die verschiedenen Elemente und ihre Verknüpfungen modelliert werden, um die Architektur der Weblösung und der Datenbank zu strukturieren`,
+  "RNCP01-6": `Eine Präsentation erstellen, um technische Entscheidungen, Mockups und das Schema der Weblösung darzustellen und die getroffenen Entscheidungen zu begründen, damit Kunde oder Entscheider den Lösungsvorschlag validieren kann`,
+
+  "RNCP02-1": `Den Prototypen der Weblösung entwickeln, um dem Kunden die technische Architektur zu präsentieren`,
+  "RNCP02-2": `Den Lösungscode erstellen, indem die Funktionen aus dem Lastenheft umgesetzt werden und dabei Standards für Barrierefreiheit, Ergonomie, SEO sowie die geltenden Vorschriften eingehalten werden, um die Weblösung zu entwickeln`,
+  "RNCP02-3": `Die verschiedenen Elemente der Weblösung gemäß den Mockups integrieren und dabei die neuesten Standards der verwendeten Sprachen (HTML, CSS, JS, …) einhalten`,
+  "RNCP02-4": `Den Front-End-Teil einer Weblösung implementieren`,
+  "RNCP02-5": `Die Logik und Datenbank implementieren, die die Persistenz der Daten serverseitig (Back-End) sicherstellt`,
+  "RNCP02-6": `Authentifizierungsregeln implementieren und dabei Sicherheits-Best-Practices einhalten, um den Zugriff auf eine Weblösung abzusichern`,
+  "RNCP02-7": `Einen Testplan implementieren, indem verschiedene Unit- und Integrationstests entworfen werden, um zu überprüfen, dass alle entwickelten Funktionen einzeln und im Zusammenspiel korrekt funktionieren`,
+  "RNCP02-8": `Eine Webanwendung auf einem Server deployen, um sie für Nutzer zugänglich zu machen`,
+
+  "RNCP03-1": `Technische Dokumentation für Stakeholder-Teams erstellen, indem technische und funktionale Dokumentation der Weblösung verfasst wird, um deren Nachhaltigkeit und zukünftige Weiterentwicklung zu gewährleisten`,
+  "RNCP03-2": `Benutzerdokumentation erstellen, um Nutzer zu unterstützen und die Autonomie und Zufriedenheit der Nutzer der Weblösung zu gewährleisten`,
+  "RNCP03-3": `Den Launch einer Weblösung überwachen, indem Nutzerfeedback gesammelt wird, um die Qualität der ausgerollten Weblösung zu bewerten`,
+  "RNCP03-4": `Qualitative und Performance-Verbesserungen einer Weblösung identifizieren, indem Nutzerfeedback und Traffic-Analyse-Daten ausgewertet werden, um die Qualität und Verfügbarkeit der bereitgestellten Weblösung zu verbessern`,
+  "RNCP03-5": `Die Qualität von Ergonomie und Barrierefreiheit der Lösung (Standards, Design, Ergonomie, Navigation, SEO, Best Practices usw.) analysieren, um Verbesserungsachsen zu identifizieren`,
+  "RNCP03-6": `Ein argumentatives Dokument verfassen, das Verbesserungsvorschläge auflistet, um Empfehlungen für korrigierende Weiterentwicklungen einer Weblösung validieren zu lassen`,
+} as const satisfies Record<RncpId, string>;
+
+export const RNCP_DESCRIPTION_JA = {
+  "RNCP01-1": `ニーズの表現（要望）を起点に要件定義書（CDC）を作成し、特にGDPR（一般データ保護規則）を含む現行規制を遵守しながらWebソリューション案件を機能面で定義する`,
+  "RNCP01-2": `要件定義書（CDC）を分析して技術仕様書を作成し、Webソリューション開発プロジェクトを技術面で定義する`,
+  "RNCP01-3": `バージョン管理、共有、コラボレーション／コミュニケーションに必要なツールを整備して作業環境を構築し、Webソリューション開発プロジェクトを運用面で定義する`,
+  "RNCP01-4": `ユーザビリティ（エルゴノミクス）とアクセシビリティのベストプラクティスを踏まえてモックアップを作成し、顧客がWebソリューションの構造を確認・承認できるようにする`,
+  "RNCP01-5": `各要素とその相互関係をモデリングして開発すべき機能を特定し、Webソリューションおよびデータベース（DB）のアーキテクチャを構造化する`,
+  "RNCP01-6": `技術選定、モックアップ、Webソリューションの構成図を提示し、判断理由を論理的に説明するプレゼン資料を作成して、顧客または意思決定者が提案を承認できるようにする`,
+
+  "RNCP02-1": `顧客に技術アーキテクチャを提示するため、Webソリューションのプロトタイプを開発する`,
+  "RNCP02-2": `要件定義書（CDC）の機能を実装し、アクセシビリティ、ユーザビリティ、SEOの標準および現行規制を遵守して、Webソリューションのコードを作成する`,
+  "RNCP02-3": `モックアップに基づいてWebソリューションの各要素を統合し、使用言語（HTML、CSS、JSなど）の最新標準に準拠する`,
+  "RNCP02-4": `Webソリューションのフロントエンドを実装する`,
+  "RNCP02-5": `サーバー側（バックエンド）でのデータ永続化を担うロジックとデータベースを実装する`,
+  "RNCP02-6": `セキュリティのベストプラクティスに従って認証ルールを実装し、Webソリューションへのアクセスを保護する`,
+  "RNCP02-7": `単体テストと結合テストを設計してテスト計画を実装し、開発した全機能が個別にも連携時にも正しく動作することを検証する`,
+  "RNCP02-8": `サーバーを用いてWebアプリケーションをデプロイし、ユーザーが利用できる状態にする`,
+
+  "RNCP03-1": `関係者チーム向けに、Webソリューションの技術・機能ドキュメントを作成して、保守性と将来的な進化を担保する`,
+  "RNCP03-2": `ユーザーの自律的利用と満足度を確保するため、サポート目的のユーザードキュメントを作成する`,
+  "RNCP03-3": `ユーザーフィードバックを収集しながらWebソリューションのリリースをモニタリングし、展開したソリューションの品質を評価する`,
+  "RNCP03-4": `ユーザーフィードバックとトラフィック分析データを解析して、品質面および性能面の改善点を特定し、展開済みWebソリューションの品質と可用性を向上させる`,
+  "RNCP03-5": `規格、デザイン、ユーザビリティ、ナビゲーション、SEO、ベストプラクティス等の観点から、ソリューションのユーザビリティおよびアクセシビリティ品質を分析し、改善軸を特定する`,
+  "RNCP03-6": `改善提案を列挙した論証的ドキュメントを作成し、Webソリューションの是正開発に関する推奨事項の承認を得る`,
+} as const satisfies Record<RncpId, string>;

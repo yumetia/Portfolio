@@ -3,9 +3,9 @@
 import languages from "@locales/languages";
 
 type ThemeModalProps = {
-    themes: string[],
-    language:keyof typeof languages,
-    isVisible?:boolean,
+    themes: string[];
+    language:keyof typeof languages;
+    isVisible?:boolean;
     onClose:()=>void;
 }
 

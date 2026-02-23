@@ -40,6 +40,9 @@ const en = {
   projects: {
     title: "Projects",
     data: projectsData,
+    modalTitle: "Skills acquired (RNCP)",
+    modalClose: "Close",
+    play: "Play"
   },
   contact: {
     title: "Contact",

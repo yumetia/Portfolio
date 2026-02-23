@@ -4,21 +4,20 @@ import projectsData from "./projectsData";
 
 const de = {
   navbar: {
-    home: "Startseite",
+    home: "Start",
     about: "Über mich",
     skills: "Fähigkeiten",
     projects: "Projekte",
     experiences: "Erfahrungen",
     contact: "Kontakt",
-    themeBtn: "Design",  
+    themeBtn: "Design",
     langBtn: "Sprache",
     toggleBtn: "Deutsch",
   },
   home: {
     title: "Hey, ich bin Yumetia",
     paragraph1: "Leidenschaftliche*r 21-jährige*r Entwickler*in!",
-    paragraph2:
-      "Ich entwickle Web-Erlebnisse mit Fokus auf Performance und Sicherheit.",
+    paragraph2: "Ich entwickle Web-Erlebnisse mit Fokus auf Performance und Sicherheit.",
     paragraph3: "Jede Codezeile wird mit Wirkung geschrieben.",
     contactBtn: "Kontaktiere mich!",
   },
@@ -39,6 +38,9 @@ const de = {
   projects: {
     title: "Projekte",
     data: projectsData,
+    modalTitle: "Erworbene Kompetenzen (RNCP)",
+    modalClose: "Schließen",
+    play: "Spielen"
   },
   contact: {
     title: "Kontakt",
@@ -50,7 +52,7 @@ const de = {
     },
     button: "Nachricht senden",
     success: "✅ Nachricht erfolgreich gesendet!",
-    error: "❌ Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.",
+    error: "❌ Senden fehlgeschlagen. Bitte versuche es erneut.",
   },
 };
 

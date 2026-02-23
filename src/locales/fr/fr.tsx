@@ -40,7 +40,10 @@ const fr =
     },
     projects: {
       title: "Projets",
-      data: projectsData, // shared
+      data: projectsData,
+      modalTitle: "Compétences acquises (RNCP)",
+      modalClose: "Fermer",
+      play:"Jouer"
     },
     contact: {
       title: "Contact",

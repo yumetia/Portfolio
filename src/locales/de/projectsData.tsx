@@ -10,8 +10,9 @@ const projectsData = [
     id: 1,
     title: "My Meetic",
     description:
-      "Ein Klon einer Dating-Plattform, entwickelt mit PHP und JavaScript. Nutzer können Profile erstellen, potenzielle Matches durchsuchen und in Echtzeit interagieren.",
+      "Ein Dating-Plattform-Klon, entwickelt mit PHP und JavaScript. Benutzer können Profile erstellen, potenzielle Matches durchsuchen und in Echtzeit interagieren.",
     technologies: ["PHP", "JavaScript"],
+    rncp: [],
     images: myMeeticScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/my_meetic",
@@ -22,6 +23,7 @@ const projectsData = [
     description:
       "Eine Plattform für Anime-Fans, um ihre Lieblingsserien zu verfolgen und zu teilen. Derzeit in Entwicklung.",
     technologies: ["Next.js", "Laravel", "AdonisJS", "DaisyUI", "(In Entwicklung..)"],
+    rncp: [],
     images: nakamanetScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/nakamanet",
@@ -30,8 +32,9 @@ const projectsData = [
     id: 3,
     title: "CSS Generator",
     description:
-      "Ein Tool, das aus einem Bilderordner ein Sprite erstellt und automatisch das entsprechende CSS-Stylesheet generiert. Unterstützt Standard-Kommandozeilenoptionen (Sprite-Name, CSS-Name, Rekursion …) sowie erweiterte Optionen (Padding, Größenanpassung, Spalten).",
+      "Ein Tool, das aus einem Bilderordner ein Sprite erstellt und automatisch das entsprechende CSS-Stylesheet generiert. Unterstützt Standard-CLI-Optionen (Sprite-Name, CSS-Name, Rekursion…) sowie Zusatzoptionen (Padding, Größenanpassung, Spalten).",
     technologies: ["PHP", "GD library"],
+    rncp: [],
     images: cssGeneratorScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/GenerateMVC",
@@ -42,6 +45,7 @@ const projectsData = [
     description:
       "Ein leichtgewichtiger PHP-MVC-Framework-Generator, der die Projektstruktur vereinfacht und die Backend-Entwicklung durch automatische Routen und Controller beschleunigt.",
     technologies: ["PHP"],
+    rncp: [],
     images: generateMVCScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/GenerateMVC",
@@ -50,8 +54,9 @@ const projectsData = [
     id: 5,
     title: "Stone Rain",
     description:
-      "Ein Arcade-Spiel im Retro-Stil, entwickelt mit Pyxel und Python. Spieler müssen herabfallenden Steinen ausweichen und so lange wie möglich überleben.",
+      "Ein Arcade-Spiel im Retro-Stil, entwickelt mit Pyxel und Python. Spieler müssen fallenden Steinen ausweichen und so lange wie möglich überleben.",
     technologies: ["Python", "Pyxel"],
+    rncp: [],
     images: stoneRainScreenshots(),
     demoLink: "https://yumetia.github.io/IshiNoAmeDemo/",
     repoLink: "https://github.com/yumetia/IshiNoAme",
@@ -60,13 +65,13 @@ const projectsData = [
     id: 6,
     title: "Mockup Responsive",
     description:
-      "Eine vollständig responsive Website-Integration basierend auf einem vorgegebenen Design-Mockup. Das Projekt folgt W3C-Standards, gewährleistet SEO-Optimierung und implementiert adaptive Bilder je nach Bildschirmgröße mit HTML5, CSS3 und JavaScript unter Verwendung der BEM-Methodik.",
+      "Eine vollständig responsive Webseiten-Integration basierend auf einem vorgegebenen Design-Mockup. Das Projekt folgt W3C-Standards, berücksichtigt SEO-Optimierung und implementiert adaptive Bilder je nach Bildschirmgröße unter Verwendung von HTML5, CSS3 und JavaScript mit der BEM-Methodik.",
     technologies: ["HTML5", "CSS3", "JavaScript"],
-    rncp: ["Mockup", "Architektur der Weblösung", "Technische Präsentation"],
+    rncp: ["mockup", "presentation", "architecture"],
     images: mockupResponsiveScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/mockup-css-responsive",
   },
-] as const;
+];
 
 export default projectsData;
