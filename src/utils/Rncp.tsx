@@ -39,7 +39,7 @@ export const RNCP_DESCRIPTION_FR = {
   "RNCP03-4": `Identifier des améliorations qualitatives et de performance d'une solution web, en analysant les retours utilisateurs et les données d'analyse du trafic, afin d'améliorer la qualité et la disponibilité d'une solution web déployée`,
   "RNCP03-5": `Analyser la qualité de l'ergonomie et la qualité de l'accessibilité de la solution (normes, design, ergonomie, navigation, référencement, bonnes pratiques, etc.) pour identifier les axes d'amélioration`,
   "RNCP03-6": `Rédiger un document argumentatif en listant des propositions d'améliorations afin de faire valider des préconisations de développements correctifs d'une solution web`,
-} as const satisfies Record<RncpId, string>;
+} as const ;
 
 export const RNCP_DESCRIPTION_EN = {
   "RNCP01-1": `Draft a Statement of Requirements (SOR) based on needs expression, in order to functionally define a web solution project while respecting current regulations, particularly GDPR`,
@@ -64,7 +64,7 @@ export const RNCP_DESCRIPTION_EN = {
   "RNCP03-4": `Identify quality and performance improvements for a web solution by analyzing user feedback and traffic analysis data to improve the quality and availability of a deployed web solution`,
   "RNCP03-5": `Analyze the quality of ergonomics and accessibility of the solution (standards, design, ergonomics, navigation, SEO, best practices, etc.) to identify areas for improvement`,
   "RNCP03-6": `Write an argumentative document listing improvement proposals to validate recommendations for corrective developments of a web solution`,
-} as const satisfies Record<RncpId, string>;
+} as const ;
 
 
 
@@ -91,7 +91,7 @@ export const RNCP_DESCRIPTION_DE = {
   "RNCP03-4": `Qualitative und Performance-Verbesserungen einer Weblösung identifizieren, indem Nutzerfeedback und Traffic-Analyse-Daten ausgewertet werden, um die Qualität und Verfügbarkeit der bereitgestellten Weblösung zu verbessern`,
   "RNCP03-5": `Die Qualität von Ergonomie und Barrierefreiheit der Lösung (Standards, Design, Ergonomie, Navigation, SEO, Best Practices usw.) analysieren, um Verbesserungsachsen zu identifizieren`,
   "RNCP03-6": `Ein argumentatives Dokument verfassen, das Verbesserungsvorschläge auflistet, um Empfehlungen für korrigierende Weiterentwicklungen einer Weblösung validieren zu lassen`,
-} as const satisfies Record<RncpId, string>;
+} as const ;
 
 export const RNCP_DESCRIPTION_JA = {
   "RNCP01-1": `ニーズの表現（要望）を起点に要件定義書（CDC）を作成し、特にGDPR（一般データ保護規則）を含む現行規制を遵守しながらWebソリューション案件を機能面で定義する`,
@@ -116,4 +116,4 @@ export const RNCP_DESCRIPTION_JA = {
   "RNCP03-4": `ユーザーフィードバックとトラフィック分析データを解析して、品質面および性能面の改善点を特定し、展開済みWebソリューションの品質と可用性を向上させる`,
   "RNCP03-5": `規格、デザイン、ユーザビリティ、ナビゲーション、SEO、ベストプラクティス等の観点から、ソリューションのユーザビリティおよびアクセシビリティ品質を分析し、改善軸を特定する`,
   "RNCP03-6": `改善提案を列挙した論証的ドキュメントを作成し、Webソリューションの是正開発に関する推奨事項の承認を得る`,
-} as const satisfies Record<RncpId, string>;
+} as const ;

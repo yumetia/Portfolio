@@ -3,7 +3,6 @@ import { useLanguage } from "@context/LanguageContext";
 import languages from "@locales/languages";
 import { Mail } from "lucide-react";
 import img from "@assets/profile.jpg";
-import SafeImage from "./SafeImage";
 
 function Home() {
   const { language } = useLanguage();
@@ -35,11 +34,16 @@ function Home() {
       </div>
 
       <div className="lg:ml-60 md:ml-30">
-        <SafeImage
+        <img
           src={img}
           alt="profile"
-          className="size-80 sm:size-96 object-cover border-8 border-accent shadow-xl"
-          roundedBlob={true}
+          className="size-80 object-cover border-8 border-accent shadow-xl
+          sm:size-96 select-none pointer-events-none"
+          style={{
+            borderRadius: "30% 70% 70% 30%/ 67% 62% 38% 33%",
+          }}
+          draggable={false}
+       
         />
       </div>
     </div>

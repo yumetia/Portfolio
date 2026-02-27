@@ -18,6 +18,7 @@
   "homepage": "https://github.com/yumetia/Portfolio#readme",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@types/react-dom": "^19.2.3",
     "lucide-react": "^0.575.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",

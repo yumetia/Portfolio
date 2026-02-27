@@ -3,28 +3,62 @@
 
 // rncp
 import languages from "@locales/languages";
-import mappingRncp from "@utils/mapping/rncpMapping";
-import RNCP_DATA from "@utils/Rncp";
+import RNCP_MAPPING, { RncpMappingItem } from "@utils/mapping/rncpMapping";
+import rncpDescMapping from "@utils/mapping/rncpDescMapping";
+
 
 
 type RncpModalType = {
     language:keyof typeof languages;
     modalTitle:string,
     modalClose:string,
-    projectId:number;
+    projectId:number|undefined;
     isVisible:boolean;
     onClose:()=>void;
 }
 
+const mapRncpDesc = (language:keyof typeof languages, rncpMap:RncpMappingItem[]) =>{
+    const rncpDescs = rncpDescMapping[language]
+    const pRncpCodes = rncpMap.map((({rncp})=>({rncp}))).map((obj) => obj.rncp);
+    
+    // now, getting an array that matches rncp from both prev arrays
+    const pRncpInfos = Object.entries(rncpDescs).filter((rncpDesc) => 
+        pRncpCodes.some((pRncpCode) =>
+            (rncpDesc[0] === pRncpCode)
+        )
+    )
 
+    // i cant get what i want...
+    console.log("ffff",pRncpCodes)
+   
+    console.log("Verdict:",pRncpInfos)
+
+    return pRncpInfos;
+} 
 
 const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:RncpModalType) => {
     
-    const rncpMap = mappingRncp(RNCP_DATA);
+    if (!isVisible) return null;
+    
     const projects = languages[language].projects.data
-    const project = projects.find((project)=> (project.id==projectId)) ?? []
+    const project = projects.filter((project)=> (project.id==projectId)) ?? []
+    // get the rncp project array objects based on the mapping
+    const rncpMap = RNCP_MAPPING.filter((item) =>
+        Object.values(item).some( (value) =>
+            project.some((pObj)=> 
+                pObj.rncp.some((pRncp)=> (pRncp==value)
+            ))
+        )
+    );
+    console.log("rncpMap",rncpMap)
 
-    if(!isVisible) return null;
+    // we have the mapping rncp array, 
+    // now get the final full rncp+desc array of the project  
+    const pRncpInfos = mapRncpDesc(language,rncpMap)
+
+    console.log("project:",project);
+    // project ==> OK , but project.rncp is undefined???
+
     return ( 
     <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
         {/* Overlay */}
@@ -62,22 +96,15 @@ const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:
 
             {/* Content */}
             <div className="space-y-3">
-            {project.rncp?.map((rncpLabel: string) => {
+            {pRncpInfos.map((skillRncp) => {
 
-                const match = rncpMap.find( (item) => item.label === rncpLabel);
-
-                if (!match || !match.rncp) return null;
-
-                return (
-                <div
-                    key={rncpLabel}
-                    className="rounded-lg bg-base-200 p-3"
-                >
+            return (
+                <div className="rounded-lg bg-base-200 p-3" key={skillRncp[0]}>
                     <h4 className="font-semibold text-sm mb-1">
-                    {match.rncp.code}
+                        {skillRncp[0]}
                     </h4>
                     <p className="text-xs leading-snug opacity-80 line-clamp-3">
-                    {match?.rncp?.[`description_${language}`] ?? ""}
+                        {skillRncp[1]}
                     </p>
                 </div>
                 );
@@ -94,7 +121,7 @@ const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:
             </button>
             </div>
         </div>
-        </div>
+    </div>
     )
 }
 

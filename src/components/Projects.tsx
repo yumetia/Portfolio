@@ -14,19 +14,20 @@ import ImageCarousel from "./ImageCarousel";
 import { useState } from "react";
 
 import github from "@assets/institutions/github.png"
+import RncpModal from "./modals/RncpModal";
 
 
 const Projects = () => {
   const { language } = useLanguage();
   const lang = language ; 
 
-  const { title, data, modalTitle,modalClose,play,} = languages[lang].projects ;
-
-  const [projectId, setProjectId] = useState<number | null>(null);
+  const { title, data, modalTitle,modalClose,play} = languages[lang].projects ;
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const handleOnClickInfo = (projectId: number) => {
-    setProjectId(projectId);
+  const [projectId,setProjectId] = useState<number | undefined>();
+
+  const handleOpenModal = (projectId:number) => {
+    setProjectId(projectId)
     setIsModalVisible(true);
   };
 
@@ -79,11 +80,9 @@ const Projects = () => {
                   ))}
 
                   <div className="ml-auto cursor-pointer">
-                    <Info onClick={() => handleOnClickInfo(project.id)} />
+                    <Info onClick={()=> handleOpenModal(project.id)} />
                   </div>
                 </div>
-
-                
 
                 <div className="flex">
                   {project.demoLink && project.demoLink !== "#" && (
@@ -97,7 +96,6 @@ const Projects = () => {
                       <Video className="w-4" />
                     </a>
                   )}
-
                   <a
                     className={`btn btn-neutral ${
                       project.demoLink && project.demoLink !== "#"
@@ -115,6 +113,15 @@ const Projects = () => {
             </SwiperSlide>
           );
         })}
+        {/* rncp modal */}
+          <RncpModal 
+            language={language}
+            modalTitle={modalTitle}
+            modalClose={modalClose}
+            projectId={projectId}
+            isVisible={isModalVisible}
+            onClose={handleCloseModal}
+          />
       </Swiper>
     </div>
   );

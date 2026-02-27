@@ -7,6 +7,7 @@ import nakamanetScreenshots from "@assets/projects/nakamanet/nakamanetScreenshot
 import stoneRainScreenshots from "@assets/projects/stoneRain/stoneRainScreenshots";
 
 
+
 const projectsData = [
   {
     id: 1,
