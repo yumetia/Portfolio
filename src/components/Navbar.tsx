@@ -64,7 +64,7 @@ const Navbar = () => {
         bg-base-300/80 backdrop-blur-md border-b border-base-200`}
     >
       <div className="flex flex-col items-center p-4 md:justify-between md:flex-row">
-        <a href="/" className="flex items-center font-bold text-3xl md:text-xl lg:text-2xl">
+        <a href="/" className="flex items-center font-bold text-3xl md:text-2xl">
           <Container className="text-accent lg:size-7" />
           <p className="ml-1 p-1">Yumetia</p>
         </a>
@@ -80,7 +80,7 @@ const Navbar = () => {
 
       {/* theme & lang buttons  */}
         <div className="flex gap-10 mt-5 
-        md:mt-0
+        md:mt-0 
         lg:gap-2
         ">
 

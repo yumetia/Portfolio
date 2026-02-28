@@ -28,9 +28,11 @@ const ThemeModal = ({ themes,language,isVisible=false,onClose }: ThemeModalProps
 
     if (!isVisible) return null
     return (
-        <div className="absolute top-40 right-40 
-        sm:right-70 md:top-20 md:right-30
+        <div className="absolute top-40 right-50 
+        sm:right-40
+        md:top-20 
         bg-primary rounded p-6
+        border
         ">
             {/* modal title */}
             <div className="mb-4 flex justify-center">

@@ -10,6 +10,14 @@ type LangModalProps= {
     onClose:()=>void,
 }
 
+// not necessary as an HELPER, so putting it here for now..
+const mappingLang = {
+    en:"English",
+    de:"Deutsch",
+    fr:"Français",
+    ja:"日本語"
+}
+
 const LangModal = ({locales,currentLang,isVisible=false,onClose}: LangModalProps) =>{
     if (!isVisible) return null
 
@@ -19,31 +27,33 @@ const LangModal = ({locales,currentLang,isVisible=false,onClose}: LangModalProps
     const langBtn = languages[language].navbar.langBtn;
     
      return (
-        <div className="absolute top-40 right-40 
-        sm:right-70 md:top-20 md:right-30
-        bg-primary rounded p-6
+        <div className="absolute top-40 right-3 
+        sm:top-50
+        md:top-20 
+        bg-secondary rounded p-6
+        border
         ">
             {/* modal title */}
             <div className="mb-4 flex justify-center">
-            <h2 className="text-center text-neutral font-bold">{langBtn}</h2>
+                <h2 className="text-center text-neutral font-bold">{langBtn}</h2>
             </div>
 
             {/* rendering themes button */}
             
             {locales.map((lang,key)=>(
-            <div key={key} className="flex mb-2 ">
-                <button className="btn" onClick={()=>{switchLanguage(lang)}}>
-                {lang}
-                </button>
-            </div>
+                <div key={key} className="flex mb-2 ">
+                    <button className="btn rounded-xl" onClick={()=>{switchLanguage(lang)}}>
+                        {mappingLang[lang]}
+                    </button>
+                </div>
             ))}
 
             {/* close modal button */}
             <button 
-            className="mt-2 btn btn-outline hover:bg-accent text-neutral"
+            className="mt-2 btn btn-outline hover:bg-accent text-neutral rounded"
             onClick={onClose}
             >
-            <span>{currentLang === "fr" ? "Fermer" : "Close"}</span>
+                <span>{currentLang === "fr" ? "Fermer" : "Close"}</span>
             </button>
         </div>
     ) 
