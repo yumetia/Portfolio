@@ -107,16 +107,16 @@ const Navbar = () => {
         </div>
 
         <ThemeModal themes={themes}
-        language={language}
-        isVisible={themeModalVisible}
-        onClose={()=>{setThemeModalVisible(false)}}
+          language={language}
+          isVisible={themeModalVisible}
+          onClose={()=>{setThemeModalVisible(false)}}
         />
         
         <LangModal
-        locales={Locales}
-        currentLang={language}
-        isVisible={langModalVisible}
-        onClose={()=>setLangModalVisible(false)}
+          locales={Locales}
+          currentLang={language}
+          isVisible={langModalVisible}
+          onClose={()=>setLangModalVisible(false)}
         />
 
 

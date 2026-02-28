@@ -25,7 +25,7 @@ const projectsData = [
     title: "Nakamanet",
     description:
       "A platform for anime fans to track and share their favorite shows. Currently in development.",
-    technologies: ["Next.js", "Laravel", "AdonisJS", "DaisyUI", "(In development..)"],
+    technologies: ["Next.js", "Laravel", "AdonisJS"],
     rncp:[],
     images: nakamanetScreenshots(),
     demoLink: "#",
@@ -70,7 +70,7 @@ const projectsData = [
     description:
       "A fully responsive website integration based on a provided design mockup. The project follows W3C standards, ensures SEO optimization, and implements adaptive images depending on screen size using HTML5, CSS3, and JavaScript with the BEM methodology.",
     technologies: ["HTML5", "CSS3", "JavaScript"],
-    rncp: ["mockup","presentation","architecture"],
+    rncp: ["mockup","presentation","architecture","spec-tech","prototype","env-work","cdc"],
     images: mockupResponsiveScreenshots(),
     demoLink: "#",
     repoLink: "https://github.com/yumetia/mockup-css-responsive",

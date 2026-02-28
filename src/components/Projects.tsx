@@ -9,7 +9,7 @@ import Title from "./Title";
 import { useLanguage } from "@context/LanguageContext";
 import languages, { getLocalized } from "@locales/languages";
 
-import { Info, Video } from "lucide-react";
+import { BookOpen, Play } from "lucide-react";
 import ImageCarousel from "./ImageCarousel";
 import { useState } from "react";
 
@@ -69,19 +69,28 @@ const Projects = () => {
 
                 <div>
                   <h1 className="my-2 font-bold">{project.title}</h1>
-                  <p className="text-sm">{description}</p>
+                  <p className="text-sm lg:w-7/8">{description}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2 my-3">
-                  {technologies.map((tech: string, idx: number) => (
-                    <span key={idx} className="badge badge-accent badge-sm">
-                      {tech}
-                    </span>
-                  ))}
+                   {technologies.map((tech: string, idx: number) => (
+                      <span key={idx} className="badge badge-accent badge-sm">
+                        {tech}
+                      </span>
+                    ))}
+                </div>
 
-                  <div className="ml-auto cursor-pointer">
-                    <Info onClick={()=> handleOpenModal(project.id)} />
-                  </div>
+                {/* infos: rncpModal button */}
+                <div className="absolute 
+                right-8
+                bottom-18
+                md:p-2 ml-auto cursor-pointer rounded border-neutral mr-2
+                transition duration-300 hover:bg-neutral
+                md:mr-5">
+                    <BookOpen className="mx-auto size-8 text-secondary
+                    md:mb-auto 
+                    md:mb-3" 
+                    onClick={()=> handleOpenModal(project.id)} />
                 </div>
 
                 <div className="flex">
@@ -92,8 +101,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {play}
-                      <Video className="w-4" />
+                      <Play strokeWidth={1.7} className="size-6" />
                     </a>
                   )}
                   <a

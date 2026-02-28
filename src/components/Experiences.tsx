@@ -80,7 +80,7 @@ export default function Experiences() {
                       lg:ml-1
                       ">
                         {description.map((d, i) => (
-                          <li key={i} className="text-xs
+                          <li key={i} className="
                           sm:text-sm
                           md:text-base
                           lg:text-lg">

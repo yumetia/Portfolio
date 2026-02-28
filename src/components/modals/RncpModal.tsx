@@ -5,6 +5,7 @@
 import languages from "@locales/languages";
 import RNCP_MAPPING, { RncpMappingItem } from "@utils/mapping/rncpMapping";
 import rncpDescMapping from "@utils/mapping/rncpDescMapping";
+import { X } from "lucide-react";
 
 
 
@@ -27,18 +28,12 @@ const mapRncpDesc = (language:keyof typeof languages, rncpMap:RncpMappingItem[])
             (rncpDesc[0] === pRncpCode)
         )
     )
-
-    // i cant get what i want...
-    console.log("ffff",pRncpCodes)
-   
-    console.log("Verdict:",pRncpInfos)
-
     return pRncpInfos;
 } 
 
 const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:RncpModalType) => {
     
-    if (!isVisible) return null;
+    if (!isVisible) return;
     
     const projects = languages[language].projects.data
     const project = projects.filter((project)=> (project.id==projectId)) ?? []
@@ -50,14 +45,10 @@ const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:
             ))
         )
     );
-    console.log("rncpMap",rncpMap)
 
     // we have the mapping rncp array, 
     // now get the final full rncp+desc array of the project  
     const pRncpInfos = mapRncpDesc(language,rncpMap)
-
-    console.log("project:",project);
-    // project ==> OK , but project.rncp is undefined???
 
     return ( 
     <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
@@ -70,55 +61,57 @@ const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:
         {/* Modal */}
         <div
             className="
-            relative
-            bottom-40 md:bottom-auto
-            w-full md:w-[28rem]
-            max-h-[85vh]
+            relative w-76
+            bottom-1/4
+            md:w-5/6
+            lg:w-2/3
+            p-4 md:px-6
             bg-base-100 text-base-content
             rounded-t-2xl md:rounded-2xl
-            p-4 md:p-6
             overflow-y-auto
             animate-slide-up
+            border
             "
         >
             {/* Header */}
             <div className="flex items-center justify-between mb-3">
-            <h3 className="font-bold text-lg">
-                {modalTitle}
-            </h3>
-            <button
-                className="btn btn-sm btn-circle btn-ghost"
-                onClick={onClose}
-            >
-                ✕
-            </button>
+                <h3 className="ml-3 font-bold text-2sm
+                md:text-lg md:mx-auto">
+                    {modalTitle}
+                </h3>
+                <button className="btn btn-sm btn-circle btn-ghost"
+                    onClick={onClose}>
+                   <X />
+                </button>
             </div>
 
             {/* Content */}
-            <div className="space-y-3">
-            {pRncpInfos.map((skillRncp) => {
-
-            return (
-                <div className="rounded-lg bg-base-200 p-3" key={skillRncp[0]}>
-                    <h4 className="font-semibold text-sm mb-1">
-                        {skillRncp[0]}
-                    </h4>
-                    <p className="text-xs leading-snug opacity-80 line-clamp-3">
-                        {skillRncp[1]}
-                    </p>
-                </div>
-                );
-            })}
+            <div className="space-y-3 ">
+                {pRncpInfos.map((skillRncp) => 
+                (
+                    <div className="rounded-lg bg-base-200 p-3" key={skillRncp[0]}>
+                        <h4 className="font-semibold text-sm mb-1">
+                            {skillRncp[0]}
+                        </h4>
+                        <p className="text-xs leading-snug opacity-80 
+                        md:line-clamp-3">
+                            {skillRncp[1]}
+                        </p>
+                    </div>
+                ))}
             </div>
 
             {/* Footer */}
-            <div className="mt-4 flex justify-center">
-            <button
-                className="btn btn-primary btn-sm w-full md:w-auto"
-                onClick={onClose}
-            >
-                {modalClose}
-            </button>
+            <div className="mt-5 flex justify-center
+            md:mt-0">
+                <button
+                    className="mt-3 btn btn-primary w-full 
+                    md:mt-5
+                    "
+                    onClick={onClose}
+                >
+                    {modalClose}
+                </button>
             </div>
         </div>
     </div>

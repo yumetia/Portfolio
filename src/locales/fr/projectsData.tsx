@@ -22,7 +22,7 @@ const projectsData = [
     title: "Nakamanet",
     description:
       "Une plateforme pour les fans d’anime permettant de suivre et partager leurs séries préférées. Actuellement en développement.",
-    technologies: ["Next.js", "Laravel", "AdonisJS", "DaisyUI", "(En développement..)"],
+    technologies: ["Next.js", "Laravel", "AdonisJS"],
     rncp: [],
     images: nakamanetScreenshots(),
     demoLink: "#",
