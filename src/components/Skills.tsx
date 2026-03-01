@@ -22,6 +22,7 @@ const Skills = () => {
 
             {/* Category Title */}
             <h3 className="text-2xl font-bold mb-6 text-accent text-center
+            [text-shadow:0_2px_5px_theme(colors.neutral)]
             lg:text-3xl">
               {categoryLabels[category.key]}
             </h3>

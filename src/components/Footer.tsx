@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer className="footer footer-center p-10">
       <aside>
-        <Container className="w-10 h-10 text-accent" />
+        <Container className="size-10 text-info" />
         <div className="flex gap-1">
           <span>©</span>
           <span>{(currentYear.toString())}</span>

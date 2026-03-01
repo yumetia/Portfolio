@@ -60,6 +60,7 @@ export default function Experiences() {
                     />
                     <div className="flex flex-col">
                       <h2 className="text-2sm font-bold text-accent 
+                      [text-shadow:2px_1px_theme(colors.neutral)]
                       lg:text-xl lg:mb-1">{role}</h2>
                       <p className="text-xs text-base-content/60
                       md:text-sm">{at}</p>
@@ -102,7 +103,7 @@ export default function Experiences() {
           lg:left-5
           p-1 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
-            <CornerDownLeft className="size-5 text-accent
+            <CornerDownLeft className="size-5 text-primary
             md:size-auto"/>
           </button>
 
@@ -111,7 +112,7 @@ export default function Experiences() {
           lg:right-5
           p-1 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
-            <CornerDownRight className="size-5 text-accent
+            <CornerDownRight className="size-5 text-primary
             md:size-auto"/>
           </button>
         </Swiper>

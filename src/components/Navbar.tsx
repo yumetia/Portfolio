@@ -7,6 +7,7 @@ import ThemeModal from "./modals/ThemeModal";
 import LangModal from "./modals/LangModal";
 
 import { Locales } from "@context/LanguageContext";
+import themes from "@utils/themes";
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
@@ -40,15 +41,7 @@ const Navbar = () => {
   const [themeModalVisible,setThemeModalVisible] = useState(false);
   const [langModalVisible,setLangModalVisible] = useState(false);
 
-  const themes = [
-    "emerald",
-    "dracula",
-    "cyberpunk",
-    "halloween",
-  ]
-
   // renders
-  
   const renderThemeModal = () => {
     themeModalVisible===false? setThemeModalVisible(true): setThemeModalVisible(false);
   }
@@ -65,7 +58,9 @@ const Navbar = () => {
     >
       <div className="flex flex-col items-center p-4 md:justify-between md:flex-row">
         <a href="/" className="flex items-center font-bold text-3xl md:text-2xl">
-          <Container className="text-accent lg:size-7" />
+            <Container className="stroke-info
+            lg:size-7" />
+          
           <p className="ml-1 p-1">Yumetia</p>
         </a>
 

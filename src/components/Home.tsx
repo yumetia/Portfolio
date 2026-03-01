@@ -2,7 +2,7 @@
 import { useLanguage } from "@context/LanguageContext";
 import languages from "@locales/languages";
 import { Mail } from "lucide-react";
-import img from "@assets/profile.jpg";
+import profile from "@assets/profile.jpg";
 
 function Home() {
   const { language } = useLanguage();
@@ -35,7 +35,7 @@ function Home() {
 
       <div className="lg:ml-60 md:ml-30">
         <img
-          src={img}
+          src={profile}
           alt="profile"
           className="size-80 object-cover border-8 border-accent shadow-xl
           sm:size-96 select-none pointer-events-none"

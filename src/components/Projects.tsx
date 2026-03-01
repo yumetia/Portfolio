@@ -74,9 +74,9 @@ const Projects = () => {
 
                 <div className="flex flex-wrap gap-2 my-3">
                    {technologies.map((tech: string, idx: number) => (
-                      <span key={idx} className="badge badge-accent badge-sm">
+                      <div key={idx} className="badge badge-accent badge-sm ring-1">
                         {tech}
-                      </span>
+                      </div>
                     ))}
                 </div>
 
@@ -87,7 +87,7 @@ const Projects = () => {
                 md:p-2 ml-auto cursor-pointer rounded border-neutral mr-2
                 transition duration-300 hover:bg-neutral
                 md:mr-5">
-                    <BookOpen className="mx-auto size-8 text-secondary
+                    <BookOpen className="mx-auto size-8 text-info
                     md:mb-auto 
                     md:mb-3" 
                     onClick={()=> handleOpenModal(project.id)} />
