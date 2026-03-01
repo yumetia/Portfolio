@@ -11,8 +11,7 @@ type ThemeModalProps = {
 
 const ThemeModal = ({ themes,language,isVisible=false,onClose }: ThemeModalProps) => {
     
-    const { themeBtn  } = languages[language].navbar 
-
+    const { themeBtn,modalClose  } = languages[language].navbar 
 
     const handleTheme = (theme:string) =>{
         // 1) get the current theme
@@ -30,7 +29,7 @@ const ThemeModal = ({ themes,language,isVisible=false,onClose }: ThemeModalProps
     return (
         <div className="absolute top-40 right-50 
         sm:right-40
-        md:top-20 
+        md:top-20 md:right-50
         bg-primary rounded p-6
         border
         ">
@@ -53,7 +52,7 @@ const ThemeModal = ({ themes,language,isVisible=false,onClose }: ThemeModalProps
             className="mt-2 btn btn-outline hover:bg-accent text-neutral"
             onClick={onClose}
             >
-            <span>{language === "fr" ? "Fermer" : "Close"}</span>
+            <span>{modalClose}</span>
             </button>
         </div>
     ) 

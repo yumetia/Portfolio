@@ -2,6 +2,7 @@
 import experiencesData from "./experiencesData";
 import aboutSections from "./aboutSections";
 import projectsData from "./projectsData"
+import age from "@utils/data";
 
 
 const en = {
@@ -15,10 +16,11 @@ const en = {
     themeBtn: "Theme",
     langBtn: "Language",
     toggleBtn: "English",
+    modalClose:"Close",
   },
   home: {
     title: "Hey, I'm Yumetia",
-    paragraph1: "Passionate 21-year-old developer !",
+    paragraph1: `Passionate ${age}-year-old developer !`,
     paragraph2: "I build web experiences with performance and security in mind.",
     paragraph3: "Each part of code is written for impact.",
     contactBtn: "Contact me !",
@@ -56,6 +58,7 @@ const en = {
     success: "✅ Message sent successfully!",
     error: "❌ Failed to send message. Please try again.",
   },
+  isBetaLang:false
 };
 
 export default en;

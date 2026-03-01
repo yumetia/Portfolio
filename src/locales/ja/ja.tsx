@@ -13,6 +13,7 @@ const ja = {
     themeBtn: "テーマ",
     langBtn: "言語",
     toggleBtn: "日本語",
+    modalClose: "閉じる",
   },
   home: {
     title: "こんにちは、Yumetiaです",
@@ -54,6 +55,7 @@ const ja = {
     success: "✅ メッセージが正常に送信されました！",
     error: "❌ 送信に失敗しました。もう一度お試しください。",
   },
+  isBetaLang:true
 };
 
 export default ja;

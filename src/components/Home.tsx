@@ -13,7 +13,7 @@ function Home() {
       <div className="flex flex-col">
         <h1 className="mt-4 text-5xl font-bold text-center 
         md:text-left md:text-6xl md:mt-0">
-          {title}
+          {title} 
         </h1>
         <p className="my-4 text-md text-center 
         md:text-left

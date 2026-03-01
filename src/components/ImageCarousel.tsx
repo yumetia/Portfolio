@@ -83,7 +83,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           lg:left-5
           p-0 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
-            <CornerDownLeft className="size-5 text-accent
+            <CornerDownLeft className="size-5 text-primary
             md:size-auto" />
           </button>
 
@@ -92,7 +92,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           lg:right-5
           p-0 md:p-2 lg:p-3
           [&.swiper-button-disabled]:hidden">
-            <CornerDownRight className="size-5 text-accent
+            <CornerDownRight className="size-5 text-primary
             md:size-auto"/>
           </button>
       </Swiper>

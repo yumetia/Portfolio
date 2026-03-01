@@ -1,3 +1,4 @@
+import age from "@utils/data"
 import aboutSections from "./aboutSections"
 import experiencesData from "./experiencesData"
 import projectsData from "./projectsData"
@@ -15,10 +16,11 @@ const fr =
       themeBtn: "Thème",
       langBtn: "Langue",
       toggleBtn: "Français",
+      modalClose:"Fermer",
     },
     home: {
       title: "Salut, je suis Yumetia",
-      paragraph1: "Développeur passionné de 21 ans !",
+      paragraph1: `Développeur passionné de ${age} ans !`,
       paragraph2:
         "Je conçois des expériences web en mettant l’accent sur la performance et la sécurité.",
       paragraph3: "Chaque morceau de code est écrite avec un objectif clair.",
@@ -57,6 +59,7 @@ const fr =
       success: "✅ Message envoyé avec succès !",
       error: "❌ Échec de l'envoi du message. Veuillez réessayer.",
     },
+    isBetaLang:false
 }
 
 export default fr

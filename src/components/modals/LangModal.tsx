@@ -24,8 +24,7 @@ const LangModal = ({locales,currentLang,isVisible=false,onClose}: LangModalProps
     const { switchLanguage } = useLanguage();
     const { language } = useLanguage();
     
-    const langBtn = languages[language].navbar.langBtn;
-    
+    const { langBtn, modalClose } = languages[language].navbar;
      return (
         <div className="absolute top-40 right-3 
         sm:top-50
@@ -38,22 +37,24 @@ const LangModal = ({locales,currentLang,isVisible=false,onClose}: LangModalProps
                 <h2 className="text-center text-neutral font-bold">{langBtn}</h2>
             </div>
 
-            {/* rendering themes button */}
-            
-            {locales.map((lang,key)=>(
-                <div key={key} className="flex mb-2 ">
+            {/* rendering lang button */}
+           
+            {locales.map((lang,key)=>{
+                // get the status of the lang
+                const isBetaLang = languages[lang].isBetaLang 
+                return (<div key={key} className="flex mb-2 ">
                     <button className="btn rounded-xl" onClick={()=>{switchLanguage(lang)}}>
-                        {mappingLang[lang]}
+                        {isBetaLang ? `${mappingLang[lang]} (beta)`: mappingLang[lang]}
                     </button>
-                </div>
-            ))}
+                </div>)
+            })}
 
             {/* close modal button */}
             <button 
             className="mt-2 btn btn-outline hover:bg-accent text-neutral rounded"
             onClick={onClose}
             >
-                <span>{currentLang === "fr" ? "Fermer" : "Close"}</span>
+                <span>{modalClose}</span>
             </button>
         </div>
     ) 

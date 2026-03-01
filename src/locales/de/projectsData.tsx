@@ -65,8 +65,8 @@ const projectsData = [
     id: 6,
     title: "Mockup Responsive",
     description:
-      "Eine vollständig responsive Webseiten-Integration basierend auf einem vorgegebenen Design-Mockup. Das Projekt folgt W3C-Standards, berücksichtigt SEO-Optimierung und implementiert adaptive Bilder je nach Bildschirmgröße unter Verwendung von HTML5, CSS3 und JavaScript mit der BEM-Methodik.",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
+      "Eine vollständig responsive Webseiten-Integration basierend auf einem vorgegebenen Design-Mockup. Das Projekt folgt W3C-Standards, berücksichtigt SEO-Optimierung und implementiert adaptive Bilder je nach Bildschirmgröße unter Verwendung von HTML5 und CSS3 mit der BEM-Methodik.",
+    technologies: ["HTML5", "CSS3"],
     rncp: ["mockup", "presentation", "architecture"],
     images: mockupResponsiveScreenshots(),
     demoLink: "#",

@@ -76,7 +76,7 @@ const Navbar = () => {
       {/* theme & lang buttons  */}
         <div className="flex gap-10 mt-5 
         md:mt-0 
-        lg:gap-2
+        lg:gap-7
         ">
 
         {/* theme selector button*/}
