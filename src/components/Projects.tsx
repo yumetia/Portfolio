@@ -44,9 +44,21 @@ const Projects = () => {
         effect="cards"
         grabCursor={true}
         modules={[EffectCards, Pagination]}
-        pagination={{ clickable: true }}
+        pagination={{
+          clickable: true,
+          renderBullet: (index, className) => {
+             return `
+                <span class="${className} 
+                  w-3 h-3 rounded-full 
+                  bg-primary/40 
+                  transition-all duration-300">
+                </span>
+              `;
+          },
+        }}
         className="mx-auto my-10 w-80 
-        md:w-2/3 lg:w-1/2 "
+        md:w-2/3 lg:w-1/2 
+        select-none"
       >
         {data.map((project: any) => {
           const images: string[] = project.images ?? [];

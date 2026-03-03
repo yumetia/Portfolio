@@ -31,7 +31,8 @@ export default function Experiences() {
           watchOverflow={true}
           className="flex justify-center w-80
           md:w-2/3
-          lg:w-1/2"
+          lg:w-1/2
+          select-none"
           navigation={{
             prevEl:".custom-prev",
             nextEl:".custom-next",

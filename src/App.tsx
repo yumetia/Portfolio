@@ -7,6 +7,7 @@ import Experiences from "./components/Experiences";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 
+
 import { LanguageProvider } from "./context/LanguageContext";
 import { useEffect } from "react";
 
