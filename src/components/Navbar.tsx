@@ -59,7 +59,7 @@ const Navbar = () => {
       <div className="flex flex-col items-center p-4 md:justify-between md:flex-row">
         <a href="/" className="flex items-center font-bold text-3xl md:text-2xl">
             <Container className="size-10 stroke-info
-            lg:size-7" />
+            lg:size-8" />
           
           <p className="ml-1 p-1">Yumetia</p>
         </a>
