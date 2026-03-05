@@ -44,9 +44,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   if (!images || images.length === 0) {
     return (
       <div
-        className={`${className} ${heightClass} ${roundedClass} bg-base-200 grid place-items-center text-base-content/60`}
+        className={`${className} ${heightClass} ${roundedClass} flex bg-base-200 text-base-content/60`}
       >
-        No image
+        <div className="grid place-items-center bg-primary-900 w-full h-96">
+          <p className="text-secondary font-bold">No image</p>
+        </div>
       </div>
     );
   }
