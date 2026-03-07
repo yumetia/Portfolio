@@ -1,6 +1,5 @@
 import experiencesData from "./experiencesData";
 import aboutSections from "./aboutSections";
-import projectsData from "./projectsData";
 import age from "@utils/data";
 
 const de = {
@@ -40,7 +39,6 @@ const de = {
   },
   projects: {
     title: "Projekte",
-    data: projectsData,
     modalTitle: "Erworbene Kompetenzen (RNCP)",
     modalClose: "Schließen",
     play: "Spielen"

@@ -1,8 +1,6 @@
 import age from "@utils/data"
 import aboutSections from "./aboutSections"
 import experiencesData from "./experiencesData"
-import projectsData from "./projectsData"
-
 
 const fr =  
 {
@@ -42,7 +40,6 @@ const fr =
     },
     projects: {
       title: "Projets",
-      data: projectsData,
       modalTitle: "Compétences acquises (RNCP)",
       modalClose: "Fermer",
       play:"Jouer"

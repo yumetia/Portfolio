@@ -18,8 +18,14 @@ import { CornerDownLeft, CornerDownRight } from "lucide-react";
 
 type EffectName = "slide" | "fade" | "coverflow" | "cards";
 
+interface ImageAsset {
+  asset: {
+    url: string;
+  };
+}
+
 export interface ImageCarouselProps {
-  images: string[];
+  images: ImageAsset[];
   alt?: string;
   className?: string;
   interval?: number;
@@ -41,6 +47,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   roundedClass = "rounded-xl",
   alts,
 }) => {
+  // the array given is now a array of object 
+  // ex: images= [assets: object{url:...}]
+
+  console.log("logging images:",images)
+
   if (!images || images.length === 0) {
     return (
       <div
@@ -65,20 +76,23 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         className={`${roundedClass} overflow-hidden`}
 
       >
-        {images.map((src, i) => (
-          <SwiperSlide key={i}>
-            <div className={`flex justify-center w-full`}>
-              <img
-                src={src}
-                alt={alts?.[i] ?? alt}
-                className={`h-96 mx-auto object-cover ${roundedClass}`}
-                loading="lazy"
-                draggable={false}
-              />
-            </div>
-          </SwiperSlide>
+        {images.map((src, i) => {
+          console.log("src", src)
+          return (
+            <SwiperSlide key={i}>
+              <div className={`flex justify-center w-full`}>
+                <img
+                  src={src.asset?.url}
+                  alt={alts?.[i] ?? alt}
+                  className={`h-96 mx-auto object-cover ${roundedClass}`}
+                  loading="lazy"
+                  draggable={false}
+                />
+              </div>
+            </SwiperSlide>
+          )
           
-        ))}
+        })}
         {/* buttons */}
           <button className="btn bg-transparent custom-prev absolute 
           left-5 top-1/2 z-10

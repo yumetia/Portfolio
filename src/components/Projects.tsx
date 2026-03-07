@@ -15,13 +15,17 @@ import { useState } from "react";
 
 import github from "@assets/institutions/github.png"
 import RncpModal from "./modals/RncpModal";
+import { sanityProjects } from "@lib/sanity";
 
+// sanity projects
+const sProjects = await sanityProjects();
+console.log(sProjects)
 
 const Projects = () => {
   const { language } = useLanguage();
   const lang = language ; 
 
-  const { title, data, modalTitle,modalClose,play} = languages[lang].projects ;
+  const { title,  modalTitle,modalClose} = languages[lang].projects ;
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const [projectId,setProjectId] = useState<number | undefined>();
@@ -34,7 +38,6 @@ const Projects = () => {
   const handleCloseModal = () => {
     setIsModalVisible(false);
   };
-
 
   return (
     <div className="mt-10" id="Projects">
@@ -60,31 +63,33 @@ const Projects = () => {
         md:w-2/3 lg:w-1/2 
         select-none"
       >
-        {data.map((project: any) => {
-          const images: string[] = project.images ?? [];
+        {sProjects.map((project: any) => {
+          const images = project.image ?? [];  
 
           // shared or localized
-          const description = getLocalized<string>(project, "description", lang);
+          const description = project.description ?? [];
 
           // shared or localized
-          const technologies = getLocalized<string[]>(project,"technologies",lang) ?? []
+          const technologies = project.tech ?? []
 
           return (
             <SwiperSlide key={project.id}>
               <div className="bg-base-300 p-5 rounded-xl shadow-lg">
                   <ImageCarousel
                     images={images}
-                    alt={project.title}
+                    // name of the project is decided in eng for now..
+                    alt={project.title["en"]}
                     className="h-full mb-3"
                     interval={4000}
                   />
 
                 <div>
-                  <h1 className="my-2 font-bold">{project.title}</h1>
-                  <p className="text-sm lg:w-7/8">{description}</p>
+                  <h1 className="my-2 font-bold">{project.title["en"]}</h1>
+                  <p className="text-sm lg:w-7/8">{description[lang]}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2 my-3">
+                  {/* tech name in eng as default (obvious, but i just wanna remind it here) */}
                    {technologies.map((tech: string, idx: number) => (
                       <div key={idx} className="badge badge-accent badge-sm ring-1">
                         {tech}

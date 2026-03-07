@@ -9,18 +9,7 @@ import {sanity} from "@lib/sanity";
 function Home() {
   const { language } = useLanguage();
   const { title, paragraph1, paragraph2,paragraph3, contactBtn } = languages[language].home;
-   {/* sanity test */}
-  const query = `*[_type == "project"]{
-    title,
-    description,
-    github,
-    demo,
-    tech,
-    image{
-      asset->{url}
-    }
-  }`
-    {console.log(sanity.fetch(query))}
+
   return (
     <div id="Home" className="flex flex-col-reverse md:flex-row justify-center items-center md:my-32 my-10">
       <div className="flex flex-col">

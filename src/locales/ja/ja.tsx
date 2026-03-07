@@ -1,6 +1,5 @@
 import experiencesData from "./experiencesData";
 import aboutSections from "./aboutSections";
-import projectsData from "./projectsData"
 
 const ja = {
   navbar: {
@@ -38,7 +37,6 @@ const ja = {
   },
   projects: {
     title: "プロジェクト",
-    data: projectsData,
     modalTitle: "習得スキル（RNCP）",
     modalClose: "閉じる",
     play: "プレイ"
