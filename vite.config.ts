@@ -15,6 +15,7 @@ export default defineConfig({
       "@context": path.resolve(__dirname, "src/context"),
       "@locales": path.resolve(__dirname, "src/locales"),
       "@utils": path.resolve(__dirname, "src/utils"),
+      "@lib": path.resolve(__dirname, "src/lib"),
     },
   },
   plugins: [react(), tailwindcss()],

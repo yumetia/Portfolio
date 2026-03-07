@@ -16,6 +16,7 @@
       "@assets/*": ["src/assets/*"],
       "@locales/*": ["src/locales/*"],
       "@utils/*": ["src/utils/*"],
+      "@lib/*": ["src/lib/*"],
     },
   }
 }
