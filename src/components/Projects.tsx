@@ -30,8 +30,8 @@ const Projects = () => {
 
   const [projectId,setProjectId] = useState<number | undefined>();
 
-  const handleOpenModal = (projectId:number) => {
-    setProjectId(projectId)
+  const handleOpenModal = (pId:number) => {
+    setProjectId(pId)
     setIsModalVisible(true);
   };
 
@@ -63,7 +63,7 @@ const Projects = () => {
         md:w-2/3 lg:w-1/2 
         select-none"
       >
-        {sProjects.map((project: any) => {
+        {sProjects.map((project: any,pId:number) => {
           const images = project.image ?? [];  
 
           // shared or localized
@@ -71,7 +71,7 @@ const Projects = () => {
 
           // shared or localized
           const technologies = project.tech ?? []
-
+          
           return (
             <SwiperSlide key={project.id}>
               <div className="bg-base-300 p-5 rounded-xl shadow-lg">
@@ -107,7 +107,7 @@ const Projects = () => {
                     <BookOpen className="mx-auto size-8 text-info
                     md:mb-auto 
                     md:mb-3" 
-                    onClick={()=> handleOpenModal(project.id)} />
+                    onClick={()=> handleOpenModal(pId)} />
                 </div>
 
                 <div className="flex">

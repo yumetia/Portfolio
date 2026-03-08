@@ -50,8 +50,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   // the array given is now a array of object 
   // ex: images= [assets: object{url:...}]
 
-  console.log("logging images:",images)
-
   if (!images || images.length === 0) {
     return (
       <div
@@ -77,7 +75,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
       >
         {images.map((src, i) => {
-          console.log("src", src)
           return (
             <SwiperSlide key={i}>
               <div className={`flex justify-center w-full`}>

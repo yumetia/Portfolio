@@ -18,6 +18,7 @@ export const sanityProjects = async () =>{
     fr,
     ja
   },
+  "rncp": coalesce(rncp,[]),
   github,
   demo,
   tech,

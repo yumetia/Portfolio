@@ -6,8 +6,11 @@ import languages from "@locales/languages";
 import RNCP_MAPPING, { RncpMappingItem } from "@utils/mapping/rncpMapping";
 import rncpDescMapping from "@utils/mapping/rncpDescMapping";
 import { X } from "lucide-react";
+import { sanityProjects } from "@lib/sanity";
 
 
+// sanity projects
+const sProjects = await sanityProjects();
 
 type RncpModalType = {
     language:keyof typeof languages;
@@ -16,6 +19,17 @@ type RncpModalType = {
     projectId:number|undefined;
     isVisible:boolean;
     onClose:()=>void;
+}
+
+type Project = {
+  title: Record<string, string>;
+  description: Record<string, string>;
+  github: string | null  ;  // ← can be null
+  demo: string | null   ;   // ← can be null
+  tech: string[];
+  rncp: string[];
+  image: { asset: { url: string } }[];
+  order: number;
 }
 
 const mapRncpDesc = (language:keyof typeof languages, rncpMap:RncpMappingItem[]) =>{
@@ -35,13 +49,15 @@ const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:
     
     if (!isVisible) return;
     
-    const projects = languages[language].projects.data
-    const project = projects.filter((project)=> (project.id==projectId)) ?? []
+    const projects = sProjects ?? []
+    const project = projects?.filter((_:any,index:number)=> index===projectId) ?? []
+    console.log("hello",project)
+    
     // get the rncp project array objects based on the mapping
     const rncpMap = RNCP_MAPPING.filter((item) =>
-        Object.values(item).some( (value) =>
-            project.some((pObj)=> 
-                pObj.rncp.some((pRncp)=> (pRncp==value)
+        Object.values(item).some( (value:string) =>
+            project.some((pObj : Project)=>
+                pObj.rncp.some((pRncp: string)=> (pRncp==value)
             ))
         )
     );
