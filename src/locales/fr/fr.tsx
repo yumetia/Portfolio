@@ -1,6 +1,6 @@
 import age from "@utils/data"
 import aboutSections from "./aboutSections"
-import experiencesData from "./experiencesData"
+
 
 const fr =  
 {
@@ -36,7 +36,6 @@ const fr =
     },
     experiences: {
       title: "Expériences",
-      data: experiencesData, // shared
     },
     projects: {
       title: "Projets",

@@ -1,5 +1,5 @@
 
-import experiencesData from "./experiencesData";
+
 import aboutSections from "./aboutSections";
 
 import age from "@utils/data";
@@ -31,7 +31,6 @@ const en = {
   },
   experiences: {
     title: "Experiences",
-    data: experiencesData,
   },
   skillsSection: {
     software: "Software Development",

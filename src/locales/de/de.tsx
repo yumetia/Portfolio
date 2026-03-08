@@ -1,4 +1,4 @@
-import experiencesData from "./experiencesData";
+
 import aboutSections from "./aboutSections";
 import age from "@utils/data";
 
@@ -29,7 +29,6 @@ const de = {
   },
   experiences: {
     title: "Erfahrungen",
-    data: experiencesData,
   },
   skillsSection: {
     software: "Softwareentwicklung",

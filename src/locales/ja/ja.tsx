@@ -1,4 +1,4 @@
-import experiencesData from "./experiencesData";
+
 import aboutSections from "./aboutSections";
 
 const ja = {
@@ -27,7 +27,6 @@ const ja = {
   },
   experiences: {
     title: "経験",
-    data: experiencesData,
   },
   skillsSection: {
     software: "ソフトウェア開発",

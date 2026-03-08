@@ -8,14 +8,17 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import { CornerDownLeft, CornerDownRight } from "lucide-react";
+import { sanityExperiences } from "@lib/sanity";
 
+// sanity Experiences
 
+const sExperiences = await sanityExperiences();
 
 export default function Experiences() {
   const { language } = useLanguage();
   const lang = language;
 
-  const { title, data: experiences } = languages[lang].experiences;
+  const { title } = languages[lang].experiences;
 
   return (
     <div className="mt-10" id="Experiences">
@@ -39,13 +42,11 @@ export default function Experiences() {
             disabledClass:"swiper-button-disabled"
           }}
         >
-          {experiences.map((exp: any) => {
-            const role = getLocalized<string>(exp, "role", lang);
-            const at = getLocalized<string>(exp, "at", lang);
-            const name = getLocalized<string>(exp, "name", lang);
-            const description =
-              getLocalized<string[]>(exp, "description", lang) ?? [];
-
+          {sExperiences.map((exp: any) => {
+            const role = exp?.role[lang];
+            const at = exp?.at;
+            const description = exp?.description[lang] ?? []
+            
             return (
               <SwiperSlide key={exp.id} className="flex justify-center">
                 <div className="bg-base-200 p-10 rounded-xl shadow-lg">
@@ -54,8 +55,8 @@ export default function Experiences() {
                   <div className="flex items-center gap-4 w-full mb-2 
                   lg:gap-6">
                     <img
-                      src={exp.image}
-                      alt={name ?? at}
+                      src={exp.image?.asset?.url}
+                      alt={at}
                       className="size-10 object-cover rounded
                       lg:size-12"
                     />
@@ -74,14 +75,14 @@ export default function Experiences() {
                       <p className="ml-12 mt-1 text-xs
                       md:text-sm
                       lg:ml-1
-                      ">{exp.period}
+                      ">{exp.period[lang]}
                       </p>
 
                       <ul className="list-disc list-inside mt-4 space-y-2 overflow-y-auto
                       md:ml-5
                       lg:ml-1
                       ">
-                        {description.map((d, i) => (
+                        {description.map((d:string, i:number) => (
                           <li key={i} className="
                           sm:text-sm
                           md:text-base
