@@ -11,17 +11,22 @@ import languages, { getLocalized } from "@locales/languages";
 
 import { BookOpen, Play } from "lucide-react";
 import ImageCarousel from "./ImageCarousel";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import github from "@assets/institutions/github.png"
 import RncpModal from "./modals/RncpModal";
 import { sanityProjects } from "@lib/sanity";
 
 // sanity projects
-const sProjects = await sanityProjects();
-console.log(sProjects)
+
+
 
 const Projects = () => {
+  const [sProjects, setSProjects] = useState<any[]>([])
+
+  useEffect(() => {
+    sanityProjects().then(setSProjects)
+  }, [])
   const { language } = useLanguage();
   const lang = language ; 
 

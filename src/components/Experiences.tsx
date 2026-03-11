@@ -9,12 +9,18 @@ import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import { CornerDownLeft, CornerDownRight } from "lucide-react";
 import { sanityExperiences } from "@lib/sanity";
+import { useEffect, useState } from "react";
 
-// sanity Experiences
 
-const sExperiences = await sanityExperiences();
 
 export default function Experiences() {
+
+  const [sExperiences, setSExperiences] = useState<any[]>([])
+
+  useEffect(() => {
+    sanityExperiences().then(setSExperiences)
+  }, [])
+  
   const { language } = useLanguage();
   const lang = language;
 
