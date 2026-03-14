@@ -6,7 +6,7 @@ import languages from "@locales/languages";
 import RNCP_MAPPING, { RncpMappingItem } from "@utils/mapping/rncpMapping";
 import rncpDescMapping from "@utils/mapping/rncpDescMapping";
 import { X } from "lucide-react";
-import { sanityExperiences, sanityProjects } from "@lib/sanity";
+import { sanityProjects } from "@lib/sanity";
 import { useEffect, useState } from "react";
 
 
@@ -45,18 +45,18 @@ const mapRncpDesc = (language:keyof typeof languages, rncpMap:RncpMappingItem[])
 
 const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:RncpModalType) => {
 
-    const [sanityProjects,setSanityProjects] = useState<any[]>([]);
+    const [sProjects,setSProjects] = useState<any[]>([]);
 
     useEffect(()=>{
-        sanityExperiences().then(setSanityProjects)
+        sanityProjects().then(setSProjects)
     },[])
     
     if (!isVisible) return;
     
-    const projects = sanityProjects ?? []
+    const projects = sProjects ?? []
     const project = projects?.filter((_:any,index:number)=> index===projectId) ?? []
-    console.log("hello",project)
     
+    console.log("project clicked",project)
     // get the rncp project array objects based on the mapping
     const rncpMap = RNCP_MAPPING.filter((item) =>
         Object.values(item).some( (value:string) =>
@@ -65,6 +65,7 @@ const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:
             ))
         )
     );
+
 
     // we have the mapping rncp array, 
     // now get the final full rncp+desc array of the project  

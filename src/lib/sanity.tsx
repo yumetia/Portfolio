@@ -31,29 +31,32 @@ export const sanityProjects = async () =>{
           `
           const res = await sanity.fetch(query)
           return res;
-        }
-        export const sanityExperiences = async () =>{
-          // sanity client fetch projects based on the currrent lang
-          
-          const query = `*[_type=="experiences"]{
-            role,
-            at,
-            period,
-            description{
-              en,
-              de,
-              fr,
-              ja
-              },
-              image{
-                asset->{
-                  url
-                  }
-                  }
-                  }
-                  `
-                  const res = await sanity.fetch(query)
-                  return res;
-                }
-                
-                
+}
+
+
+
+export const sanityExperiences = async () =>{
+  // sanity client fetch projects based on the currrent lang
+
+  const query = `*[_type=="experiences"]{
+    role,
+    at,
+    period,
+    description{
+      en,
+      de,
+      fr,
+      ja
+      },
+      image{
+        asset->{
+          url
+          }
+          }
+          }
+          `
+        const res = await sanity.fetch(query)
+        return res;
+}
+      
+      
