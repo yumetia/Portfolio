@@ -1,7 +1,8 @@
  // Technos logos
 
 import imgREACT from "@assets/technos/react.png";
-import imgNODE from "@assets/technos/node-js.png";
+// import imgNODE from "@assets/technos/node-js.png";
+import imgAdonis from "@assets/technos/adonis.png"
 import imgPYTHON from "@assets/technos/python.png";
 
 import imgLARAVEL from "@assets/technos/laravel.png";
@@ -30,7 +31,7 @@ export const shared = {
       key: "web",
       skills: [
         { id: 1, name: "React / React Native", image: imgREACT },
-        { id: 2, name: "Node.js", image: imgNODE },
+        { id: 2, name: "Adonis.js", image: imgAdonis },
         { id: 4, name: "Laravel", image: imgLARAVEL },
       ],
     },
@@ -46,9 +47,9 @@ export const shared = {
       id: 3,
       key: "database",
       skills: [
+        { id: 8, name: "PostgreSQL", image: imgPostgre },
         { id: 6, name: "MySQL", image: imgMYSQL },
         { id: 7, name: "MongoDB", image: imgMONGODB },
-        { id: 8, name: "PostgreSQL", image: imgPostgre },
       ],
     },
   ],

@@ -1,6 +1,6 @@
 const themes = [
-    "halloween",
-    "cupcake",
+    "cyberpunk",
+    "emerald",
     "dracula",
     "dim",
 ].sort()

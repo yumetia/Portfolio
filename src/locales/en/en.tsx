@@ -1,10 +1,6 @@
-
-
+// en.js
+import age from "@utils/data"
 import { LetterText, CalendarSync, Paintbrush } from "lucide-react";
-
-import age from "@utils/data";
-
-
 const en = {
   navbar: {
     home: "Home",
@@ -16,41 +12,40 @@ const en = {
     themeBtn: "Theme",
     langBtn: "Language",
     toggleBtn: "English",
-    modalClose:"Close",
+    modalClose: "Close",
   },
   home: {
-    title: "Hey, I'm Yumetia",
-    paragraph1: `Passionate ${age}-year-old developer !`,
-    paragraph2: "I build web experiences with performance and security in mind.",
-    paragraph3: "Each part of code is written for impact.",
-    contactBtn: "Contact me !",
+    title: "Hey, it's Yumetia!",
+    paragraph1: `A passionate ${age}-year-old developer!`,
+    paragraph2: "I craft web experiences that balance performance, security, and attention to detail.",
+    paragraph3: "Every line of code is written with intention.",
+    contactBtn: "Get in touch!",
   },
   about: {
     title: "About",
-      sections: [{
-      id: 1,
-      title: "Frontend Developer",
-      description:
-        "I am a frontend developer with solid experience in building interactive and responsive web applications.",
-      icon: LetterText,
-    },
-    {
-      id: 2,
-      title: "Backend Developer",
-      description:
-        "I have a strong foundation in backend development, designing robust APIs and handling database management.",
-      icon: CalendarSync,
-    },
-    {
-      id: 3,
-      title: "UI/UX Enthusiast",
-      description:
-        "Crafting visually appealing and user-friendly interfaces is one of my top priorities.",
-      icon: Paintbrush,
-    },],
-  },
-  experiences: {
-    title: "Experiences",
+    sections: [
+      {
+        id: 1,
+        title: "Frontend Developer",
+        description:
+          "I love building modern, interactive web interfaces that are fast, polished, and a pleasure to use.",
+        icon: LetterText,
+      },
+      {
+        id: 2,
+        title: "Backend Developer",
+        description:
+          "I design reliable backend architectures and clean APIs built for performance and long-term maintainability.",
+        icon: CalendarSync,
+      },
+      {
+        id: 3,
+        title: "UI/UX Enthusiast",
+        description:
+          "I care deeply about design and usability — every interface I build aims to be clear, intuitive, and enjoyable.",
+        icon: Paintbrush,
+      },
+    ],
   },
   skillsSection: {
     software: "Software Development",
@@ -58,25 +53,27 @@ const en = {
     database: "Databases & Auth",
     game: "Game Development",
   },
+  experiences: {
+    title: "Experiences",
+  },
   projects: {
     title: "Projects",
-    modalTitle: "Skills acquired (RNCP)",
+    modalTitle: "Skills gained (RNCP)",
     modalClose: "Close",
-    play: "Play"
+    play: "Play",
   },
   contact: {
     title: "Contact",
     placeholders: {
       subject: "Subject",
-      name: "Your Name",
-      email: "Your Email",
-      message: "Your Message",
+      name: "Your name",
+      email: "Your email",
+      message: "Your message",
     },
-    button: "Send Message",
+    button: "Send message",
     success: "✅ Message sent successfully!",
     error: "❌ Failed to send message. Please try again.",
   },
-  isBetaLang:false
+  isBetaLang: false,
 };
-
 export default en;

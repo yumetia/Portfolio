@@ -68,7 +68,6 @@ export default function Experiences() {
                     />
                     <div className="flex flex-col">
                       <h2 className="text-2sm font-bold text-accent 
-                      [text-shadow:2px_1px_theme(colors.neutral)]
                       lg:text-xl lg:mb-1">{role}</h2>
                       <p className="text-xs text-base-content/60
                       md:text-sm">{at}</p>

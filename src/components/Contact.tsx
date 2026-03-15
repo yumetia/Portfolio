@@ -86,7 +86,7 @@ function Contact() {
             className="
               btn btn-outline
               bg-accent
-              text-base
+              text-neutral
             "
           >
             {button}

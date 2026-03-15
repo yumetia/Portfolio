@@ -44,12 +44,13 @@ function About() {
           {/* card */}
               
             <div className="flex flex-col">
-              <div className="flex justify-between
+              <div className="flex justify-center
+              gap-6
               lg:mb-3">
-                <Icon className="text-accent size-6 
+                <Icon className="text-accent size-6 drop-shadow-md
                 lg:size-8
                 "/>
-                <h2 className="text-xl font-bold mb-1 text-center w-full
+                <h2 className="text-xl font-bold mb-1
                 lg:text-2xl
                 ">
                   {sectionTitle}

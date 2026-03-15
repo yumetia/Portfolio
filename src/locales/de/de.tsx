@@ -1,27 +1,25 @@
-
-import age from "@utils/data";
+// de.js
+import age from "@utils/data"
 import { LetterText, CalendarSync, Paintbrush } from "lucide-react";
-
 const de = {
   navbar: {
-    home: "Start",
+    home: "Startseite",
     about: "Über mich",
     skills: "Fähigkeiten",
     projects: "Projekte",
     experiences: "Erfahrungen",
     contact: "Kontakt",
-    themeBtn: "Design",
+    themeBtn: "Theme",
     langBtn: "Sprache",
     toggleBtn: "Deutsch",
     modalClose: "Schließen",
-    isBetaLang:false
   },
   home: {
-    title: "Hey, ich bin Yumetia",
-    paragraph1: `Leidenschaftliche*r ${age}-jährige*r Entwickler*in!`,
-    paragraph2: "Ich entwickle Web-Erlebnisse mit Fokus auf Performance und Sicherheit.",
-    paragraph3: "Jede Codezeile wird mit Wirkung geschrieben.",
-    contactBtn: "Kontaktiere mich!",
+    title: "Hey, hier ist Yumetia!",
+    paragraph1: `Ein leidenschaftlicher Entwickler, ${age} Jahre alt!`,
+    paragraph2: "Ich gestalte Web-Erlebnisse mit Fokus auf Performance, Sicherheit und Liebe zum Detail.",
+    paragraph3: "Jede Zeile Code wird mit klarer Absicht geschrieben.",
+    contactBtn: "Kontakt aufnehmen!",
   },
   about: {
     title: "Über mich",
@@ -30,53 +28,52 @@ const de = {
         id: 1,
         title: "Frontend-Entwickler",
         description:
-          "Ich bin ein Frontend-Entwickler mit solider Erfahrung in der Entwicklung interaktiver und responsiver Webanwendungen.",
+          "Ich entwickle moderne, interaktive Oberflächen, die schnell, durchdacht und angenehm zu bedienen sind.",
         icon: LetterText,
       },
       {
         id: 2,
         title: "Backend-Entwickler",
         description:
-          "Ich verfüge über eine starke Grundlage in der Backend-Entwicklung, entwerfe robuste APIs und verwalte Datenbanken.",
+          "Ich entwerfe zuverlässige Backend-Architekturen und saubere APIs — gebaut für Performance und Wartbarkeit.",
         icon: CalendarSync,
       },
       {
         id: 3,
-        title: "UI/UX-Enthusiast",
+        title: "UI/UX-Begeisterter",
         description:
-          "Die Gestaltung visuell ansprechender und benutzerfreundlicher Oberflächen hat für mich oberste Priorität.",
+          "Design und Benutzerfreundlichkeit liegen mir am Herzen — jede Oberfläche soll klar, intuitiv und angenehm sein.",
         icon: Paintbrush,
       },
     ],
   },
-  experiences: {
-    title: "Erfahrungen",
-  },
   skillsSection: {
     software: "Softwareentwicklung",
     web: "Webentwicklung",
-    database: "Datenbanken & Authentifizierung",
+    database: "Datenbanken & Auth",
     game: "Spieleentwicklung",
+  },
+  experiences: {
+    title: "Erfahrungen",
   },
   projects: {
     title: "Projekte",
-    modalTitle: "Erworbene Kompetenzen (RNCP)",
+    modalTitle: "Erworbene Fähigkeiten (RNCP)",
     modalClose: "Schließen",
-    play: "Spielen"
+    play: "Spielen",
   },
   contact: {
     title: "Kontakt",
     placeholders: {
       subject: "Betreff",
-      name: "Dein Name",
-      email: "Deine E-Mail",
-      message: "Deine Nachricht",
+      name: "Ihr Name",
+      email: "Ihre E-Mail",
+      message: "Ihre Nachricht",
     },
     button: "Nachricht senden",
     success: "✅ Nachricht erfolgreich gesendet!",
-    error: "❌ Senden fehlgeschlagen. Bitte versuche es erneut.",
+    error: "❌ Senden fehlgeschlagen. Bitte versuchen Sie es erneut.",
   },
-  isBetaLang:false
+  isBetaLang: false,
 };
-
 export default de;

@@ -17,38 +17,37 @@ const fr =
       modalClose:"Fermer",
     },
     home: {
-      title: "Salut, je suis Yumetia",
-      paragraph1: `Développeur passionné de ${age} ans !`,
-      paragraph2:
-        "Je conçois des expériences web en mettant l’accent sur la performance et la sécurité.",
-      paragraph3: "Chaque morceau de code est écrite avec un objectif clair.",
+      title: "Salut, c'est Yumetia !",
+      paragraph1: `Un développeur passionné de ${age} ans !`,
+      paragraph2: "Je conçois des expériences web en alliant performance, sécurité et souci du détail.",
+      paragraph3: "Chaque morceau de code est écrit avec un objectif clair.",
       contactBtn: "Me contacter !",
     },
     about: {
       title: "À propos",
       sections: [
-      {
-        id: 1,
-        title: "Développeur Frontend",
-        description:
-          "Je suis développeur frontend avec une solide expérience dans la création d'applications web interactives et réactives.",
-        icon: LetterText,
-      },
-      {
-        id: 2,
-        title: "Développeur Backend",
-        description:
-          "J'ai une base solide en développement backend, en concevant des API robustes et en gérant des bases de données.",
-        icon: CalendarSync,
-      },
-      {
-        id: 3,
-        title: "Passionné par l'UI/UX",
-        description:
-          "Créer des interfaces visuellement attrayantes et faciles à utiliser est l'une de mes priorités.",
-        icon: Paintbrush,
-      },
-    ], // shared
+        {
+          id: 1,
+          title: "Développeur Frontend",
+          description:
+            "Passionné par la création d'interfaces web modernes, je conçois des applications interactives et performantes qui offrent une expérience utilisateur fluide.",
+          icon: LetterText,
+        },
+        {
+          id: 2,
+          title: "Développeur Backend",
+          description:
+            "Je conçois des architectures backend fiables et des API bien structurées, pensées pour la performance et la maintenabilité.",
+          icon: CalendarSync,
+        },
+        {
+          id: 3,
+          title: "Passionné par l'UI/UX",
+          description:
+            "J'accorde une grande importance au design et à l'ergonomie — chaque interface que je crée se veut à la fois claire, intuitive et agréable à utiliser.",
+          icon: Paintbrush,
+        },
+      ], // shared
     },
     skillsSection: {
       software: "Développement Logiciel",
