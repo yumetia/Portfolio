@@ -41,7 +41,7 @@ const ThemeModal = ({ themes,language,isVisible=false,onClose }: ThemeModalProps
             {/* rendering themes button */}
             {themes.map((theme:string,key:number)=>(
             <div key={key} className="flex mb-2 ">
-                <button className="btn" onClick={()=>{handleTheme(theme)}}>
+                <button className="btn rounded-xl" onClick={()=>{handleTheme(theme)}}>
                 {theme}
                 </button>
             </div>
@@ -49,7 +49,7 @@ const ThemeModal = ({ themes,language,isVisible=false,onClose }: ThemeModalProps
 
             {/* close modal button */}
             <button 
-            className="mt-2 btn btn-outline hover:bg-accent text-neutral"
+            className="mt-2 btn btn-outline rounded hover:bg-accent text-neutral"
             onClick={onClose}
             >
             <span>{modalClose}</span>

@@ -4,8 +4,6 @@ import languages from "@locales/languages";
 import { Mail } from "lucide-react";
 import profile from "@assets/profile.jpg";
 
-import {sanity} from "@lib/sanity";
-
 function Home() {
   const { language } = useLanguage();
   const { title, paragraph1, paragraph2,paragraph3, contactBtn } = languages[language].home;
@@ -26,7 +24,8 @@ function Home() {
           <br />
           {paragraph3}
         </p>
-        <a href="#Contact" className="btn btn-accent hover:bg-outline-200
+        <a href="#Contact" className="btn btn-accent rounded border
+        hover:bg-outline-200
         md:w-fit
         lg:text-lg">
           <Mail className="size-5
