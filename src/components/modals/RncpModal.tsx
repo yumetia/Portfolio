@@ -72,7 +72,9 @@ const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:
     const pRncpInfos = mapRncpDesc(language,rncpMap)
 
     return ( 
-    <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
+        // gonna restyle this shit since this was made fully by AI
+        // I need to create a good modal in a more simple way than this
+        <div className="fixed w-2/3 mx-auto mt-50 inset-0 z-150 flex items-end md:items-center justify-center">
         {/* Overlay */}
         <div
             className="absolute inset-0 b g-black/50"

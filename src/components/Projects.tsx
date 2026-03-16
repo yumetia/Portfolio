@@ -53,6 +53,7 @@ const Projects = () => {
         effect="cards"
         grabCursor={true}
         modules={[EffectCards, Pagination]}
+        style={{paddingBottom:"2.5rem"}}
         pagination={{
           clickable: true,
           renderBullet: (index, className) => {
