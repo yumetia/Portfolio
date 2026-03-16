@@ -26,28 +26,28 @@ const fr =
     about: {
       title: "À propos",
       sections: [
-        {
-          id: 1,
-          title: "Développeur Frontend",
-          description:
-            "Passionné par la création d'interfaces web modernes, je conçois des applications interactives et performantes qui offrent une expérience utilisateur fluide.",
-          icon: LetterText,
-        },
-        {
-          id: 2,
-          title: "Développeur Backend",
-          description:
-            "Je conçois des architectures backend fiables et des API bien structurées, pensées pour la performance et la maintenabilité.",
-          icon: CalendarSync,
-        },
-        {
-          id: 3,
-          title: "Passionné par l'UI/UX",
-          description:
-            "J'accorde une grande importance au design et à l'ergonomie — chaque interface que je crée se veut à la fois claire, intuitive et agréable à utiliser.",
-          icon: Paintbrush,
-        },
-      ], // shared
+    {
+      id: 1,
+      title: "Développeur Frontend",
+      description:
+        "Je crée des interfaces web modernes, interactives et performantes, avec un fort accent sur la fluidité et l'expérience utilisateur.",
+      icon: LetterText,
+    },
+    {
+      id: 2,
+      title: "Développeur Backend",
+      description:
+        "Je développe des architectures backend solides et des API bien structurées, optimisées pour la performance et la maintenabilité.",
+      icon: CalendarSync,
+    },
+    {
+      id: 3,
+      title: "Passionné par l'UI/UX",
+      description:
+        "Je conçois des interfaces claires et intuitives, où design et ergonomie améliorent l'expérience utilisateur.",
+      icon: Paintbrush,
+    },
+  ],
     },
     skillsSection: {
       software: "Développement Logiciel",

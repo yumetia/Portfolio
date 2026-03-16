@@ -2,7 +2,7 @@ import { createClient } from "@sanity/client"
 
 export const sanity = createClient({
   projectId: import.meta.env.VITE_SANITY_KEY,
-  dataset: "production",
+  dataset: "staging",
   apiVersion: "2024-01-01",
   useCdn: true
 })
@@ -10,25 +10,25 @@ export const sanity = createClient({
 export const sanityProjects = async () =>{
   // sanity client fetch projects based on the currrent lang
   
-  const query = `*[_type=="project"]{
+  const query = `*[_type=="project"] | order(order asc) {
     title,
     description{
       en,
       de,
       fr,
       ja
-      },
-      "rncp": coalesce(rncp,[]),
-      github,
-      demo,
-      tech,
-      image[]{
-        asset->{
-          url
-          }
-          }
-          }
-          `
+    },
+    "rncp": coalesce(rncp,[]),
+    github,
+    demo,
+    tech,
+    order,
+    image[]{
+      asset->{
+        url
+      }
+    }
+  }`
           const res = await sanity.fetch(query)
           return res;
 }
@@ -38,7 +38,7 @@ export const sanityProjects = async () =>{
 export const sanityExperiences = async () =>{
   // sanity client fetch projects based on the currrent lang
 
-  const query = `*[_type=="experiences"]{
+  const query = `*[_type=="experiences"] | order(order asc) {
     role,
     at,
     period,
