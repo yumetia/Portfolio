@@ -7,7 +7,7 @@ import "swiper/css/effect-coverflow";
 
 import Title from "./Title";
 import { useLanguage } from "@context/LanguageContext";
-import languages, { getLocalized } from "@locales/languages";
+import languages from "@locales/languages";
 
 import { BookOpen, Play } from "lucide-react";
 import ImageCarousel from "./ImageCarousel";
@@ -44,6 +44,7 @@ const Projects = () => {
     setIsModalVisible(false);
   };
 
+  console.log("projects fetched:",sProjects)
   return (
     <div className="mt-10" id="Projects">
       <Title title={title} />
@@ -116,10 +117,10 @@ const Projects = () => {
                 </div>
 
                 <div className="flex">
-                  {project.demoLink && project.demoLink !== "#" && (
+                  {project.demo && (
                     <a
-                      className="btn btn-accent w-2/3"
-                      href={project.demoLink}
+                      className="btn btn-accent border-neutral rounded w-2/3"
+                      href={project.demo}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -127,12 +128,10 @@ const Projects = () => {
                     </a>
                   )}
                   <a
-                    className={`btn btn-neutral ${
-                      project.demoLink && project.demoLink !== "#"
-                        ? "w-1/3 ml-2"
-                        : "w-full"
+                    className={`btn btn-neutral border-neutral rounded ${
+                      project.demo ? "w-1/3 ml-2" : "w-full"
                     }`}
-                    href={project.repoLink}
+                    href={project.github}
                     target="_blank"
                     rel="noreferrer"
                   >

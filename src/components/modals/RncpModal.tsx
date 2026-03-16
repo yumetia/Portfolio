@@ -126,7 +126,8 @@ const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:
             <div className="mt-5 flex justify-center
             md:mt-0">
                 <button
-                    className="mt-3 btn btn-primary w-full 
+                    className="mt-3 btn btn-primary rounded border-neutral
+                    w-full 
                     md:mt-5
                     "
                     onClick={onClose}

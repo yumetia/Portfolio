@@ -17,7 +17,7 @@ export default function App() {
       // if theres no saved theme, set the default
       // else : set the saved one
       const savedTheme = localStorage.getItem("theme")
-      if (!savedTheme) document.documentElement.dataset.theme = "dracula";
+      if (savedTheme==undefined) document.documentElement.dataset.theme = "dracula";
       else {document.documentElement.dataset.theme = savedTheme}
   },[])
   
