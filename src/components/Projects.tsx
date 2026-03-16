@@ -142,16 +142,16 @@ const Projects = () => {
             </SwiperSlide>
           );
         })}
-        {/* rncp modal */}
-          <RncpModal 
-            language={language}
-            modalTitle={modalTitle}
-            modalClose={modalClose}
-            projectId={projectId}
-            isVisible={isModalVisible}
-            onClose={handleCloseModal}
-          />
       </Swiper>
+      {/* rncp modal */}
+        <RncpModal 
+          language={language}
+          modalTitle={modalTitle}
+          modalClose={modalClose}
+          projectId={projectId}
+          isVisible={isModalVisible}
+          onClose={handleCloseModal}
+        />
     </div>
   );
 }
