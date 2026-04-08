@@ -2,7 +2,7 @@ import { createClient } from "@sanity/client"
 
 export const sanity = createClient({
   projectId: import.meta.env.VITE_SANITY_KEY,
-  dataset: "staging",
+  dataset: "production",
   apiVersion: "2024-01-01",
   useCdn: false
 })
