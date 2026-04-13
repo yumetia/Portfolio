@@ -1,7 +1,7 @@
 // components/footer.jsx
 
 import github from "@assets/institutions/github.png"
-import discord from "@assets/institutions/discord.svg"
+import discord from "@assets/institutions/discord.png"
 
 import { Container } from "lucide-react";
 
@@ -39,7 +39,7 @@ function Footer() {
               className="btn btn-primary btn-circle"
               title="Discord: yumetia (click to copy)"
             >
-              <img src={discord} alt="discord" className="size-6" />
+              <img src={discord} alt="discord" className="size-8" />
             </button>
           </div>
 

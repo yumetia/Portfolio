@@ -42,7 +42,7 @@ const en = {
         id: 3,
         title: "UI/UX Enthusiast",
         description:
-          "I care deeply about design and usability — every interface I build aims to be clear, intuitive, and enjoyable.",
+          "I care deeply about design and usability, every interface I build aims to be clear, intuitive, and enjoyable.",
         icon: Paintbrush,
       },
     ],

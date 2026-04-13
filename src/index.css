@@ -3,12 +3,19 @@
   themes: all;
 }
 
-/* concerning swiper js slides... */
-html,
-body {    
-  overflow-x: hidden;      
+@plugin "daisyui/theme" {
+  name: "cyberpunk";
+  default: true;
+  --color-base-100: oklch(0.8500 0.179 104.32);
+  --color-base-200: oklch(0.8200 0.179 104.32);/* slightly darker bg */
+  --color-base-300: oklch(0.8000 0.179 104.32);/* even darker bg */
 }
 
+/* concerning swiper js slides... */
+html,
+body {
+  overflow-x: hidden;      
+}
 
 .swiper-pagination-bullet-active {
   @apply !bg-primary;
