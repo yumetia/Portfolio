@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import utwm from 'unplugin-tailwindcss-mangle/vite';
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -18,7 +19,10 @@ export default defineConfig({
       "@lib": path.resolve(__dirname, "src/lib"),
     },
   },
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), 
+    tailwindcss(),
+    utwm()
+  ],
   define: {
     "process.env":{}
   },
