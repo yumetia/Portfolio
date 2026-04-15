@@ -56,7 +56,6 @@ const RncpModal = ({language,modalTitle,modalClose,projectId,isVisible,onClose}:
     const projects = sProjects ?? []
     const project = projects?.filter((_:any,index:number)=> index===projectId) ?? []
     
-    console.log("project clicked",project)
     // get the rncp project array objects based on the mapping
     const rncpMap = RNCP_MAPPING.filter((item) =>
         Object.values(item).some( (value:string) =>

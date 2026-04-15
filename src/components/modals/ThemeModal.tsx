@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import languages from "@locales/languages";
+import { createPortal } from "react-dom";
 
 type ThemeModalProps = {
   themes: string[];
@@ -17,13 +18,13 @@ const ThemeModal = ({
   const { themeBtn, modalClose } = languages[language].navbar;
 
   // function returning the initial state value so we can actually reset
-   const getInitialPositions = () => {
-     const w = window.innerWidth;
-     if (w < 640) return { x: 10, y: 160 }; // mobile
-     if (w < 1024) return { x: w/2 + 50, y: 80 }; // tablet
-     return { x: 1270, y: 90 }; // desktop
-   }
-  const [position, setPosition] = useState(getInitialPositions());
+  const getInitialPositions = () => {
+    const w = window.innerWidth;
+    if (w < 640) return { x: 2, y: 20 }; // ~mobile
+    if (w < 1024) return { x: 55, y: 10 }; // ~tablet
+    return { x: 75, y: 12 }; // desktop
+  };
+  const [position, setPosition] = useState(getInitialPositions();
 
   const [isDragging, setIsDragging] = useState(false);
   const offset = useRef({ x: 0, y: 0 });
@@ -32,20 +33,21 @@ const ThemeModal = ({
     setIsDragging(true);
     // remember where inside the modal we clicked
     offset.current = {
-      x: e.clientX - position.x,
-      y: e.clientY - position.y,
+      x: e.clientX - (position.x / 100) * window.innerWidth,
+      y: e.clientY - (position.y / 100) * window.innerHeight,
     };
   };
-  const handleClose = ()=> {
-    setPosition(getInitialPositions())
-    onClose()
-  }
+  const handleClose = () => {
+    setPosition(getInitialPositions());
+    onClose();
+  };
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging) return;
+      console.log("mouse event", e.clientX);
       setPosition({
-        x: e.clientX - offset.current.x,
-        y: e.clientY - offset.current.y,
+        x: ((e.clientX - offset.current.x) / window.innerWidth) * 100,
+        y: ((e.clientY - offset.current.y) / window.innerHeight) * 100,
       });
     };
 
@@ -66,12 +68,12 @@ const ThemeModal = ({
 
   if (!isVisible) return null;
 
-  return (
+  return createPortal(
     <div
       className="fixed bg-primary rounded p-6 border select-none"
       style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
+        left: `${position.x}%`,
+        top: `${position.y}%`,
         cursor: isDragging ? "grabbing" : "default",
       }}
     >
@@ -97,7 +99,8 @@ const ThemeModal = ({
       >
         <span>{modalClose}</span>
       </button>
-    </div>
+    </div>,
+    document.body,
   );
 };
 

@@ -15,7 +15,9 @@ function Contact() {
   });
   const [messageText, setMessageText] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -27,7 +29,7 @@ function Contact() {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formData,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
       setMessageText(success);
       setFormData({ title: "", user_name: "", user_email: "", message: "" });
@@ -41,10 +43,12 @@ function Contact() {
       <Title title={title} />
 
       {/* main container */}
-      <div className="bg-base-300 p-5 rounded-xl shadow-lg max-w-xs mx-auto
+      <div
+        className="bg-base-300 p-5 rounded-xl shadow-lg max-w-xs mx-auto
       sm:max-w-lg
       md:max-w-xl
-      lg:max-w-2xl">
+      lg:max-w-2xl"
+      >
         <form onSubmit={sendEmail} className="flex flex-col gap-4">
           <input
             type="text"
@@ -92,9 +96,10 @@ function Contact() {
             {button}
           </button>
         </form>
-        {messageText && <p className="text-center mt-4 text-sm">{messageText}</p>}
+        {messageText && (
+          <p className="text-center mt-4 text-sm">{messageText}</p>
+        )}
       </div>
-
     </div>
   );
 }

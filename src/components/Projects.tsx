@@ -44,7 +44,7 @@ const Projects = () => {
     setIsModalVisible(false);
   };
 
-  console.log("projects fetched:",sProjects)
+
   return (
     <div className="mt-10" id="Projects">
       <Title title={title} />
