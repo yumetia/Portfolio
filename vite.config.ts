@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 export default defineConfig({
+  base:"/",
   resolve: {
     alias: {
       "@assets": path.resolve(__dirname, "src/assets"),
