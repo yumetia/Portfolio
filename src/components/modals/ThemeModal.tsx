@@ -15,16 +15,17 @@ const ThemeModal = ({
   isVisible = false,
   onClose,
 }: ThemeModalProps) => {
+
   const { themeBtn, modalClose } = languages[language].navbar;
 
   // function returning the initial state value so we can actually reset
   const getInitialPositions = () => {
     const w = window.innerWidth;
-    if (w < 640) return { x: 2, y: 20 }; // ~mobile
-    if (w < 1024) return { x: 55, y: 10 }; // ~tablet
-    return { x: 75, y: 12 }; // desktop
+    if (w < 640) return { x: 3, y: 17 }; // ~mobile
+    if (w < 1024) return { x: 57, y: 10 }; // ~tablet
+    return { x: 80, y: 12 }; // desktop
   };
-  const [position, setPosition] = useState(getInitialPositions();
+  const [position, setPosition] = useState(getInitialPositions());
 
   const [isDragging, setIsDragging] = useState(false);
   const offset = useRef({ x: 0, y: 0 });
@@ -37,14 +38,13 @@ const ThemeModal = ({
       y: e.clientY - (position.y / 100) * window.innerHeight,
     };
   };
-  const handleClose = () => {
-    setPosition(getInitialPositions());
-    onClose();
-  };
   useEffect(() => {
+    if (!isVisible){
+      setPosition(getInitialPositions());
+    }
+
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging) return;
-      console.log("mouse event", e.clientX);
       setPosition({
         x: ((e.clientX - offset.current.x) / window.innerWidth) * 100,
         y: ((e.clientY - offset.current.y) / window.innerHeight) * 100,
@@ -59,7 +59,7 @@ const ThemeModal = ({
       globalThis.removeEventListener("mousemove", handleMouseMove);
       globalThis.removeEventListener("mouseup", handleMouseUp);
     };
-  }, [isDragging]);
+  }, [isDragging,isVisible]);
 
   const handleTheme = (theme: string) => {
     document.documentElement.dataset.theme = theme;
@@ -70,7 +70,7 @@ const ThemeModal = ({
 
   return createPortal(
     <div
-      className="fixed bg-primary rounded p-6 border select-none"
+      className="fixed bg-primary rounded p-6 border select-none z-[999]"
       style={{
         left: `${position.x}%`,
         top: `${position.y}%`,
@@ -95,7 +95,7 @@ const ThemeModal = ({
 
       <button
         className="mt-2 btn btn-outline rounded hover:bg-accent text-neutral"
-        onClick={handleClose}
+        onClick={onClose}
       >
         <span>{modalClose}</span>
       </button>
