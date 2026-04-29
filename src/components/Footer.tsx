@@ -55,7 +55,7 @@ function Footer() {
             </button>
           </div>
 
-          <ClickModal isVisible={isModalVisible} message="Discord username copied!" position={{x:1,y:30}} />
+          <ClickModal isVisible={isModalVisible} />
         </div>
     </footer>
   );
