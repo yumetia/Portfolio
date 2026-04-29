@@ -31,9 +31,9 @@ const LangModal = ({
   // function returning the initial state value so we can actually reset
   const getInitialPositions = () => {
     const w = window.innerWidth;
-    if (w < 640) return { x: 54, y: 17 };   // ~mobile
+    if (w < 640) return { x: 50, y: 17 };   // ~mobile
     if (w < 1024) return { x: 78, y: 10 }; // ~tablet
-    return { x: 90, y: 12 };                // desktop
+    return { x: 90, y: 9 };                // desktop
   };
 
   const [position, setPosition] = useState(getInitialPositions);

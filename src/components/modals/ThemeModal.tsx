@@ -23,7 +23,7 @@ const ThemeModal = ({
     const w = window.innerWidth;
     if (w < 640) return { x: 3, y: 17 }; // ~mobile
     if (w < 1024) return { x: 57, y: 10 }; // ~tablet
-    return { x: 80, y: 12 }; // desktop
+    return { x: 80, y: 9 }; // desktop
   };
   const [position, setPosition] = useState(getInitialPositions());
 

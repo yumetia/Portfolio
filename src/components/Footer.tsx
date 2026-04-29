@@ -4,9 +4,21 @@ import github from "@assets/institutions/github.png"
 import discord from "@assets/institutions/discord.png"
 
 import { Container } from "lucide-react";
+import { useState } from "react";
+import ClickModal from "./modals/ClickModal";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const [isModalVisible,setIsModalVisible] = useState(false)
+
+  const handleDiscordClick = () => {
+    // save clipboard
+    navigator.clipboard.writeText("yumetia");
+    // show user that its been saved
+    setIsModalVisible(true)
+    setTimeout(() => setIsModalVisible(false), 2000);
+  }
 
   return (
     <footer className="footer footer-center p-10">
@@ -34,7 +46,7 @@ function Footer() {
             </a>
             {/* discord */}
             <button
-              onClick={() => navigator.clipboard.writeText("yumetia")}
+              onClick={handleDiscordClick}
               aria-label="Copy Discord username"
               className="btn btn-primary btn-circle"
               title="Discord: yumetia (click to copy)"
@@ -43,6 +55,7 @@ function Footer() {
             </button>
           </div>
 
+          <ClickModal isVisible={isModalVisible} message="Discord username copied!" position={{x:1,y:30}} />
         </div>
     </footer>
   );
