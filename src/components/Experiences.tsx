@@ -1,28 +1,34 @@
 import Title from "./Title";
 import { useLanguage } from "@context/LanguageContext";
-import languages, { getLocalized } from "@locales/languages";
+import languages from "@locales/languages";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import { CornerDownLeft, CornerDownRight } from "lucide-react";
 import { sanityExperiences } from "@lib/sanity";
-import { useEffect, useState } from "react";
-
-
+import { useEffect, useState, useRef } from "react";
 
 export default function Experiences() {
-
-  const [sExperiences, setSExperiences] = useState<any[]>([])
+  const [sExperiences, setSExperiences] = useState<any[]>([]);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
-    sanityExperiences().then(setSExperiences)
-  }, [])
-  
+    sanityExperiences().then(setSExperiences);
+  }, []);
+
   const { language } = useLanguage();
   const lang = language;
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.update();
+      swiperRef.current.updateAutoHeight(0);
+    }
+  }, [language]);
 
   const { title } = languages[lang].experiences;
 
@@ -32,27 +38,30 @@ export default function Experiences() {
 
       <div className="mt-10 mx-auto md:w-full">
         <Swiper
+          onSwiper={(swiper) => { swiperRef.current = swiper; }}
           effect="cards"
           grabCursor
           autoHeight
           modules={[Pagination, Navigation]}
           pagination={{ clickable: true }}
           watchOverflow={true}
+          observer={true}
+          observeParents={true}
           className="flex justify-center w-80
           md:w-2/3
           lg:w-1/2
           select-none"
           navigation={{
-            prevEl:".custom-prev",
-            nextEl:".custom-next",
-            disabledClass:"swiper-button-disabled"
+            prevEl: ".custom-prev",
+            nextEl: ".custom-next",
+            disabledClass: "swiper-button-disabled"
           }}
         >
           {sExperiences.map((exp: any) => {
             const role = exp?.role[lang];
             const at = exp?.at;
-            const description = exp?.description[lang] ?? []
-            
+            const description = exp?.description[lang] ?? [];
+
             return (
               <SwiperSlide key={exp.id} className="flex justify-center">
                 <div className="bg-base-200 p-10 rounded-xl shadow-lg">
@@ -72,32 +81,32 @@ export default function Experiences() {
                       <p className="text-xs text-base-content/60
                       md:text-sm">{at}</p>
                     </div>
-                </div>
+                  </div>
 
-                {/* period & description */}
-                    <div className="ml-2 lg:ml-17">
+                  {/* period & description */}
+                  <div className="ml-2 lg:ml-17">
 
-                      <p className="ml-12 mt-1 text-xs
-                      md:text-sm
-                      lg:ml-1
-                      ">{exp.period[lang]}
-                      </p>
+                    <p className="ml-12 mt-1 text-xs
+                    md:text-sm
+                    lg:ml-1
+                    ">{exp.period[lang]}
+                    </p>
 
-                      <ul className="list-disc list-inside mt-4 space-y-2 overflow-y-auto
-                      md:ml-5
-                      lg:ml-1
-                      ">
-                        {description.map((d:string, i:number) => (
-                          <li key={i} className="
-                          sm:text-sm
-                          md:text-base
-                          lg:text-lg">
-                            {d}
-                          </li>
-                        ))}
-                      </ul>
+                    <ul className="list-disc list-inside mt-4 space-y-2 overflow-y-auto
+                    md:ml-5
+                    lg:ml-1
+                    ">
+                      {description.map((d: string, i: number) => (
+                        <li key={i} className="
+                        sm:text-sm
+                        md:text-base
+                        lg:text-lg">
+                          {d}
+                        </li>
+                      ))}
+                    </ul>
 
-                    </div>
+                  </div>
 
                 </div>
               </SwiperSlide>

@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "prepare": "tw-patch install",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b web"
+    "deploy": "npm run build && gh-pages -d dist -f -t true"
   },
   "repository": {
     "type": "git",
